@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "Search a recipe",
+    "content": "Search a recipe by searching on keywords.",
+    "imagename": "1-search-recipes"
+  },
+  {
+    "id": "2",
+    "title": "Add to favorites",
+    "content": "Add your chosen recipes to your favorite-list.",
+    "imagename": "2-favorite"
+  },
+  {
+    "id": "3",
+    "title": "chose number off guests",
+    "content": "Configure per recipe the number of guests who will be coming for diner.",
+    "imagename": "3-group-people"
+  },
+  {
+    "id": "4",
+    "title": "create your personalised shoppinglist",
+    "content": "Print your shoppinglist and go shopping!",
+    "imagename": "4-grocery-store"
+  }
+]

@@ -1,0 +1,66 @@
+@import '../../../assets/scss/variables.scss';
+
+#grid {
+    display: grid;
+    grid-template-areas:
+    "grid-searchbar grid-searchbar grid-searchbar grid-searchbar grid-searchbar";
+    grid-template-rows: auto;
+}
+#grid-searchbar {
+    grid-area: grid-searchbar;
+}
+.searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-04;
+    height: 120px;
+}
+
+.search-input {
+    display:flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 10px;
+    background: $background-01;
+    border-radius:6px;
+    border:none;
+    box-shadow: $box-shadow-01;
+}
+.searchbar input {
+    font-size: 20px;
+    border:none;
+    display:flex;
+    height:30px;
+    margin: 5px;
+    width: 500px;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+.searchbutton{
+    height: 30px!important;
+    padding: 5px 10px 5px 10px;
+}
+
+.error {
+    position:absolute;
+    padding: 5px 10px;
+    background-color: $background-02;
+    border-radius:6px;
+    letter-spacing: 1.5px;
+}
+.label {
+    font-size: 20px;
+    color: $font-color-01;
+    letter-spacing: 1px;
+}
+
+
+.error-message {
+    color: $error-message;
+    position: absolute;
+    border: 1px solid $error-message;
+    border-radius: 6px;
+    padding: 10px;
+}

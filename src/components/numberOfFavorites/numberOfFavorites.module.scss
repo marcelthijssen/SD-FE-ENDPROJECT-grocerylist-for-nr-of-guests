@@ -1,0 +1,18 @@
+@import '../../assets/scss/variables.scss';
+
+.favorites {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.favorites-text {
+  display: flex;
+  flex-direction: row;
+}
+
+
+p {
+  letter-spacing: 1px;
+}

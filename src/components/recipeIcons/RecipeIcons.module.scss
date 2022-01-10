@@ -1,0 +1,41 @@
+@import '../../assets/scss/variables.scss';
+
+.recipe-info {
+  display: flex;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.recipe-info-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 15px;
+
+  &:hover .tooltip {
+    display: block;
+    position: absolute;
+  }
+
+  &:hover .recipe-icon {
+    opacity: 1;
+  }
+}
+
+.recipe-icon {
+  height: 45px;
+  opacity: 0.6;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  padding: $tooltip-padding;
+  border-radius: $tooltip-border-radius;
+  background-color: $tooltip-background-color;
+  box-shadow: $tooltip-shadow-01;
+  text-align: $tooltip-text-align;
+  font-size: $tooltip-text-size;
+}

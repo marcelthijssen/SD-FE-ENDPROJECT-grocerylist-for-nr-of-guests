@@ -1,0 +1,25 @@
+@import '../../assets/scss/variables.scss';
+
+.label {
+    font-size: 20px;
+    color: $font-color-01;
+    letter-spacing: 1px;
+}
+.input {
+    display:flex;
+    height:30px;
+    margin: 5px;
+    width: 500px;
+    border:none;
+    //text-indent: 10px;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+.error-message {
+    color: $error-message;
+    position: absolute;
+    border: 1px solid $error-message;
+    border-radius: 6px;
+    padding: 10px;
+}

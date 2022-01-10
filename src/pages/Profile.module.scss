@@ -1,0 +1,34 @@
+@import '../assets/scss/variables.scss';
+
+#grid {
+  display: grid;
+  grid-template-areas:
+          //". grid-pageheader grid-pageheader grid-pageheader ."
+          ". grid-main grid-main grid-main ."
+          ". grid-sidebar grid-footer grid-footer .";
+  grid-template-rows: auto auto;
+  grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+  grid-gap: 10px;
+}
+
+#grid-main {
+  grid-area: grid-main;
+
+}
+.account-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 2200px;
+}
+
+.account {
+  display:flex;
+  flex-direction: column;
+  width: 500px;
+}
+.filtersettings {
+  display:flex;
+  flex-direction: column;
+}

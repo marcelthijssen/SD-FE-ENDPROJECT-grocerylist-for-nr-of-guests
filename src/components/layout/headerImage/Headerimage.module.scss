@@ -1,0 +1,32 @@
+@import '../../../assets/scss/variables.scss';
+
+#grid {
+    display:grid;
+    grid-template-areas:
+        "grid-header";
+    grid-template-rows: auto;
+
+}
+#grid-header {
+    grid-area: grid-header;
+    overflow: hidden;
+    background: linear-gradient(0deg, $background-10, $background-11), url(../../../assets/images/pageheader-image.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: content-box;
+    object-fit: cover;
+}
+
+.pageheader-text {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing:2px;
+    color: #ffffff;
+    text-shadow: 0 0 5px $font-color-07;
+    text-align: center;
+    height:20vw;
+}

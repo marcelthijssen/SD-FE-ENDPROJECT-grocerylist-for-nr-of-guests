@@ -1,0 +1,66 @@
+@import '../assets/scss/variables.scss';
+
+#grid {
+  display: grid;
+  grid-template-areas:
+    ". grid-maintop grid-maintop grid-maintop ."
+    ". grid-main grid-main grid-main ."
+    ". grid-mainbottom grid-mainbottom grid-mainbottom .";
+  grid-template-rows: 50px auto 50px 50px auto auto 50px auto;
+  grid-template-columns: 20px 2fr 2fr 2fr 20px;
+  grid-gap: 10px;
+}
+
+#grid-main {
+  grid-area: grid-main;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  background-color: $background-02;
+  box-shadow: $box-shadow-01;
+}
+
+.input-field {
+  display: flex;
+  width: 300px;
+  height: 35px;
+  text-indent: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-top: 10px;
+}
+
+form > label {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  //margin:20px;
+  justify-content: space-between;
+  align-content: center;
+  width: 320px;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: none;
+
+}
+
+.button {
+  padding: 20px;
+}

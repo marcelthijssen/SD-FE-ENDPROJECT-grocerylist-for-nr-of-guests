@@ -1,0 +1,42 @@
+@import '../../assets/scss/variables.scss';
+
+.toggle-favorite {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  //position: absolute;
+  margin: 15px 10px;
+  right: 10px;
+  background-color: $background-51;
+}
+
+.favorite-icon {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.favorite-icon > span {
+  filter: $box-shadow-01;
+}
+
+.favorite-icon > span:hover {
+  filter: drop-shadow(0px 0px 5px rgb(100 0 0 / 1));
+}
+
+.tooltip {
+  display: $tooltip-display-before-hover;
+  position: absolute;
+  top: $tooltip-top-favorite;
+  left: $tooltip-left;
+  padding: $tooltip-padding;
+  border-radius: $tooltip-border-radius;
+  background-color: $tooltip-background-color;
+  box-shadow: $tooltip-shadow-01;
+  text-align: $tooltip-text-align;
+  font-size: $tooltip-text-size;
+}
+
+.favorite-icon:hover .tooltip {
+  display: block;
+}

@@ -1,0 +1,44 @@
+@import '../../../assets/scss/variables.scss';
+
+#grid {
+  display: grid;
+}
+#grid-searchbar {
+  grid-area: grid-searchbar;
+}
+.footer-mailing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-03;
+  height: 120px;
+  gap:10px;
+}
+
+.mailinglist-input {
+  display:flex;
+  align-items: center;
+  height: 50px;
+  padding-left:20px;
+  background: #fff;
+  border-radius:6px;
+  border:none;
+  box-shadow: $box-shadow-01;
+}
+.mailinglist-input input {
+font-size: 20px;
+}
+
+.searchbutton{
+  height: 30px!important;
+  padding: 5px 10px 5px 10px;
+}
+
+.error {
+  position:absolute;
+  margin: 0 0 0 10%;
+  padding: 5px 10px;
+  background-color: $background-02;
+  border-radius:6px;
+  letter-spacing: 1.5px;
+}

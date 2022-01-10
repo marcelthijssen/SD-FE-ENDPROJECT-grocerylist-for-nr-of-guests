@@ -1,0 +1,58 @@
+@import '../../assets/scss/variables.scss';
+
+.recipe-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.single-recipe-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 30px;
+  box-shadow: $box-shadow-01;
+  height: 400px;
+  min-width: 350px;
+  position: relative;
+  background-color: $background-01;
+  flex: 1 0 29%;
+}
+
+.image-container {
+  border-radius: 10px 10px 0 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 200px;
+}
+
+.recipe-card-image {
+  min-width: 100%;
+  min-height: 100%
+}
+
+.recipe-card-text-container {
+  height: 200px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recipe-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  hyphens: manual;
+  text-decoration: none;
+  display: inline-block;
+  color: $font-color-06;
+}
+
+.recipe-icons {
+  padding: 18px;
+}
+
+.input-favorite {
+  position: absolute;
+  right: 0;
+}

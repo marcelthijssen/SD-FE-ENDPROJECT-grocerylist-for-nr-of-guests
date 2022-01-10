@@ -1,0 +1,35 @@
+@import '../../../assets/scss/variables.scss';
+
+#grid {
+    display: grid;
+    grid-template-areas:
+    ". grid-pageheader grid-pageheader grid-pageheader .";
+    grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+    grid-template-rows: 100px;
+}
+
+#grid-pageheader {
+    grid-area: grid-pageheader;
+}
+
+.pageheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-totalnumber {
+    font-size: 75%;
+    color: $font-color-06;
+}
+
+.page-title {
+    font-size: 20px;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
+    color:$font-color-06;
+}
+
+span {
+    color: $font-color-06;
+}

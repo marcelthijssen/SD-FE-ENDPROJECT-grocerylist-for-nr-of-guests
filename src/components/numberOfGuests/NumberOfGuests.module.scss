@@ -1,0 +1,27 @@
+@import '../../assets/scss/variables.scss';
+
+
+.number-of-guests > input[type=number]::-webkit-inner-spin-button,
+.number-of-guests > input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+.number-of-guests > input[type="text"] {
+    color: $font-color-06;
+    border-color: $font-color-06;
+}
+
+.number-of-guests > input[type="text"]:focus {
+    color: initial;
+    border-color: initial;
+}
+
+.number-of-guests > input {
+    //height: 24px;
+    font-size: 53px;
+    width: 100px;
+    height: 60px;
+    padding: 10px;
+    margin: 10px 0;
+    color: $font-color-06;
+}

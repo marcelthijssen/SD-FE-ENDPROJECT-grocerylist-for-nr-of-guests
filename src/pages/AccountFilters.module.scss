@@ -1,0 +1,51 @@
+@import '../assets/scss/variables.scss';
+
+#grid {
+  display: grid;
+  grid-template-areas:
+    ". grid-sidebar grid-maintop grid-maintop ."
+    ". grid-main grid-main grid-main ."
+    ". grid-mainbottom grid-mainbottom grid-mainbottom ."
+    ". grid-footer grid-footer grid-footer .";
+  grid-template-rows: auto auto 50px auto;
+  grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+  grid-gap: 20px;
+}
+
+.filter {
+  box-shadow: $box-shadow-01;
+}
+
+#grid-main {
+  grid-area: grid-main;
+}
+
+.filters-container {
+  display: flex;
+  justify-content: space-between;
+  height: fit-content !important;
+  padding-top: 20px;
+}
+
+.filter-list {
+  height: fit-content !important;
+}
+
+.filter-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+  width: 300px;
+  letter-spacing: 1px;
+  background-color: $background-02;
+  color: $title;
+  font-size: 18px;
+  font-weight: bold;
+  text-indent: 10px;
+}
+
+.account-filter {
+  height: fit-content !important;
+  width: 200px;
+}

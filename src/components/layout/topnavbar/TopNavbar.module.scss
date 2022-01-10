@@ -1,0 +1,59 @@
+@import "./../../../assets/scss/variables.scss";
+
+#grid {
+    display: grid;
+    grid-template-areas:
+    ". grid-topnav grid-topnav grid-topnav .";
+    grid-template-rows: 70px;
+    grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+    grid-gap: 10px;
+}
+.grid {
+    background-color: $background-01;
+}
+.top-navbar {
+    grid-area: grid-topnav;
+    display: flex;
+    padding-left: 10px;
+    background-color: #fff;
+    position: sticky;
+    align-items: center;
+    width: 100%;
+}
+.push {
+    margin-left: auto;
+    column-gap: 20px
+}
+
+.logo-container img {
+    height: 40px;
+}
+.tooltip  {
+    visibility:hidden;
+
+}
+
+.tooltip:hover  {
+    visibility:visible;
+
+}
+
+.menu-button {
+    letter-spacing: 1px;
+    border-radius: 5px;
+    border: 1px solid $submit-button-background;
+    padding: 10px 15px 10px 15px;
+    margin: 10px 10px 10px 10px;
+    background-color: $submit-button-background;
+    //box-shadow: $button-shadow-01;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $submit-button-hover;
+        transition: ease-in-out 0.5s;
+        color: #fff;
+    }
+    &:disabled {
+        background-color: $submit-button-disabled;
+    }
+}

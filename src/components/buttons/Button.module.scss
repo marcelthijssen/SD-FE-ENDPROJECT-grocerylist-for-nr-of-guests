@@ -1,0 +1,72 @@
+@import "./../../assets/scss/variables.scss";
+
+.reset-button {
+  background-color: green;
+  border: none;
+}
+.submit-button {
+  background-color: green;
+}
+.mailinglist{
+
+}
+.inloggen{
+  border: 10px;
+  background-color: $submit-button-background;
+}
+button {
+  border-radius: 5px;
+  border: 0 solid $submit-button-background;
+  padding: 10px 15px 10px 15px;
+  margin: 10px 10px 10px 10px;
+  background-color: $submit-button-background;
+  box-shadow: $button-shadow-01;
+
+  &:hover {
+    background-color: $submit-button-hover;
+    transition: ease-in-out 0.5s;
+    //color: #fff;
+  }
+  &:disabled {
+    background-color:$submit-button-disabled;
+  }
+}
+.add-button {
+  background-color: $add-button-background !important;
+  //color: red!important;
+  color: white !important;
+
+  &:hover {
+    background-color: $add-button-hover !important;
+  }
+}
+.h3 {
+    color: white!important;
+
+}
+.submit-button {
+  padding-top: 25px;
+  width: 100%;
+  background-color: $background-20;
+}
+.filter-button {
+  width:100%;
+
+  &:hover {
+    background-color: $background-20!important;
+  }
+}
+
+.favorites {
+  //box-shadow: none!important;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.favorites, label:after {
+  display: flex;
+  font-size: 30px;
+  font-weight: bolder;
+  color: $font-color-06;
+  justify-content: center;
+}

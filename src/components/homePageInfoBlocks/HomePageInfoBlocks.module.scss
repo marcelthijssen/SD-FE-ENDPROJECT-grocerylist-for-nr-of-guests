@@ -1,0 +1,65 @@
+@import '../../assets/scss/variables.scss';
+
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.single-info-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 30px;
+  box-shadow: $box-shadow-01;
+  height: 340px;
+  max-width: 500px;
+  min-width: 320px;
+  background-color: $background-01;
+  flex: 1 0 20%;
+
+}
+
+.info-number {
+  background-color: $background-51;
+  color:$font-color-05;
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px;
+  font-family: "Museo Sans Rounded", sans-serif;
+  font-size: 55px;
+  font-weight: 500;
+}
+.image-container {
+  border-radius: 10px 10px 0 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 200px;
+}
+.text-container {
+  padding: 25px;
+}
+
+.info-card-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: $font-color-05;
+  hyphens: manual;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom:30px;
+}
+
+.content {
+  font-size: 16px;
+  font-weight: 500;
+  inline-size: 260px;
+  hyphens: manual;
+  text-decoration: none;
+}
+

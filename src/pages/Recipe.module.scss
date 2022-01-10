@@ -1,0 +1,58 @@
+@import '../assets/scss/variables.scss';
+
+#grid {
+  display: grid;
+  grid-template-areas:
+    " . grid-maintop grid-maintop grid-maintop . "
+    " . grid-column1 grid-column2 grid-column3 . "
+    " . . grid-mainbottom grid-mainbottom . ";
+  grid-template-rows:  auto auto  auto;
+  grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+  grid-gap: 20px;
+}
+
+.recipeheader {
+  grid-area: grid-maintop;
+}
+
+.columns {
+  display: grid;
+}
+
+.card {
+  border-radius: 6px;
+  background-color: $background-01;
+  box-shadow: $box-shadow-01;
+}
+
+.column1, .column2, .column3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column1 {
+  grid-area: grid-column1;
+}
+
+.column2 {
+  grid-area: grid-column2;
+}
+
+.column3 {
+  grid-area: grid-column3;
+}
+
+.recipe-instruction {
+  display: flex;
+  flex-direction: column;
+  grid-area: grid-mainbottom;
+  margin: 50px 0;
+}
+
+.credit-text {
+  font-size: 60%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+

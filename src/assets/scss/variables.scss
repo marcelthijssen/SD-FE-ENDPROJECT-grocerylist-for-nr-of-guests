@@ -1,0 +1,84 @@
+
+/* background-colors */
+
+$background-01: hsl(0, 0%, 100%);
+$background-02: hsl(0, 0%, 95%);
+$background-03: hsl(0, 0%, 90%);
+$background-04: hsl(0, 0%, 85%);
+$background-05: hsl(0, 0%, 75%);
+$background-06: hsl(0, 0%, 60%);
+$background-07: hsl(0, 0%, 50%);
+$background-08: hsl(0, 0%, 40%);
+$background-09: hsl(0, 0%, 30%);
+$background-10: hsl(0, 70%, 10%, 0.2);
+$background-11: hsl(0, 70%, 10%, 0.1);
+$background-12: hsl(0, 0%, 90%, 0.65);
+$background-20: hsl(0, 70%, 26%);
+//rgba(234, 234, 234, 0.65)
+/* Background-colors-transparant */
+$background-51: hsla(0, 0%, 100%, 0.8);
+
+/* box-shadows */
+$box-shadow-01: 0 5px 10px 5px rgba(0, 0, 0, 0.1);
+
+/* font-colors */
+$font-color-01: hsl(0, 0%, 20%);
+$font-color-05: hsl(0, 74%, 38%);
+$font-color-06: hsl(0, 70%, 26%);
+$font-color-07: hsl(0, 70%, 10%);
+
+$error-message: hsl(0, 77%, 45%);
+
+/* width */
+$width-01: 1200px;
+$width-02: 1000px;
+$width-03: 900px;
+
+// color text
+$title: hsl(0, 0%, 0%);
+
+//Distances
+$gap-01: 10px;
+$gap-02: 15px;
+$gap-03: 20px;
+
+//Button
+
+$submit-button-background: hsl(0, 0%, 100%);
+$submit-button-hover: hsl(220, 13%, 80%);
+$submit-button-disabled: hsl(0, 0%, 100%);
+
+$favorite-button-background: hsl(0, 0%, 100%);
+$favorite-button-hover: hsl(220, 13%, 80%);
+$favorite-button-disabled: hsl(0, 0%, 100%);
+
+$search-button-background: hsl(0, 0%, 100%);
+$search-button-hover: hsl(220, 13%, 80%);
+$search-button-disabled: hsl(220, 13%, 18%);
+//$search-button-disabled: hsl(196, 66%, 37%);
+
+$add-button-background: hsla(196, 70%, 50%, 0.98);
+$add-button-hover: hsl(196, 66%, 42%);
+//$add-button-hover: hsla(196, 69%, 46%, 0.98);
+
+/* shadows */
+$button-shadow-01: 0 0 7px 7px rgba(0, 0, 0, 0.1);
+
+$tooltip-shadow-01: 0 0 7px 7px rgba(0, 0, 0, 0.2);
+
+/* TOOLTIP */
+$tooltip-display-before-hover: none;
+$tooltip-position: absolute;
+$tooltip-top: -70px;
+$tooltip-top-favorite: -100px;
+$tooltip-left: -30px;
+$tooltip-padding: 10px;
+$tooltip-border-radius: 6px;
+$tooltip-background-color: #fff;
+$tooltip-shadow-01: 0 0 7px 7px rgba(0, 0, 0, 0.2);
+$tooltip-text-align: center;
+$tooltip-text-size: 18px;
+
+/* TABLE */
+$table01: hsl(0, 0%, 93%);
+$table02: hsl(0, 0%, 100%);

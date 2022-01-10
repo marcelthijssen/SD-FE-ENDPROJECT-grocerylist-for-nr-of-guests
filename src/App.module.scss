@@ -1,0 +1,98 @@
+@import './src/assets/scss/variables';
+
+@font-face {
+  font-family: 'Oxygen';
+  src: url('./assets/fonts/Oxygen/Oxygen-Regular.woff2') format('woff2'),
+  url('./assets/fonts/Oxygen/Oxygen-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oxygen';
+  src: url('./assets/fonts/Oxygen/Oxygen-Bold.woff2') format('woff2'),
+  url('./assets/fonts/Oxygen/Oxygen-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oxygen';
+  src: url('./assets/fonts/Oxygen/Oxygen-Light.woff2') format('woff2'),
+  url('./assets/fonts/Oxygen/Oxygen-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Museo Sans Rounded';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Museo Sans Rounded 500'), url('./assets/fonts/museo-sans-rounded-cufonfonts-webfont/MuseoSansRounded500.woff') format('woff');
+}
+@font-face {
+  font-family: 'Museo Sans Rounded';
+  font-style: oblique;
+  font-weight: 100;
+  src: local('Museo Sans Rounded 100'), url('./assets/fonts/museo-sans-rounded-cufonfonts-webfont/MuseoSansRounded100.woff') format('woff');
+}
+@font-face {
+  font-family: 'Museo Sans Rounded';
+  font-style: oblique;
+  font-weight: 300;
+  src: local('Museo Sans Rounded 300'), url('./assets/fonts/museo-sans-rounded-cufonfonts-webfont/MuseoSansRounded300.woff') format('woff');
+}
+@font-face {
+  font-family: 'Museo Sans Rounded';
+  font-style: oblique;
+  font-weight: 700;
+  src: local('Museo Sans Rounded 700'), url('./assets/fonts/museo-sans-rounded-cufonfonts-webfont/MuseoSansRounded700.woff') format('woff');
+}
+@font-face {
+  font-family: 'Museo Sans Rounded';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Museo Sans Rounded 900'), url('./assets/fonts/museo-sans-rounded-cufonfonts-webfont/MuseoSansRounded900.woff') format('woff');
+}
+
+
+* {
+  font-family: "Oxygen", sans-serif;
+  margin:0;
+}
+
+h1, h2, h3, h4 {
+  color: $font-color-06;
+}
+h1 {
+  padding-bottom: 26px;
+}
+hr {
+  color: $font-color-06;
+}
+h2 {
+  padding-bottom: 20px;
+}
+p {
+  color: $font-color-01;
+  padding-bottom: 10px;
+  line-height: 1.5;
+}
+body {
+  background-color: $background-02;
+}
+
+body {
+  font-family: 'Oxygen', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-size: 16px;
+}
+
+.content-container {
+  max-width:1900px;
+}
+

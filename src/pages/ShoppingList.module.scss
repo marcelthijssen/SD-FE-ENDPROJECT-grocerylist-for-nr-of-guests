@@ -1,0 +1,20 @@
+@import '../assets/scss/variables.scss';
+
+#grid {
+  display: grid;
+  grid-template-areas:
+          ". grid-sidebar grid-main grid-main ."
+    ". grid-sidebar grid-mainbottom grid-mainbottom ."
+    "grid-footer grid-footer grid-footer grid-footer grid-footer";
+  grid-template-rows: auto auto 50px auto;
+  grid-template-columns: 0.5fr 1fr 2fr 2fr 0.5fr;
+  grid-gap: 10px;
+}
+
+#grid-main {
+  grid-area: grid-main;
+}
+
+.content-container {
+  width: 1200px;
+}

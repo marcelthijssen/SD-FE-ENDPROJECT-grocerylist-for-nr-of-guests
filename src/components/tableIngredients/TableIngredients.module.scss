@@ -1,0 +1,40 @@
+@import './src/assets/scss/variables.scss';
+
+.table-style {
+  font-family: Oxygen, sans-serif;
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+  margin-bottom: 50px;
+  table-layout: fixed;
+}
+
+th {
+  width: 1em !important;
+}
+
+td, th {
+  border: 1px solid $table01;
+  text-align: left;
+  padding: 8px;
+}
+
+td:nth-child(1) {
+  width: 1em;
+}
+
+td:nth-child(2) {
+  width: 25%;
+}
+
+td:nth-child(3) {
+  width: 100%;
+}
+
+tbody:nth-child(even) {
+  background-color: $table02;
+}
+
+tbody:nth-child(odd) {
+  background-color: $table01;
+}

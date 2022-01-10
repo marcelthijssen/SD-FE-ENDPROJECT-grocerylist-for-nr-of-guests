@@ -1,0 +1,96 @@
+@import '../assets/scss/variables.scss';
+
+#grid {
+  display: grid;
+  grid-template-areas:
+    ". grid-sidebar grid-maintop grid-maintop ."
+    ". grid-sidebar grid-main grid-main ."
+    ". grid-sidebar grid-mainbottom grid-mainbottom .";
+  grid-template-rows: 50px auto 50px 50px auto auto 50px auto;
+  grid-template-columns: 0.5fr 1fr 2fr 2fr 0.5fr;
+  grid-gap: 10px;
+}
+
+#grid-main {
+  grid-area: grid-main;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-form {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: fit-content;
+  background-color: $background-02;
+}
+
+.input-field {
+  display: flex;
+  width: 300px;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 15px;
+}
+
+
+.register-form {
+  width: 550px;
+  padding: 50px;
+  background-color: $background-03;
+  border-radius: 6px;
+}
+
+form > label {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  justify-content: space-between;
+  align-content: center;
+  width: 320px;
+}
+
+.input-field {
+  background-color: #fff;
+  border: hidden;
+  height: 30px;
+  text-indent: 10px;
+  margin: 10px 0 10px 0;
+  border-radius: 6px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  align-items: center;
+
+}
+
+.registration-form-section {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  /*justify-content: space-between;*/
+  /*width:350px;*/
+}
+
+/* typo */
+.form-error-message {
+  color: red;
+  font-size: 75%;
+  padding-top: 5px;
+  padding-left: 10px;
+}
