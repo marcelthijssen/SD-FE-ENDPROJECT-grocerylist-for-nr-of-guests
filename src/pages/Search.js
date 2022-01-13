@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "./Search.module.scss";
 import PageHeader from "../components/layout/pageheader/Pageheader";
 import RecipeCard from "../components/recipecard/RecipeCard";
@@ -8,6 +8,7 @@ import typesOfMeals from "../components/filterLists/typesOfMeals.json";
 import typesOfCuisines from "../components/filterLists/typesOfCuisines.json";
 import typesOfIntolerances from "../components/filterLists/typesOfIntolerances.json";
 import typesOfDiets from "../components/filterLists/typesOfDiets.json";
+import NumberOfFavorites from "../components/numberOfFavorites/numberOfFavorites";
 
 function RecipeSearchResults( { recipeSearch } ) {
 
@@ -25,13 +26,15 @@ function RecipeSearchResults( { recipeSearch } ) {
   const offSetting = `&offset=${ offSet }`;
   const [ filterActive, setFilterActive ] = useState( false );
 
+  let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
+  let [ countFavorites, setCountFavorites ] = useState( favoriteToSave.length );
+
   // get info from localstorage to add to url, for new api-request
   useEffect( () => {
     setSavedCuisinesFilter( JSON.parse( localStorage.getItem( "types of cuisines" ) ) );
     setSavedMealsFilter( JSON.parse( localStorage.getItem( "types of meals" ) ) );
     setSavedIntolerancesFilter( JSON.parse( localStorage.getItem( "types of intolerances" ) ) );
     setSavedDietsFilter( JSON.parse( localStorage.getItem( "types of diets" ) ) );
-
   }, [ filterActive ] );
 
   useEffect( () => {
@@ -41,8 +44,8 @@ function RecipeSearchResults( { recipeSearch } ) {
   // check if necessary set offSet to 0 for pagination
   useEffect( () => {
     setQuery( localStorage.getItem( "query" ) );
-    console.log(query);
   } );
+
 
   // get data
   useEffect( () => {
@@ -105,6 +108,7 @@ function RecipeSearchResults( { recipeSearch } ) {
                 <div className={ styles["filter-title-container"] }>
                   Types of Cuisines
                 </div>
+
                 <FilterTypes
                   title={ "TypesCuisines" }
                   name={ "types of cuisines" }
@@ -163,7 +167,7 @@ function RecipeSearchResults( { recipeSearch } ) {
             </div>
 
             <div id={ styles["grid-main"] }>
-              <RecipeCard recipesSearchResult={ recipesSearchResult }/>
+              <RecipeCard recipesSearchResult={ recipesSearchResult } />
             </div>
 
 
