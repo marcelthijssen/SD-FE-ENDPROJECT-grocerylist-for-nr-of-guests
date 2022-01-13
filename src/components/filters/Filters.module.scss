@@ -11,7 +11,7 @@ ul {
 .filter-container {
     display: flex;
     flex-direction: column;
-    height: 300px;
+    max-height: 300px;
     overflow:auto;
     overflow-x: hidden;
     background-color: $background-01;

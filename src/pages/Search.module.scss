@@ -6,7 +6,7 @@
     ". grid-sidebar grid-maintop grid-maintop ."
     ". grid-sidebar grid-main grid-main ."
     ". grid-sidebar grid-mainbottom grid-mainbottom .";
-  grid-template-rows: 50px auto 50px 50px auto auto 50px auto;
+  grid-template-rows: 50px auto 100px;
   grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
   grid-gap: 10px;
 }
@@ -14,6 +14,7 @@
 /* Filters */
 #grid-sidebar {
   grid-area: grid-sidebar;
+  padding-bottom:50px;
 }
 
 .filtercontainer {
@@ -42,7 +43,6 @@
   align-items: center;
   justify-content: flex-start;
   height: 50px;
-  width: 200px;
   letter-spacing: 1px;
   background-color: $background-02;
   color: $title;
@@ -75,5 +75,6 @@
   display: flex;
   align-content: center;
   justify-content: center;
+  align-items: center;
 }
 
