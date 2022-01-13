@@ -13,6 +13,7 @@ function RecipeSearchResults( { recipeSearch } ) {
 
   const [ recipesSearchResult, setRecipesSearchResult ] = useState( [] );
   const [ totalResults, setTotalResults ] = useState( 0 );
+  const [ query, setQuery ] = useState( { recipeSearch } );
   //filters
   const [ savedCuisinesFilter, setSavedCuisinesFilter ] = useState();
   const [ savedMealsFilter, setSavedMealsFilter ] = useState( "" );
@@ -39,8 +40,9 @@ function RecipeSearchResults( { recipeSearch } ) {
 
   // check if necessary set offSet to 0 for pagination
   useEffect( () => {
-    setOffSet( 0 );
-  }, [ savedCuisinesFilter ] );
+    setQuery( localStorage.getItem( "query" ) );
+    console.log(query);
+  } );
 
   // get data
   useEffect( () => {
@@ -49,7 +51,7 @@ function RecipeSearchResults( { recipeSearch } ) {
 
     async function fetchData() {
       try {
-        const result = await axios.get( `https://api.spoonacular.com/recipes/complexSearch?query=${ recipeSearch }&cuisine=${ savedCuisinesFilter }&type=${ savedMealsFilter }&intolerances=${ savedIntolerancesFilter }&diet=${ savedDietsFilter }&addRecipeInformation=true&apiKey=${ process.env.REACT_APP_SPOONACULAR_KEY }${ offSetting }`, { cancelToken: source.token, } );
+        const result = await axios.get( `https://api.spoonacular.com/recipes/complexSearch?query=${ query }&cuisine=${ savedCuisinesFilter }&type=${ savedMealsFilter }&intolerances=${ savedIntolerancesFilter }&diet=${ savedDietsFilter }&addRecipeInformation=true&apiKey=${ process.env.REACT_APP_SPOONACULAR_KEY }${ offSetting }`, { cancelToken: source.token, } );
         setTotalResults( result.data.totalResults );
         setRecipesSearchResult( result.data.results );
 
@@ -68,7 +70,7 @@ function RecipeSearchResults( { recipeSearch } ) {
     }
 
     fetchData();
-  }, [ recipeSearch, offSetting, filterActive ] );
+  }, [ recipeSearch, offSetting, filterActive, query] );
 
   function handleChange() {
     setFilterActive( true );
@@ -93,7 +95,7 @@ function RecipeSearchResults( { recipeSearch } ) {
           <PageHeader id={ styles["grid-pageheader"] } title="Search"/>
 
           <div id={ styles["grid"] }>
-            <div className={ styles["grid-maintop"] }>
+            <div id={ styles["grid-maintop"] }>
               <div className={ styles["recipes-found"] }>{ `Recipes found ${ totalResults }` }</div>
             </div>
 
