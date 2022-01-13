@@ -7,7 +7,7 @@
     ". grid-sidebar grid-main grid-main ."
     ". grid-sidebar grid-mainbottom grid-mainbottom .";
   grid-template-rows: 50px auto 50px 50px auto auto 50px auto;
-  grid-template-columns: 0.5fr 1fr 2fr 2fr 0.5fr;
+  grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
   grid-gap: 10px;
 }
 
