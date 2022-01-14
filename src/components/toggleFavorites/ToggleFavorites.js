@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./ToggleFavorites.module.scss";
 import { useToggle } from "rooks";
+import { FavCounterContext } from "../../context/FavContextProvider";
 
 // import favorites from "../../pages/Favorites";
 
 function ToggleFavorites( { recipe } ) {
+  const { addOneTofavorite, subtractOneFromFavorite } = useContext(FavCounterContext);
+
   let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
 
-  let [ countFavorites, setCountFavorites ] = useState(favoriteToSave.length);
+  // let [ countFavorites, setCountFavorites ] = useState(favoriteToSave.length);
   const [ isFavorite, setIsFavorite ] = useToggle( false );
   // check if saved in localStorage, if so isFavorite and display 'red hart'
   useEffect( () => {
@@ -15,8 +18,6 @@ function ToggleFavorites( { recipe } ) {
     if ( favoriteToSave === null ) favoriteToSave = [];
     if ( favoriteToSave.includes( recipe ) ) {
       setIsFavorite( isFavorite );
-      setCountFavorites( favoriteToSave.length );
-      console.log( countFavorites );
     }
   }, [] );
 
@@ -25,9 +26,11 @@ function ToggleFavorites( { recipe } ) {
     if ( !isFavorite ) {
       setIsFavorite( isFavorite );
       addToFavorite();
+      addOneTofavorite();
     } else {
       setIsFavorite( !isFavorite );
       removeFromFavorite();
+      subtractOneFromFavorite();
     }
   }
 
