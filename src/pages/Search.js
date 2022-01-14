@@ -38,7 +38,7 @@ function RecipeSearchResults( { recipeSearch } ) {
     setOffSet( 0 );
   }, [] );
 
-  // check if necessary set offSet to 0 for pagination
+  // update query ion browser refresh
   useEffect( () => {
     setQuery( localStorage.getItem( "query" ) );
     console.log(query);
