@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import styles from "./Search.module.scss";
 import PageHeader from "../components/layout/pageheader/Pageheader";
 import RecipeCard from "../components/recipecard/RecipeCard";
@@ -8,9 +8,10 @@ import typesOfMeals from "../components/filterLists/typesOfMeals.json";
 import typesOfCuisines from "../components/filterLists/typesOfCuisines.json";
 import typesOfIntolerances from "../components/filterLists/typesOfIntolerances.json";
 import typesOfDiets from "../components/filterLists/typesOfDiets.json";
+import { FavCounterContext } from "../context/FavContextProvider";
 
 function RecipeSearchResults( { recipeSearch } ) {
-
+  const { counter } = useContext( FavCounterContext );
   const [ recipesSearchResult, setRecipesSearchResult ] = useState( [] );
   const [ totalResults, setTotalResults ] = useState( 0 );
   const [ query, setQuery ] = useState( { recipeSearch } );
@@ -19,11 +20,13 @@ function RecipeSearchResults( { recipeSearch } ) {
   const [ savedMealsFilter, setSavedMealsFilter ] = useState( "" );
   const [ savedIntolerancesFilter, setSavedIntolerancesFilter ] = useState();
   const [ savedDietsFilter, setSavedDietsFilter ] = useState();
-  // const [ urlFilter, setUrlFilter ] = useState();
   //pagination
   const [ offSet, setOffSet ] = useState( 0 );
   const offSetting = `&offset=${ offSet }`;
   const [ filterActive, setFilterActive ] = useState( false );
+
+  // let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
+  // let [ countFavorites, setCountFavorites ] = useState( favoriteToSave.length );
 
   // get info from localstorage to add to url, for new api-request
   useEffect( () => {
@@ -31,7 +34,6 @@ function RecipeSearchResults( { recipeSearch } ) {
     setSavedMealsFilter( JSON.parse( localStorage.getItem( "types of meals" ) ) );
     setSavedIntolerancesFilter( JSON.parse( localStorage.getItem( "types of intolerances" ) ) );
     setSavedDietsFilter( JSON.parse( localStorage.getItem( "types of diets" ) ) );
-
   }, [ filterActive ] );
 
   useEffect( () => {
@@ -41,7 +43,6 @@ function RecipeSearchResults( { recipeSearch } ) {
   // update query ion browser refresh
   useEffect( () => {
     setQuery( localStorage.getItem( "query" ) );
-    console.log(query);
   } );
 
   // get data
@@ -70,7 +71,7 @@ function RecipeSearchResults( { recipeSearch } ) {
     }
 
     fetchData();
-  }, [ recipeSearch, offSetting, filterActive, query] );
+  }, [ recipeSearch, offSetting, filterActive, query ] );
 
   function handleChange() {
     setFilterActive( true );
@@ -92,7 +93,7 @@ function RecipeSearchResults( { recipeSearch } ) {
       <div>
         <div className={ styles["content-container"] }>
 
-          <PageHeader id={ styles["grid-pageheader"] } title="Search"/>
+          <PageHeader id={ styles["grid-pageheader"] } title="Search" counter={ counter }/>
 
           <div id={ styles["grid"] }>
             <div id={ styles["grid-maintop"] }>
@@ -105,6 +106,7 @@ function RecipeSearchResults( { recipeSearch } ) {
                 <div className={ styles["filter-title-container"] }>
                   Types of Cuisines
                 </div>
+
                 <FilterTypes
                   title={ "TypesCuisines" }
                   name={ "types of cuisines" }

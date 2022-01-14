@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./Pageheader.module.scss";
 import NumberOfFavorites from "../../numberOfFavorites/numberOfFavorites";
 
-function PageHeader( { title, total } ) {
+function PageHeader( { title, total, counter } ) {
   const favoriteToSave = JSON.parse( localStorage.getItem( "recipes" ) );
 
   useEffect( () => {
@@ -19,7 +19,7 @@ function PageHeader( { title, total } ) {
             <span className={ styles["title-totalnumber"] }>  { total }</span>
 
             <div className={ styles["number-of-favorites"] }>
-              <NumberOfFavorites id={ styles["grid-accountinfo"] }/>
+              <NumberOfFavorites id={ styles["grid-accountinfo"]} counter={counter} />
             </div>
           </div>
         </div>
