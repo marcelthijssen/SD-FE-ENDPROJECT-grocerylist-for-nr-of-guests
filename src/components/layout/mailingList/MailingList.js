@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./MailingList.module.scss";
 import "../grid.module.css";
 import Button from "../../buttons/Button";
@@ -6,15 +6,18 @@ import { useForm } from "react-hook-form";
 import InputElement from "../../InputField/InputElement";
 
 function MailingList() {
-
+  const [isDisabled, setIsDisabled] = useState(false);
   const { register, formState: { errors }, handleSubmit } = useForm( {
     mode: "onBlur",
   } );
 
   function onFormSubmit( data ) {
-    // console.log(data);
+    setIsDisabled(true)
+    console.log(isDisabled);
+    console.log(data);
     localStorage.setItem( "newsletter", JSON.stringify( data ) );
   }
+
 
   return (
     <>
@@ -43,6 +46,8 @@ function MailingList() {
             />
             <Button inputType="submit"
                     label="Submit"
+                    disabled={ isDisabled }
+                    buttonStyle="mailinglist-button"
             />
           </div>
         </form>

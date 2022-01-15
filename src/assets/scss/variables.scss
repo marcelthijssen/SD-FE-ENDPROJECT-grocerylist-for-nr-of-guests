@@ -13,7 +13,7 @@ $background-09: hsl(0, 0%, 30%);
 $background-10: hsl(0, 70%, 10%, 0.2);
 $background-11: hsl(0, 70%, 10%, 0.1);
 $background-12: hsl(0, 0%, 90%, 0.65);
-$background-20: hsl(0, 70%, 26%);
+$background-20: hsl(0, 69%, 24%);
 //rgba(234, 234, 234, 0.65)
 /* Background-colors-transparant */
 $background-51: hsla(0, 0%, 100%, 0.8);
@@ -26,6 +26,7 @@ $font-color-01: hsl(0, 0%, 20%);
 $font-color-05: hsl(0, 74%, 38%);
 $font-color-06: hsl(0, 70%, 26%);
 $font-color-07: hsl(0, 70%, 10%);
+$font-color-button: hsl(0, 0%, 100%);
 
 $error-message: hsl(0, 77%, 45%);
 
@@ -45,8 +46,8 @@ $gap-03: 20px;
 //Button
 
 $submit-button-background: hsl(0, 0%, 100%);
-$submit-button-hover: hsl(220, 13%, 80%);
-$submit-button-disabled: hsl(0, 0%, 100%);
+$submit-button-hover: hsl(89, 35%, 35%);
+$submit-button-disabled: hsl(0, 0%, 50%);
 
 $favorite-button-background: hsl(0, 0%, 100%);
 $favorite-button-hover: hsl(220, 13%, 80%);

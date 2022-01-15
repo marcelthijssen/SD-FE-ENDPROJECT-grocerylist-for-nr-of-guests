@@ -28,7 +28,6 @@ function Searchbar( { setRecipeSearchHandler } ) {
     console.warn( e.target.value );
   }
 
-  // console.log(query.length);
   return (
     <>
       <div id="grid">
@@ -57,17 +56,15 @@ function Searchbar( { setRecipeSearchHandler } ) {
             {
               query.length<3 ?
                 <Button
-                  styleType="searchbutton"
-                  className="searchbutton"
-                  type="submit"
+                  inputType="submit"
+                  buttonStyle="searchbutton"
                   disabled="disabled"
                   label="Search"
                   />
                 :
                 <Button
-                  styleType="searchbutton"
-                  className="searchbutton"
-                  type="submit"
+                  inputType="submit"
+                  buttonStyle="recipe-search-button"
                   label="Search"
                 />
             }

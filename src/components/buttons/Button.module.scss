@@ -4,16 +4,30 @@
   background-color: green;
   border: none;
 }
+
 .submit-button {
   background-color: green;
 }
-.mailinglist{
 
+.mailinglist-button, .recipe-search-button {
+  background-color: $background-20;
+  box-shadow: none;
+  margin: 0;
+  height: 100%;
+  border-radius:0 6px 6px 0;
+  color: $font-color-button;
+  letter-spacing: 2px;
+  font-weight: 700;
+   &:disabled {
+    background-color: purple;
+  }
 }
-.inloggen{
+
+.inloggen {
   border: 10px;
   background-color: $submit-button-background;
 }
+
 button {
   border-radius: 5px;
   border: 0 solid $submit-button-background;
@@ -25,12 +39,11 @@ button {
   &:hover {
     background-color: $submit-button-hover;
     transition: ease-in-out 0.5s;
-    //color: #fff;
   }
-  &:disabled {
-    background-color:$submit-button-disabled;
-  }
+
+
 }
+
 .add-button {
   background-color: $add-button-background !important;
   //color: red!important;
@@ -40,20 +53,23 @@ button {
     background-color: $add-button-hover !important;
   }
 }
+
 .h3 {
-    color: white!important;
+  color: white !important;
 
 }
+
 .submit-button {
   padding-top: 25px;
   width: 100%;
   background-color: $background-20;
 }
+
 .filter-button {
-  width:100%;
+  width: 100%;
 
   &:hover {
-    background-color: $background-20!important;
+    background-color: $background-20 !important;
   }
 }
 
@@ -63,6 +79,7 @@ button {
   width: 60px;
   height: 60px;
 }
+
 .favorites, label:after {
   display: flex;
   font-size: 30px;

@@ -15,12 +15,12 @@ function FavCounterContextProvider( {children} ) {
   // 6. Functies maken
   function addOne() {
     setCounter( counter + 1 );
-    console.log(counter);
+    // console.log(counter);
   }
 
   function subtractOne() {
     setCounter( counter - 1 );
-    console.log(counter);
+    // console.log(counter);
   }
 
   // 4. Data maken die voor iedereen beschikbaar is

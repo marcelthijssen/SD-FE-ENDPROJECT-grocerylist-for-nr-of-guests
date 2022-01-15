@@ -144,7 +144,8 @@ function RecipeSearchResults( { recipeSearch } ) {
                   name={ "types of meals" }
                   typeFilter={ typesOfMeals }
                 />
-                <button className={ styles["filter-button"] } onClick={ handleChange } type="submit-button">Activate
+                <button
+                  className={ styles["filter-button"] } onClick={ handleChange } type="submit-button">Activate
                   filter
                 </button>
               </div>

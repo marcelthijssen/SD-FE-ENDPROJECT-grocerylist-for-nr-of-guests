@@ -40,7 +40,6 @@ function ToggleFavorites( { recipe } ) {
     if ( favoriteToSave === null ) favoriteToSave = [];
     favoriteToSave.push( recipe );
     localStorage.setItem( "favorite recipes", JSON.stringify( favoriteToSave ) );
-    console.log( favoriteToSave.length );
   }
 
   // REMOVE from localStorage if set to !isFavorite
@@ -50,7 +49,6 @@ function ToggleFavorites( { recipe } ) {
     // remove accidently added "null" from array during development
     favoriteToSave = favoriteToSave.filter( favoriteToSave => favoriteToSave !== null );
     localStorage.setItem( "favorite recipes", JSON.stringify( favoriteToSave ) );
-    console.log( favoriteToSave.length );
   }
 
   return (

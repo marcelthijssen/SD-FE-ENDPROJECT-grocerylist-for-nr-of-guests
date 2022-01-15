@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Button.module.scss";
 
-function Button( { children, inputType, clickHandler, name, label,disabled, buttonStyle } ) {
+function Button( { children, inputType, clickHandler, name, label, buttonStyle, isDisabled } ) {
 
   return (
-  <button
+    <button
       type={ inputType }
       onClick={ clickHandler }
       name={ name }
       label={ label }
-      disabled={disabled}
-      className={styles[`${buttonStyle}`]}
+      className={ styles[`${ buttonStyle }`] }
+      disabled={ isDisabled }
     >
       { label }{ children }
     </button>
