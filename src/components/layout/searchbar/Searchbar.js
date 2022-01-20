@@ -6,16 +6,24 @@ import Button from "../../buttons/Button";
 
 function Searchbar( { setRecipeSearchHandler } ) {
 
-  const [ query, setQuery ] = useState( localStorage.getItem( "query" )||"" );
-
+  const [ query, setQuery ] = useState( localStorage.getItem( "query" ) || "" );
+  const [ isDisabled, setIsDisabled ] = useState( false );
   const [ queryError, setQueryError ] = useState( false );
   const history = useHistory();
 
+  // save data to localstorage "newsletter", disable button en enable after 1 sec
   function onFormSubmit( e ) {
     e.preventDefault();
     setRecipeSearchHandler( query );
+    setIsDisabled( true );
+    console.log( query );
+    setTimeout( () => {
+      setIsDisabled( false );
+    }, 1000 );
     localStorage.setItem( "query", query );
+    // redirect to search
     history.push( "/search" );
+
   }
 
   function queryHandler( e ) {
@@ -54,18 +62,19 @@ function Searchbar( { setRecipeSearchHandler } ) {
                 null
             }
             {
-              query.length<3 ?
+              query.length < 3 ?
                 <Button
                   inputType="submit"
-                  buttonStyle="searchbutton"
+                  buttonStyle="recipe-search-button"
                   disabled="disabled"
                   label="Search"
-                  />
+                />
                 :
                 <Button
                   inputType="submit"
                   buttonStyle="recipe-search-button"
                   label="Search"
+                  isDisabled={ isDisabled }
                 />
             }
           </div>

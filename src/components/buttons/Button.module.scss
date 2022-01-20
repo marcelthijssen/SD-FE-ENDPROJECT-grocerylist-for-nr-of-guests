@@ -1,25 +1,78 @@
 @import "./../../assets/scss/variables.scss";
 
-.reset-button {
-  background-color: green;
+.signin-button, .register-button {
+  background-color: $menu-button-background;
+  padding: 10px 30px;
+  border-radius: 6px;
+  font-size: 100%;
+  font-weight: 500;
+  margin: 10px;
+  border: solid 3px $menu-button-background;
+  letter-spacing: 2px;
+
+  &:hover {
+    background-color: $menu-button-hover;
+    border: solid 3px $menu-button-hover;
+    transition: ease-in-out 0.5s;
+  }
+
+  &:active {
+    background-color: $menu-button-active;
+  }
+}
+
+.recipe-search-button {
+  background-color: $menu-button-background;
+}
+
+.signin-button {
+  background-color: $background-01;
+}
+
+.reset-button, .mailinglist-button, .recipe-search-button {
+  box-shadow: none;
+  padding: 0 10px 0 10px;
+  margin: 0;
+  height: 100%;
+  border-radius: 0 6px 6px 0;
+  letter-spacing: 2px;
+  font-weight: 700;
   border: none;
 }
 
-.submit-button {
-  background-color: green;
+.reset-button, .submit-button  {
+  background-color: $reset-button-background;
+  padding: 10px;
+  border-radius: 0;
+  font-size: 100%;
+  font-weight: 500;
+
+  &:hover {
+    background-color: $reset-button-hover;
+    transition: ease-in-out 0.5s;
+  }
+
+  &:active {
+    background-color: $reset-button-active;
+  }
 }
 
 .mailinglist-button, .recipe-search-button {
-  background-color: $background-20;
-  box-shadow: none;
-  margin: 0;
-  height: 100%;
-  border-radius:0 6px 6px 0;
+  background-color: $search-button-background;
   color: $font-color-button;
-  letter-spacing: 2px;
-  font-weight: 700;
-   &:disabled {
-    background-color: purple;
+
+
+  &:disabled {
+    background-color: $search-button-disabled;
+  }
+
+  &:hover {
+    background-color: $search-button-hover;
+    transition: ease-in-out 0.2s;
+  }
+
+  &:active {
+    background-color: $search-button-active;
   }
 }
 
@@ -28,21 +81,6 @@
   background-color: $submit-button-background;
 }
 
-button {
-  border-radius: 5px;
-  border: 0 solid $submit-button-background;
-  padding: 10px 15px 10px 15px;
-  margin: 10px 10px 10px 10px;
-  background-color: $submit-button-background;
-  box-shadow: $button-shadow-01;
-
-  &:hover {
-    background-color: $submit-button-hover;
-    transition: ease-in-out 0.5s;
-  }
-
-
-}
 
 .add-button {
   background-color: $add-button-background !important;
@@ -51,6 +89,7 @@ button {
 
   &:hover {
     background-color: $add-button-hover !important;
+    transition: ease-in-out 0.2s;
   }
 }
 
@@ -59,11 +98,11 @@ button {
 
 }
 
-.submit-button {
-  padding-top: 25px;
-  width: 100%;
-  background-color: $background-20;
-}
+//.submit-button {
+//  padding-top: 25px;
+//  width: 100%;
+//  background-color: $background-20;
+//}
 
 .filter-button {
   width: 100%;

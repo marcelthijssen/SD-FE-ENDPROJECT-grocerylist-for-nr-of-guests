@@ -14,6 +14,7 @@ $background-10: hsl(0, 70%, 10%, 0.2);
 $background-11: hsl(0, 70%, 10%, 0.1);
 $background-12: hsl(0, 0%, 90%, 0.65);
 $background-20: hsl(0, 69%, 24%);
+$background-21: hsl(0, 71%, 16%);
 //rgba(234, 234, 234, 0.65)
 /* Background-colors-transparant */
 $background-51: hsla(0, 0%, 100%, 0.8);
@@ -45,23 +46,37 @@ $gap-03: 20px;
 
 //Button
 
-$submit-button-background: hsl(0, 0%, 100%);
-$submit-button-hover: hsl(89, 35%, 35%);
+$submit-button-background: hsl(0, 0%, 80%);
+$submit-button-hover: $background-06;
 $submit-button-disabled: hsl(0, 0%, 50%);
 
-$favorite-button-background: hsl(0, 0%, 100%);
-$favorite-button-hover: hsl(220, 13%, 80%);
+$filter-button-background: hsl(0, 0%, 90%);
+$filter-button-hover:  hsl(0, 0%, 80%);
+$filter-button-active: hsl(0, 0%, 40%);
+
+$reset-button-background: hsl(0, 0%, 95%);
+$reset-button-hover:  hsl(0, 0%, 80%);
+$reset-button-active: hsl(0, 0%, 40%);
+
+$favorite-button-background: hsl(0, 0%, 90%);
+$favorite-button-hover: hsl(0, 0%, 90%);
 $favorite-button-disabled: hsl(0, 0%, 100%);
 
-$search-button-background: hsl(0, 0%, 100%);
-$search-button-hover: hsl(220, 13%, 80%);
-$search-button-disabled: hsl(220, 13%, 18%);
+$search-button-background: hsl(0, 69%, 24%);
+$search-button-hover: hsl(0, 71%, 16%);
+$search-button-disabled: hsl(0, 0%, 100%);
+$search-button-active: hsl(108, 27%, 23%);
 //$search-button-disabled: hsl(196, 66%, 37%);
 
 $add-button-background: hsla(196, 70%, 50%, 0.98);
 $add-button-hover: hsl(196, 66%, 42%);
 //$add-button-hover: hsla(196, 69%, 46%, 0.98);
 
+$menu-button-background: hsl(351, 84%, 67%);
+$menu-button-hover: hsl(349, 38%, 49%);
+$menu-button-active: hsl(351, 42%, 36%);
+//$search-button-active: hsl(108, 27%, 23%);
+//$search-button-disabled: hsl(196, 66%, 37%);
 /* shadows */
 $button-shadow-01: 0 0 7px 7px rgba(0, 0, 0, 0.1);
 

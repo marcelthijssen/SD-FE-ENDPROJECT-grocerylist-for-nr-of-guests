@@ -15,6 +15,8 @@ function RecipeSearchResults( { recipeSearch } ) {
   const [ recipesSearchResult, setRecipesSearchResult ] = useState( [] );
   const [ totalResults, setTotalResults ] = useState( 0 );
   const [ query, setQuery ] = useState( { recipeSearch } );
+  const [ filterActive, setFilterActive ] = useState( false );
+
   //filters
   const [ savedCuisinesFilter, setSavedCuisinesFilter ] = useState();
   const [ savedMealsFilter, setSavedMealsFilter ] = useState( "" );
@@ -23,12 +25,8 @@ function RecipeSearchResults( { recipeSearch } ) {
   //pagination
   const [ offSet, setOffSet ] = useState( 0 );
   const offSetting = `&offset=${ offSet }`;
-  const [ filterActive, setFilterActive ] = useState( false );
 
-  // let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
-  // let [ countFavorites, setCountFavorites ] = useState( favoriteToSave.length );
-
-  // get info from localstorage to add to url, for new api-request
+  // get info from localstorage to insert into the url, for a new api-request
   useEffect( () => {
     setSavedCuisinesFilter( JSON.parse( localStorage.getItem( "types of cuisines" ) ) );
     setSavedMealsFilter( JSON.parse( localStorage.getItem( "types of meals" ) ) );
@@ -56,12 +54,12 @@ function RecipeSearchResults( { recipeSearch } ) {
         setTotalResults( result.data.totalResults );
         setRecipesSearchResult( result.data.results );
 
-        // CLEANUP when user leaves page while function is running
         // console.log( filterActive );
         setFilterActive( false );
         // console.log( filterActive );
         // console.log( result );
 
+        // CLEANUP when user leaves page while function is running
         return function cleanup() {
           source.cancel();
         };
@@ -81,10 +79,12 @@ function RecipeSearchResults( { recipeSearch } ) {
   }
 
   function nextPageButton() {
+    console.log("+10");
     return setOffSet( offSet + 10 );
   }
 
   function previousPageButton() {
+    console.log("-10");
     return setOffSet( offSet - 10 );
   }
 
@@ -130,7 +130,7 @@ function RecipeSearchResults( { recipeSearch } ) {
                   typeFilter={ typesOfIntolerances }
                 />
                 <button className={ styles["filter-button"] } onClick={ handleChange } type="submit-button">Activate
-                  filter
+                  ilter
                 </button>
 
               </div>
@@ -173,16 +173,18 @@ function RecipeSearchResults( { recipeSearch } ) {
             <div id={ styles["grid-mainbottom"] } className={ styles["pagination"] }>
 
               <button
-                type="button"
+                type="submit"
                 onClick={ previousPageButton }
                 disabled={ offSet < 1 }
+                className={styles["pagination-button"]}
               >
                 Previous 10 recipes
               </button>
               <button
-                type="button"
+                type="submit"
                 disabled={ offSet > recipesSearchResult.length }
                 onClick={ nextPageButton }
+                className={styles["pagination-button"]}
               >
                 Next 10 recipes
               </button>

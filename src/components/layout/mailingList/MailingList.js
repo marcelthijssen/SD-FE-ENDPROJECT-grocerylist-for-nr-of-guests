@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./MailingList.module.scss";
 import "../grid.module.css";
 import Button from "../../buttons/Button";
@@ -6,18 +6,23 @@ import { useForm } from "react-hook-form";
 import InputElement from "../../InputField/InputElement";
 
 function MailingList() {
-  const [isDisabled, setIsDisabled] = useState(false);
+
+  const [ isDisabled, setIsDisabled ] = useState(false );
   const { register, formState: { errors }, handleSubmit } = useForm( {
     mode: "onBlur",
   } );
 
+  // save data to localstorage "newsletter", disable button en enable after 1 sec
   function onFormSubmit( data ) {
-    setIsDisabled(true)
-    console.log(isDisabled);
-    console.log(data);
+    setIsDisabled( true );
+    // console.log( isDisabled );
+    // console.log( data );
     localStorage.setItem( "newsletter", JSON.stringify( data ) );
+    setTimeout( () => {
+      setIsDisabled( false );
+      // console.log("again");
+    }, 1000 );
   }
-
 
   return (
     <>
@@ -25,7 +30,8 @@ function MailingList() {
         <form
           id="grid-footer"
           className={ styles["footer-mailing"] }
-          onSubmit={ handleSubmit( onFormSubmit ) }>
+          onSubmit={ handleSubmit( onFormSubmit ) }
+        >
 
           <div className={ styles["mailinglist-input"] }>
             <InputElement
@@ -46,7 +52,7 @@ function MailingList() {
             />
             <Button inputType="submit"
                     label="Submit"
-                    disabled={ isDisabled }
+                    isDisabled={ isDisabled }
                     buttonStyle="mailinglist-button"
             />
           </div>

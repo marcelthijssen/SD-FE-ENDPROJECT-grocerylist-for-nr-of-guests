@@ -7,6 +7,7 @@ import Button from "../components/buttons/Button";
 import PageHeader from "../components/layout/pageheader/Pageheader";
 
 function SignIn() {
+  const [ isDisabled, setIsDisabled ] = useState(false );
   const [ username, setUsername ] = useState( "" );
   const [ password, setPassword ] = useState( "" );
   const [ error, toggleError ] = useState( false );
@@ -24,6 +25,10 @@ function SignIn() {
   async function handleSubmit( e ) {
     e.preventDefault();
     toggleError( false );
+    setTimeout( () => {
+      setIsDisabled( false );
+      // console.log("again");
+    }, 1000 );
 
     try {
       const result = await axios.post( `https://polar-lake-14365.herokuapp.com/api/auth/signin`, {
@@ -84,8 +89,9 @@ function SignIn() {
 
               <Button
                 type="submit"
-                className={ styles["submit-button"] }
-                label="Inloggen"
+                buttonStyle="submit-button"
+                label="Sign In"
+                disabled={ isDisabled }
               />
               <p>Heb je nog geen account?</p>
               <p><Link to="/register">Registreer</Link> je dan eerst.</p>

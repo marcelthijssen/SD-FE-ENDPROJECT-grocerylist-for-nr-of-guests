@@ -69,7 +69,7 @@ function FilterTypes( { typeFilter, name } ) {
         </ul>
 
         <Button
-          className={ styles["reset-button"] }
+          buttonStyle="reset-button"
           inputType="submit"
           label="reset"
           name="reset"

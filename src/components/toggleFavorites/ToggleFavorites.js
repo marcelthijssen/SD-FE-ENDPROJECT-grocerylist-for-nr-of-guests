@@ -3,9 +3,8 @@ import styles from "./ToggleFavorites.module.scss";
 import { useToggle } from "rooks";
 import { FavCounterContext } from "../../context/FavContextProvider";
 
-// import favorites from "../../pages/Favorites";
-
 function ToggleFavorites( { recipe } ) {
+
   const { addOneTofavorite, subtractOneFromFavorite } = useContext(FavCounterContext);
 
   let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );

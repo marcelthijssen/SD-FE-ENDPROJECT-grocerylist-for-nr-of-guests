@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./Button.module.scss";
 
 function Button( { children, inputType, clickHandler, name, label, buttonStyle, isDisabled } ) {
@@ -6,7 +6,7 @@ function Button( { children, inputType, clickHandler, name, label, buttonStyle, 
   return (
     <button
       type={ inputType }
-      onClick={ clickHandler }
+      onClick= { clickHandler }
       name={ name }
       label={ label }
       className={ styles[`${ buttonStyle }`] }
@@ -18,3 +18,4 @@ function Button( { children, inputType, clickHandler, name, label, buttonStyle, 
 }
 
 export default Button;
+

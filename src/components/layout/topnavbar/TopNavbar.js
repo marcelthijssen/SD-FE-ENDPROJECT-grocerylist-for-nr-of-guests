@@ -24,28 +24,30 @@ function TopNavbar() {
           <div className={styles["push"]}>
 
             <Link
-              className={styles["menu-button"]} to="/faq">
+              className={styles["menu-link"]}
+              to="/faq">
               FAQ
             </Link>
 
             <Link
-              className={styles["menu-button"]} to="/shoppinglist">
+              className={styles["menu-link"]}
+              to="/shoppinglist">
               Shoppinglist
             </Link>
 
             { !isAuth ?
               <Button
-                className={styles["menu-button"]}
+                buttonStyle="signin-button"
                 inputType="button"
                 clickHandler={ () => history.push( "/signin" ) }
-                name="sign in"
-                label="sign in"
+                name="login"
+                label="Login"
               />
               : null }
 
             { !isAuth ?
               <Button
-                className={styles["menu-button"]}
+                buttonStyle="register-button"
                 inputType="submit"
                 clickHandler={ () => history.push( "/register" ) }
               > Register

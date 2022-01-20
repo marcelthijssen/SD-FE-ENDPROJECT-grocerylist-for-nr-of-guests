@@ -38,22 +38,15 @@
 
 }
 
-.menu-button {
+.menu-link {
     letter-spacing: 1px;
     border-radius: 5px;
-    border: 1px solid $submit-button-background;
     padding: 10px 15px 10px 15px;
     margin: 10px 10px 10px 10px;
-    background-color: $submit-button-background;
-    //box-shadow: $button-shadow-01;
     text-decoration: none;
 
     &:hover {
-        background-color: $submit-button-hover;
-        transition: ease-in-out 0.5s;
-        color: #fff;
-    }
-    &:disabled {
-        background-color: $submit-button-disabled;
+        background-color: $background-03;
+        transition: ease-in-out 0.2s;
     }
 }

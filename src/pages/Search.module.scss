@@ -14,7 +14,7 @@
 /* Filters */
 #grid-sidebar {
   grid-area: grid-sidebar;
-  padding-bottom:50px;
+  padding-bottom: 50px;
 }
 
 .filtercontainer {
@@ -48,18 +48,28 @@
   color: $title;
   font-size: 18px;
   font-weight: bold;
-  text-indent: 10px;
+  text-indent: 30px;
 }
 
 .filter-button {
   width: 100%;
   margin: 0;
   box-shadow: none;
-  background-color: $background-03;
+  background-color: $filter-button-background;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
   border-radius: 0;
+  border: none;
+  padding: 10px 15px 10px 15px;
+
+  &:hover {
+    background-color: $filter-button-hover;
+  }
+
+  &:active {
+    background-color: $filter-button-active;
+  }
 }
 
 /* pagination */
@@ -67,8 +77,23 @@
   grid-area: grid-mainbottom;
 }
 
-.pagination > button {
-  font-size: 12px;
+.pagination-button {
+  border-radius: 5px;
+  border: 0 solid;
+  padding: 10px 15px 10px 15px;
+  margin: 10px 10px 10px 10px;
+  background-color: $submit-button-background;
+  box-shadow: $button-shadow-01;
+
+  &:hover {
+    background-color: $submit-button-hover;
+    transition: ease-in-out 0.5s;
+  }
+
+  &:active {
+    background-color: aqua;
+  }
+
 }
 
 .pagination {
