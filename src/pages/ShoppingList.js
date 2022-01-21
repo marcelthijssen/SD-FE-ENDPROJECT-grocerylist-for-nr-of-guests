@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./ShoppingList.module.scss";
 import PageHeader from "../components/layout/pageheader/Pageheader";
 import TableIngredients from "../components/tableIngredients/TableIngredienst";
+import { FavCounterContext } from "../context/FavContextProvider";
 
 function ShoppingList() {
 
+  const { counter } = useContext( FavCounterContext );
   const [ shoppingList, setShoppingList ] = useState( [] );
 
   useEffect( () => {
@@ -15,7 +17,7 @@ function ShoppingList() {
     <>
       <div className={ styles["content-container"] }>
 
-        <PageHeader title="Shopping adjusted for amount of guests"/>
+        <PageHeader title="Shopping adjusted for amount of guests" counter={counter}/>
 
         { shoppingList &&
 

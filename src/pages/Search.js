@@ -11,6 +11,7 @@ import typesOfDiets from "../components/filterLists/typesOfDiets.json";
 import { FavCounterContext } from "../context/FavContextProvider";
 
 function RecipeSearchResults( { recipeSearch } ) {
+
   const { counter } = useContext( FavCounterContext );
   const [ recipesSearchResult, setRecipesSearchResult ] = useState( [] );
   const [ totalResults, setTotalResults ] = useState( 0 );
