@@ -7,7 +7,7 @@ function ToggleFavorites( { recipe } ) {
 
   const { addOneTofavorite, subtractOneFromFavorite } = useContext(FavCounterContext);
 
-  let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
+  // let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
 
   // let [ countFavorites, setCountFavorites ] = useState(favoriteToSave.length);
   const [ isFavorite, setIsFavorite ] = useToggle( false );

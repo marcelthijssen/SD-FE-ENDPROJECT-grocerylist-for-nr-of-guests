@@ -1,52 +1,57 @@
 @import "./../../../assets/scss/variables.scss";
 
 #grid {
-    display: grid;
-    grid-template-areas:
+  display: grid;
+  grid-template-areas:
     ". grid-topnav grid-topnav grid-topnav .";
-    grid-template-rows: 70px;
-    grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
-    grid-gap: 10px;
+  grid-template-rows: 70px;
+  grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+  grid-gap: 10px;
 }
+
 .grid {
-    background-color: $background-01;
+  background-color: $background-01;
 }
+
 .top-navbar {
-    grid-area: grid-topnav;
-    display: flex;
-    padding-left: 10px;
-    background-color: #fff;
-    position: sticky;
-    align-items: center;
-    width: 100%;
+  grid-area: grid-topnav;
+  display: flex;
+  padding-left: 10px;
+  background-color: #fff;
+  position: sticky;
+  align-items: center;
+  width: 100%;
 }
+
 .push {
-    margin-left: auto;
-    column-gap: 20px
+  margin-left: auto;
+  column-gap: 20px
 }
 
 .logo-container img {
-    height: 40px;
+  height: 40px;
 }
-.tooltip  {
-    visibility:hidden;
+
+.tooltip {
+  visibility: hidden;
 
 }
 
-.tooltip:hover  {
-    visibility:visible;
+.tooltip:hover {
+  visibility: visible;
 
 }
 
 .menu-link {
-    letter-spacing: 1px;
-    border-radius: 5px;
-    padding: 10px 15px 10px 15px;
-    margin: 10px 10px 10px 10px;
-    text-decoration: none;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  padding: 10px 15px 10px 15px;
+  margin: 10px 10px 10px 10px;
+  text-decoration: none;
+  color: $font-color-01;
 
-    &:hover {
-        background-color: $background-03;
-        transition: ease-in-out 0.2s;
-    }
+  &:hover {
+    background-color: $background-03;
+    transition: ease-in-out 0.2s;
+  }
 }

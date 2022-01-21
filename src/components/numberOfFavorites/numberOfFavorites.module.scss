@@ -2,7 +2,6 @@
 
 .favorites {
   display: flex;
-  align-content: center;
   align-items: center;
   gap: 10px;
 }
@@ -10,9 +9,9 @@
 .favorites-text {
   display: flex;
   flex-direction: row;
-}
-
-
-p {
+  font-weight: 600;
   letter-spacing: 1px;
+  padding-top: 4px;
+  font-size: 125%;
+  color: $font-color-01;
 }

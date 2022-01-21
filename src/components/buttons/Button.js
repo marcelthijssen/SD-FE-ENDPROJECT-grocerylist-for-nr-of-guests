@@ -5,6 +5,7 @@ function Button( { children, inputType, clickHandler, name, label, buttonStyle, 
 
   return (
     <button
+      style={ { cursor: "pointer" } }
       type={ inputType }
       onClick= { clickHandler }
       name={ name }

@@ -106,7 +106,7 @@ function RecipeFavoriteCard( { favRecipesId } ) {
 
                   { numberOfGuests !== recipe.servings
                     ?
-                    <Button className={ styles["reset-button"] }
+                    <Button buttonStyle="reset-amount-button"
                             inputType="button"
                             clickHandler={ e => setNumberOfGuests( recipe.servings ) }
                             label="reset"

@@ -13,13 +13,13 @@ function NumberOfFavorites( { counter } ) {
   return (
     <>
       { counter &&
-        <div className={ styles["favorites"] }>
+        <div className={ styles["favorites"] } style={ { cursor: "pointer" } }>
           <div className={ styles["favorites-text"] }>
-            <p>favorite recipes</p>
+            Favorite recipes
           </div>
           <Button
             type="button"
-            buttonStyle="favorites"
+            buttonStyle="favorite-button"
             disabled={ counter.length === 0 }
             clickHandler={ () => history.push( "/favorites" ) }
             label={ counter }>

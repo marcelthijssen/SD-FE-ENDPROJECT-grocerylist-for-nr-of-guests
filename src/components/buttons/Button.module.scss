@@ -1,10 +1,14 @@
 @import "./../../assets/scss/variables.scss";
 
-.signin-button, .register-button {
-  background-color: $menu-button-background;
-  padding: 10px 30px;
+button {
   border-radius: 6px;
+  padding: 10px 20px;
   font-size: 100%;
+  border: none;
+}
+.signin-button,
+.register-button {
+  background-color: $menu-button-background;
   font-weight: 500;
   margin: 10px;
   border: solid 3px $menu-button-background;
@@ -28,8 +32,14 @@
 .signin-button {
   background-color: $background-01;
 }
+.reset-amount-button {
+  color: $background-01;
+  background-color: $menu-button-active;
 
-.reset-button, .mailinglist-button, .recipe-search-button {
+}
+.reset-button,
+.mailinglist-button,
+.recipe-search-button {
   box-shadow: none;
   padding: 0 10px 0 10px;
   margin: 0;
@@ -39,8 +49,11 @@
   font-weight: 700;
   border: none;
 }
-
-.reset-button, .submit-button  {
+.not {
+  font-size: 300%;
+}
+.reset-button,
+.submit-button  {
   background-color: $reset-button-background;
   padding: 10px;
   border-radius: 0;
@@ -57,7 +70,8 @@
   }
 }
 
-.mailinglist-button, .recipe-search-button {
+.mailinglist-button,
+.recipe-search-button {
   background-color: $search-button-background;
   color: $font-color-button;
 
@@ -93,10 +107,6 @@
   }
 }
 
-.h3 {
-  color: white !important;
-
-}
 
 //.submit-button {
 //  padding-top: 25px;
@@ -112,17 +122,20 @@
   }
 }
 
-.favorites {
-  //box-shadow: none!important;
+.favorite-button {
+  background-color: $background-01;
   border-radius: 50%;
+  border: none;
   width: 60px;
   height: 60px;
+  box-shadow: $box-shadow-01;
 }
 
-.favorites, label:after {
+.favorite-button, label:after {
   display: flex;
   font-size: 30px;
   font-weight: bolder;
   color: $font-color-06;
   justify-content: center;
+  align-items: center;
 }

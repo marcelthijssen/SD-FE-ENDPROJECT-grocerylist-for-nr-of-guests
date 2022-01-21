@@ -50,13 +50,13 @@ function ToggleShoppingList( { recipe, numberOfGuests } ) {
   }
   // todo: change icons
   return (
-    <Button buttonStyle="add-button">
-      <h3 onClick={ toggle }>
-        <div style={ { cursor: "pointer" } }>
+    <Button
+      buttonStyle="add-button"
+      clickHandler={ toggle }>
+        <div>
           { inShoppingList ? <div>❌ Remove from shoppinglist</div> : <div>✅ Add to shoppinglist</div> }
 
         </div>
-      </h3>
     </Button>
 
   );
