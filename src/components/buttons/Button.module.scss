@@ -3,7 +3,9 @@
 button {
   border-radius: 6px;
   padding: 10px 20px;
-  border: none;
+  //border: none;
+  letter-spacing: 2px;
+
 }
 .signin-button,
 .register-button {
@@ -11,7 +13,6 @@ button {
   font-weight: 500;
   margin: 10px;
   border: solid 3px $menu-button-background;
-  letter-spacing: 2px;
 
   &:hover {
     background-color: $menu-button-hover;
@@ -36,14 +37,13 @@ button {
   background-color: $menu-button-active;
 
 }
-.reset-button,
+//.reset-button,
 .mailinglist-button,
 .recipe-search-button {
   box-shadow: none;
   margin: 0;
   height: 100%;
   border-radius: 0 6px 6px 0;
-  letter-spacing: 2px;
   font-weight: 700;
   border: none;
 }
@@ -104,13 +104,6 @@ button {
   }
 }
 
-
-//.submit-button {
-//  padding-top: 25px;
-//  width: 100%;
-//  background-color: $background-20;
-//}
-
 .filter-button {
   width: 100%;
 
@@ -126,6 +119,10 @@ button {
   width: 60px;
   height: 60px;
   box-shadow: $box-shadow-01;
+  &:hover {
+    background-color: $favorite-button-hover;
+    transition: ease-in-out 0.3s;
+  }
 }
 
 .favorite-button, label:after {
