@@ -20,7 +20,6 @@ import Favorites from "./pages/Favorites";
 import Searchbar from "./components/layout/searchbar/Searchbar";
 import Recipe from "./pages/Recipe";
 import RecipeSearchResults from "./pages/Search";
-import HeaderImage from "./components/layout/headerImage/HeaderImage";
 import ShoppingList from "./pages/ShoppingList";
 import { AuthContext } from "./context/IsAuthContextProvider";
 import AccountFilters from "./pages/AccountFilters";
@@ -65,7 +64,7 @@ function App() {
   return (
     <>
       <TopNavbar  id="grid-topnav"/>
-      {/*<HeaderImage id="grid-header"/>*/}
+
       <Searchbar id="grid-searchbar" setRecipeSearchHandler={ setRecipeSearch }/>
 
       <div>

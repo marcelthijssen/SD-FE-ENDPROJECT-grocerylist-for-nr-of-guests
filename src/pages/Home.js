@@ -43,7 +43,7 @@ function Home() {
   return (
     <>
       { recipesSearchResult &&
-        <div className={ styles["content-container"] }>
+        <div >
 
           <PageHeader title="Home"/>
 
@@ -52,7 +52,7 @@ function Home() {
               <div className={ styles["home-container"] }>
 
                 <HomePageInfoBlocks className={ styles["home-info-block"] }/>
-
+                <hr/>
                 <RecipeCard recipesSearchResult={ recipesSearchResult }/>
 
               </div>

@@ -2,10 +2,10 @@ import React from "react";
 // components
 import PageHeader from "../components/layout/pageheader/Pageheader";
 import FilterTypes from "../components/filters/FilterTypes";
-import typesOfCuisines from "../components/filterLists/typesOfCuisines.json";
-import typesOfIntolerances from "../components/filterLists/typesOfIntolerances.json";
-import typesOfMeals from "../components/filterLists/typesOfMeals.json";
-import typesOfDiets from "../components/filterLists/typesOfDiets.json";
+import typesOfCuisines from "../assets/json/typesOfCuisines.json";
+import typesOfIntolerances from "../assets/json/typesOfIntolerances.json";
+import typesOfMeals from "../assets/json/typesOfMeals.json";
+import typesOfDiets from "../assets/json/typesOfDiets.json";
 import styles from "./AccountFilters.module.scss";
 import FilterExport from "../components/filterExport/FilterExport";
 

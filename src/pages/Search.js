@@ -4,10 +4,10 @@ import PageHeader from "../components/layout/pageheader/Pageheader";
 import RecipeCard from "../components/recipecard/RecipeCard";
 import axios from "axios";
 import FilterTypes from "../components/filters/FilterTypes";
-import typesOfMeals from "../components/filterLists/typesOfMeals.json";
-import typesOfCuisines from "../components/filterLists/typesOfCuisines.json";
-import typesOfIntolerances from "../components/filterLists/typesOfIntolerances.json";
-import typesOfDiets from "../components/filterLists/typesOfDiets.json";
+import typesOfMeals from "../assets/json/typesOfMeals.json";
+import typesOfCuisines from "../assets/json/typesOfCuisines.json";
+import typesOfIntolerances from "../assets/json/typesOfIntolerances.json";
+import typesOfDiets from "../assets/json/typesOfDiets.json";
 import { FavCounterContext } from "../context/FavContextProvider";
 
 function RecipeSearchResults( { recipeSearch } ) {

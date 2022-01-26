@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "./HomePageInfoBlocks.module.scss";
-import infoBlocks from "./HomeInfoBlockText.json";
+import infoBlocks from "../../assets/json/HomeInfoBlockText.json";
 
 function HomePageInfoBlocks() {
 
