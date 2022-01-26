@@ -24,10 +24,10 @@ function RecipeIcons( { recipe } ) {
           ️{ ` ${ recipe.readyInMinutes } min.` }
         </div>
 
-        <div className={ styles["recipe-info-detail"] }>
+        <div>
           { recipe.vegetarian
             ?
-            <div>
+            <div  className={ styles["recipe-info-detail"] }>
               <div className={ styles["tooltip"] }>Vegetarian recipe</div>
               <img alt="vegetarian"
                    className={ styles["recipe-icon"] }
@@ -40,11 +40,11 @@ function RecipeIcons( { recipe } ) {
           }
         </div>
 
-        <div className={ styles["recipe-info-detail"] }>
+        <div>
           { recipe.vegan
             ?
-            <div>
-              <div className={ styles["tooltip"] }>Veganrecipe</div>
+            <div  className={ styles["recipe-info-detail"] }>
+              <div className={ styles["tooltip"] }>Vegan recipe</div>
               <img alt="vegan"
                    style={ { cursor: "pointer" } }
                    className={ styles["recipe-icon"] }
@@ -54,10 +54,10 @@ function RecipeIcons( { recipe } ) {
           }
         </div>
 
-        <div className={ styles["recipe-info-detail"] }>
+        <div>
           { recipe.glutenfree
             ?
-            <div>
+            <div  className={ styles["recipe-info-detail"] }>
               <div className={ styles["tooltip"] }>Glutenfree</div>
               <img alt="gluten free"
                    style={ { cursor: "pointer" } }
@@ -67,10 +67,10 @@ function RecipeIcons( { recipe } ) {
             : ""
           }
         </div>
-        <div className={ styles["recipe-info-detail"] }>
+        <div>
           { recipe.dairyFree
             ?
-            <div>
+            <div  className={ styles["recipe-info-detail"] }>
               <div className={ styles["tooltip"] }>Dairyfree</div>
               <img alt="dairy free"
                    className={ styles["recipe-icon"] }

@@ -12,6 +12,7 @@ function Favorites() {
   const favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
   const history = useHistory();
 
+  //
   useEffect( () => {
     if ( favoriteToSave === null || favoriteToSave.length === 0 ) {
       history.push( "/search" );
@@ -29,6 +30,7 @@ function Favorites() {
                 <div>
                   {
                     <RecipeFavoriteCard favRecipesId={ favRecipesId }/>
+
                   }
                 </div>
               ) }

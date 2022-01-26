@@ -16,22 +16,10 @@
 }
 
 .mailinglist-input {
-  display:flex;
-  align-items: center;
-  height: 50px;
-  padding-left:20px;
-  background: #fff;
-  border-radius:6px;
-  border:none;
-  box-shadow: $box-shadow-01;
+  @include form-input;
 }
 .mailinglist-input input {
-font-size: 20px;
-}
-
-.searchbutton{
-  height: 30px!important;
-  padding: 5px 10px 5px 10px;
+  font-size: 20px;
 }
 
 .error {

@@ -76,9 +76,7 @@ function RecipeFavoriteCard( { favRecipesId } ) {
                   </div>
                 </Link>
 
-                <div className={ styles["recipe-card-icon-container"] }>
                   <RecipeIcons recipe={ recipe }/>
-                </div>
               </div>
 
               <div className={ styles["middle-column"] }>

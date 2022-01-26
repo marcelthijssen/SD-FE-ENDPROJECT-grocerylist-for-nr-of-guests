@@ -9,13 +9,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 15px;
+  padding: 0 0 15px 15px;
 
   &:hover .tooltip {
     opacity: 1;
     position: absolute;
     transition: ease-in-out 0.3s;
-    transition-delay: 2s;
+    transition-delay: 1s;
   }
 
   &:hover .recipe-icon {

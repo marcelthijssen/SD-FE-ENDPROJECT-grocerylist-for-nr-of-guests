@@ -3,7 +3,7 @@
 button {
   border-radius: 6px;
   padding: 10px 20px;
-  //border: none;
+  border: none;
   letter-spacing: 2px;
 
 }
@@ -95,7 +95,6 @@ button {
 
 .add-button {
   background-color: $add-button-background !important;
-  //color: red!important;
   color: white !important;
 
   &:hover {

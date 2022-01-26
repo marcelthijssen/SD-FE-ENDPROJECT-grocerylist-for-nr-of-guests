@@ -22,14 +22,7 @@
 }
 
 .search-input {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    padding-left: 10px;
-    background: $background-01;
-    border-radius:6px;
-    border:none;
-    box-shadow: $box-shadow-01;
+    @include form-input;
 }
 .searchbar input {
     font-size: 20px;
