@@ -38,49 +38,52 @@ function Searchbar( { setRecipeSearchHandler } ) {
 
   return (
     <>
-      <div id="grid">
-        <form
-          id="grid-searchbar"
-          className={ styles["searchbar"] }
-          onSubmit={ onFormSubmit }>
-
-          <div className={ styles["search-input"] }>
-            <input
-              type="text"
-              name="search"
-              value={ query }
-              placeholder={ query }
-              onChange={ e => {
-                setQuery( e.target.value );
-                queryHandler( e );
-              } }
-            />
-            {
-              queryError ?
-                <span className={ styles["error"] }>Please insert a minimum of 3 characters</span>
-                :
-                null
-            }
-            {
-              query.length < 3 ?
-                <Button
-                  inputType="submit"
-                  buttonStyle="recipe-search-button"
-                  disabled="disabled"
-                  label="Search"
-                />
-                :
-                <Button
-                  inputType="submit"
-                  buttonStyle="recipe-search-button"
-                  label="Search"
-                  isDisabled={ isDisabled }
-                />
-            }
+      <div id={ styles["grid"] }>
+        <div id={ styles["pageheader"] } className={ styles["pageheader"] }>
+          <div className={ styles["pageheader-text"] }>
+            <div>Enjoying a meal with friends</div>
           </div>
-        </form>
-      </div>
+          <form
+            className={ styles["searchbar"] }
+            onSubmit={ onFormSubmit }>
 
+            <div className={ styles["search-input"] }>
+              <input
+                type="text"
+                name="search"
+                value={ query }
+                placeholder={ query }
+                onChange={ e => {
+                  setQuery( e.target.value );
+                  queryHandler( e );
+                } }
+              />
+              {
+                queryError ?
+                  <span className={ styles["error"] }>Please insert a minimum of 3 characters</span>
+                  :
+                  null
+              }
+              {
+                query.length < 3 ?
+                  <Button
+                    inputType="submit"
+                    buttonStyle="recipe-search-button"
+                    disabled="disabled"
+                    label="Search"
+                  />
+                  :
+                  <Button
+                    inputType="submit"
+                    buttonStyle="recipe-search-button"
+                    label="Search"
+                    isDisabled={ isDisabled }
+                  />
+              }
+            </div>
+          </form>
+        </div>
+      </div>
     </>
   );
 }

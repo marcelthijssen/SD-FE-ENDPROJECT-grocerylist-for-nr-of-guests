@@ -3,7 +3,6 @@
 button {
   border-radius: 6px;
   padding: 10px 20px;
-  font-size: 100%;
   border: none;
 }
 .signin-button,
@@ -41,7 +40,6 @@ button {
 .mailinglist-button,
 .recipe-search-button {
   box-shadow: none;
-  padding: 0 10px 0 10px;
   margin: 0;
   height: 100%;
   border-radius: 0 6px 6px 0;
@@ -74,7 +72,6 @@ button {
 .recipe-search-button {
   background-color: $search-button-background;
   color: $font-color-button;
-
 
   &:disabled {
     background-color: $search-button-disabled;

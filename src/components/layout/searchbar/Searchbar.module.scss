@@ -3,24 +3,28 @@
 #grid {
     display: grid;
     grid-template-areas:
-    "grid-searchbar grid-searchbar grid-searchbar grid-searchbar grid-searchbar";
+    "grid-pageheader";
     grid-template-rows: auto;
 }
-#grid-searchbar {
-    grid-area: grid-searchbar;
+#pageheader {
+    grid-area: grid-pageheader;
+}
+.pageheader {
+    border-bottom: 0px solid white;
+    background: url(../../../assets/images/pageheader-image.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -4vw;
 }
 .searchbar {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: $background-04;
-    height: 120px;
 }
 
 .search-input {
-    display:flex;
+    display: flex;
     align-items: center;
-    height: 50px;
+    height: 60px;
     padding-left: 10px;
     background: $background-01;
     border-radius:6px;
@@ -31,16 +35,10 @@
     font-size: 20px;
     border:none;
     display:flex;
-    height:30px;
     margin: 5px;
     width: 500px;
     outline: none;
     letter-spacing: 1px;
-}
-
-.searchbutton{
-    height: 30px!important;
-    padding: 5px 10px 5px 10px;
 }
 
 .error {
@@ -56,11 +54,23 @@
     letter-spacing: 1px;
 }
 
-
 .error-message {
     color: $error-message;
     position: absolute;
     border: 1px solid $error-message;
     border-radius: 6px;
     padding: 10px;
+}
+
+.pageheader-text {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing:2px;
+    color: #ffffff;
+    text-shadow: 0 0 5px $font-color-07;
+    text-align: center;
+    height:20vw;
 }

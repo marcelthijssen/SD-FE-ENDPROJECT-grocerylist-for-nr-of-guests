@@ -65,7 +65,7 @@ function App() {
   return (
     <>
       <TopNavbar  id="grid-topnav"/>
-      <HeaderImage id="grid-header"/>
+      {/*<HeaderImage id="grid-header"/>*/}
       <Searchbar id="grid-searchbar" setRecipeSearchHandler={ setRecipeSearch }/>
 
       <div>
