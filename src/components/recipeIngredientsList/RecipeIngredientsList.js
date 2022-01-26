@@ -15,9 +15,11 @@ function RecipeIngredientsList( { recipe, numberOfGuests } ) {
               { recipe.extendedIngredients.map( ( ingredient ) =>
                 <tbody key={ ingredient.id }>
                 <tr>
+                  {/*Calculating amount adjusted from amount of guests input */}
                   <td> { displayAmount( (ingredient.amount / recipe.servings) * numberOfGuests ) } </td>
                   <td> { ingredient.unit } </td>
                   <td> { ingredient.name }</td>
+                  push
                 </tr>
                 </tbody>
               ) }

@@ -32,13 +32,13 @@ function ToggleShoppingList( { recipe, numberOfGuests } ) {
   function addToShoppinglist() {
     let shoppinglist = JSON.parse( localStorage.getItem( "shoppinglist" ) );
 
-    // add numberOfGuest and recipe in an temp array (fullrecipeInfo)
+    // add numberOfGuest and recipe in array (fullrecipeInfo)
     const fullRecipeInfo =  [ recipe, { "numberofguests": numberOfGuests }, ] ;
-    console.log( { fullRecipeInfo } );
+    // console.log( { fullRecipeInfo } );
 
     // add fullRecipeInfo is to the complete shoppinglist.
     shoppinglist.push( fullRecipeInfo );
-    console.log( shoppinglist );
+    // console.log( shoppinglist );
     localStorage.setItem( "shoppinglist", JSON.stringify( shoppinglist ) );
   }
 
