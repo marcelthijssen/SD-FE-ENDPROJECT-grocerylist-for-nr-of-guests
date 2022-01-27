@@ -17,7 +17,7 @@ function ShoppingList() {
     <>
       <div className={ styles["content-container"] }>
 
-        <PageHeader title="Shopping adjusted for amount of guests" counter={counter}/>
+        <PageHeader title="Shopping adjusted for amount of guests" counter={ counter }/>
 
         { shoppingList &&
 
@@ -25,6 +25,7 @@ function ShoppingList() {
             <div id={ styles["grid-main"] }>
 
               <TableIngredients shoppingList={ shoppingList }/>
+
             </div>
           </div>
         }
