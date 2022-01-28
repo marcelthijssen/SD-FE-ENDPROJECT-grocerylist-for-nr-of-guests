@@ -55,7 +55,7 @@ function TableIngredients( { shoppingList } ) {
                 <tbody key={ ingredient.id }>
                 <tr>
                   {/*Calculating amount adjusted from amount of guests input */ }
-                  <td> { ingredient.id } </td>
+                  {/*<td> { ingredient.id } </td>*/}
                   <td> { ingredient.amount } </td>
                   <td> { ingredient.unit } </td>
                   <td> { ingredient.name }</td>
