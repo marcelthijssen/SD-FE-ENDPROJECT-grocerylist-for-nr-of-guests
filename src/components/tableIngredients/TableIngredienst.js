@@ -3,18 +3,22 @@
 import React, { useState } from "react";
 import displayAmount from "../../helpers/displayAmount";
 import styles from "./TableIngredients.module.scss";
+import replaceUnitnNames from "../../helpers/replaceUnitnNames";
 
-const arr = [{a: 'b'}]
-console.log(arr.some(item => item.a === 'b'))
+const arr = [ { a: "b" } ];
+console.log( arr.some( item => item.a === "b" ) );
 
 function TableIngredients( { shoppingList } ) {
   console.log( shoppingList );
-  let shoppingListAll=[];
+
+  let shoppingListAll = [];
   shoppingList.map( ( recipe ) => {
     recipe[0].extendedIngredients.map( ( ingredient ) => {
-      console.log( shoppingListAll );
-      //Finding the same ingredient with item.id equals ingredient.id BUT NOT when units are different
-      if ( !shoppingListAll.some(item => item.id === ingredient.id && shoppingListAll.some(item => item === ingredient.unit)) ) {
+      // console.log( shoppingListAll );
+
+      replaceUnitnNames( ingredient );
+      //IF an ingredient.id are the same AND the unit is the same then don't put in the array yet.
+      if ( !shoppingListAll.some( item => item.id === ingredient.id && shoppingListAll.some( item => item === ingredient.unit ) ) ) {
         shoppingListAll = [ ...shoppingListAll, {
           "id": ingredient.id,
           "name": ingredient.name,
@@ -22,7 +26,7 @@ function TableIngredients( { shoppingList } ) {
           "amount": displayAmount( (ingredient.amount / recipe[0].servings) * recipe[1].numberofguests )
         } ];
       } else {
-                // add amount to other amount if unit is equals;
+        // add the amount to other amount if unit is equals;
       }
     } );
     console.log( shoppingListAll );
