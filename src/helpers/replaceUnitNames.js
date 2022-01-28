@@ -1,12 +1,9 @@
-export default function replaceUnitnNames(ingredient) {
-  // new component to change units
-  //   if ( ingredient.unit === "tbsp" ) {
-  //     ingredient.unit = "tablespoon"
-  //   }
-  // }
-
+export default function replaceUnitNames(ingredient) {
   switch ( ingredient.unit ) {
-    case "tbsp" || "tablespoons":
+    case "tbsp":
+      ingredient.unit = "tablespoon";
+      break;
+      case "tablespoons":
       ingredient.unit = "tablespoon";
       break;
     case "tsp":
@@ -16,6 +13,5 @@ export default function replaceUnitnNames(ingredient) {
       ingredient.unit = "cup";
       break;
     default:
-    // code block
   }
 }
