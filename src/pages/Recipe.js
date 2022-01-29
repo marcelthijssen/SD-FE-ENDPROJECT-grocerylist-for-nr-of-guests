@@ -38,6 +38,8 @@ function Recipe() {
       { recipe &&
         <div>
           <PageHeader title={ `${ recipe.title } ` }/>
+
+          {/*TODO: Positioning: Favorite in card*/}
           <ToggleFavorites recipe={ recipe.id }/>
 
           <div id={ styles["grid"] }>

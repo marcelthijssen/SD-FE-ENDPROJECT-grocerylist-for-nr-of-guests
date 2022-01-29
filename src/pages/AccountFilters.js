@@ -8,6 +8,7 @@ import typesOfMeals from "../assets/json/typesOfMeals.json";
 import typesOfDiets from "../assets/json/typesOfDiets.json";
 import styles from "./AccountFilters.module.scss";
 import FilterExport from "../components/filterExport/FilterExport";
+import Button from "../components/buttons/Button";
 
 function AccountFilters() {
 
@@ -34,29 +35,33 @@ function AccountFilters() {
   return (
     <div>
       <PageHeader
-        title="Filter Settings"
+        title="Personal filter Settings"
       />
       <div id={ styles["grid"] }>
 
         <div id={ styles["grid-main"] }>
           <h1>Filtersettings</h1>
-          <p>Here you can safe your personal filtersettings.</p>
-          <p>And copy them to use them when searching.</p>
+          <p>Here you can save your personal filtersettings.</p>
+          <p>To use them, click 'Use these settings'.</p>
+
           <div className={ styles["filters-container"] }>
+
             <div className={ styles["filter"] }>
+
               <div className={ styles["filter-title"] }>
                 Types of Cuisines
               </div>
+
               <FilterTypes
                 className={ styles["account-filter"] }
                 title={ "Types of Cuisines" }
                 name={ "account settings toc" }
                 typeFilter={ typesOfCuisines }
               />
-              <button
-                onClick={ copySettingsToc }>
+              <Button
+                clickHandler={ copySettingsToc }>
                 Use these settings
-              </button>
+              </Button>
             </div>
 
             <div className={ styles["filter"] }>
@@ -70,10 +75,10 @@ function AccountFilters() {
                 name={ "account settings toi" }
                 typeFilter={ typesOfIntolerances }
               />
-              <button
-                onClick={ copySettingsToi }>
+              <Button
+                clickHandler={ copySettingsToi }>
                 Use these settings
-              </button>
+              </Button>
             </div>
 
             <div className={ styles["filter"] }>
@@ -86,10 +91,10 @@ function AccountFilters() {
                 name={ "account settings tom" }
                 typeFilter={ typesOfMeals }
               />
-              <button
-                onClick={ copySettingsTom }>
+              <Button
+                clickHandler={ copySettingsTom }>
                 Use these settings
-              </button>
+              </Button>
             </div>
 
             <div className={ styles["filter"] }>
@@ -102,13 +107,14 @@ function AccountFilters() {
                 name={ "account settings tod" }
                 typeFilter={ typesOfDiets }
               />
-              <button
-                onClick={ copySettingsTod }>
+              <Button
+                clickHandler={ copySettingsTod }>
                 Use these settings
-              </button>
+              </Button>
             </div>
           </div>
-          <FilterExport/>
+
+          <FilterExport />
 
         </div>
       </div>

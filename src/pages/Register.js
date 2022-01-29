@@ -100,13 +100,13 @@ function Register() {
                 { error && <p className={ styles["error"] }>Error...</p> }
                 <Button
                   type="submit"
-                  className="submit-button"
+                  buttonStyle="submit-button"
                   disabled={ loading }
                 >
-                  Registreren
+                  Register
                 </Button>
 
-                <p>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
+                <p>Allready an account? You can signin <Link to="/signin">here</Link>.</p>
 
               </form>
 

@@ -1,4 +1,5 @@
 import React from "react";
+
 import styles from "./FilterExport.scss";
 import Button from "../buttons/Button";
 
@@ -27,7 +28,7 @@ function FilterExport() {
   return (
 
     <Button
-      className={ styles["filter-button"] }
+      buttonStyle="filter-button"
       clickHandler={ exportFilterSettings }
 
       label="COPY ALL SETTINGS"

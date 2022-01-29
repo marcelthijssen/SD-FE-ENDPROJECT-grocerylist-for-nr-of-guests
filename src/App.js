@@ -29,7 +29,6 @@ function App() {
   const { isAuth } = useContext( AuthContext );
   const [ recipeSearch, setRecipeSearch ] = useState();
 
-  // const query = JSON.parse( localStorage.getItem( "query" ) );
   const cuisines = JSON.parse( localStorage.getItem( "types of cuisines" ) );
   const typesOfMeals = JSON.parse( localStorage.getItem( "types of meals" ) );
   const intolerances = JSON.parse( localStorage.getItem( "types of intolerances" ) );
