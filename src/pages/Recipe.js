@@ -71,11 +71,9 @@ function Recipe() {
                 <div className={ styles["number-of-guests"] }>
                   <p>{ `This recipe is written for ${ recipe.servings } personen.` }</p>
                   <p>
-                    Select the amount of friends that are coming.
-                    The ingredientslist will automaticaly be updated.
-                  </p><p>
-                  when ready click the 'add to shoppinglist'-button. The ingredients will be added to your
-                  shoppinglist.
+                    For how many guests will you be serving?
+                    Select the amount of guests and add to the ingredients
+                    into your shopping-list.
                 </p>
                 </div>
 
