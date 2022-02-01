@@ -34,13 +34,9 @@
 }
 
 .input-field {
-  display: flex;
-  width: 300px;
-  height: 35px;
-  text-indent: 10px;
-  border-radius: 6px;
-  border: none;
-  margin-top: 10px;
+  @include form-input;
+  height: 35pt;
+  margin: 10px 0;
 }
 
 form > label {
@@ -58,9 +54,7 @@ form > label {
   flex-direction: column;
   width: 300px;
   border: none;
-
 }
-
-.button {
-  padding: 20px;
+.text-block {
+  padding-top:30px;
 }

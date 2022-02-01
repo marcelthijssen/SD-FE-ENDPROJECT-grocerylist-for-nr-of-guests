@@ -5,8 +5,25 @@ button {
   padding: 10px 20px;
   border: none;
   letter-spacing: 2px;
-
 }
+
+.menu-button {
+  background-color: #ffffff;
+  font-weight: 500;
+  margin: 10px;
+  border: solid 3px $menu-button-background;
+
+  &:hover {
+    background-color: $menu-button-hover;
+    border: solid 3px $menu-button-hover;
+    transition: ease-in-out 0.5s;
+  }
+
+  &:active {
+    background-color: $menu-button-active;
+  }
+}
+
 .signin-button,
 .register-button {
   background-color: $menu-button-background;
@@ -25,32 +42,22 @@ button {
   }
 }
 
-.recipe-search-button {
+.submit-button {
   background-color: $menu-button-background;
 }
 
-.signin-button {
-  background-color: $background-01;
-}
 .reset-amount-button {
   color: $background-01;
   background-color: $menu-button-active;
 
 }
-.mailinglist-button,
-.recipe-search-button {
-  box-shadow: none;
-  margin: 0;
-  height: 100%;
-  border-radius: 0 6px 6px 0;
-  font-weight: 700;
-  border: none;
-}
+
 .not {
   font-size: 300%;
 }
+
 .reset-button,
-.submit-button  {
+.submit-button {
   background-color: $reset-button-background;
   padding: 10px;
   border-radius: 0;
@@ -58,7 +65,7 @@ button {
   font-weight: 500;
 
   &:hover {
-    background-color: $reset-button-hover;
+    background-color: $menu-button-hover;
     transition: ease-in-out 0.5s;
   }
 
@@ -67,10 +74,23 @@ button {
   }
 }
 
+.submit-button {
+  background-color: $menu-button-background;
+  border-radius: 6px;
+  margin-top: 20px;
+
+}
+
 .mailinglist-button,
 .recipe-search-button {
   background-color: $search-button-background;
   color: $font-color-button;
+  box-shadow: none;
+  margin: 0;
+  height: 100%;
+  border-radius: 0 6px 6px 0;
+  font-weight: 700;
+  border: none;
 
   &:disabled {
     background-color: $search-button-disabled;
@@ -104,6 +124,10 @@ button {
 
 .filter-button {
   width: 100%;
+  background-color: $add-button-hover !important;
+  padding: 20px 0;
+  color: #fff;
+  margin: 20px 0;
 
   &:hover {
     background-color: $background-20 !important;
@@ -117,6 +141,7 @@ button {
   width: 60px;
   height: 60px;
   box-shadow: $box-shadow-01;
+
   &:hover {
     background-color: $favorite-button-hover;
     transition: ease-in-out 0.3s;
@@ -130,4 +155,29 @@ button {
   color: $font-color-06;
   justify-content: center;
   align-items: center;
+}
+
+.use-button,
+.use-all-button {
+  width: fit-content;
+  color: $font-color-button;
+  background-color: $add-button-background;
+  font-weight: 800;
+  margin-top: 20px;
+  border-radius: 0;
+
+  &:hover {
+    background-color: $add-button-hover;
+    transition: ease-in-out 0.5s;
+  }
+
+  &:active {
+    background-color: $menu-button-active;
+  }
+}
+
+.use-button {
+  width: 100%;
+  font-weight: 500;
+
 }

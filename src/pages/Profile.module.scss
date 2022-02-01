@@ -13,8 +13,8 @@
 
 #grid-main {
   grid-area: grid-main;
-
 }
+
 .account-container {
   display: flex;
   flex-direction: row;
@@ -24,11 +24,21 @@
 }
 
 .account {
-  display:flex;
+  display: flex;
   flex-direction: column;
   width: 500px;
 }
-.filtersettings {
-  display:flex;
-  flex-direction: column;
+
+//.filtersettings {
+//  display:flex;
+//  flex-direction: column;
+//}
+.filter-settings {
+  padding: 10px;
+  background-color: $background-03;
+  border-radius: 6px;
+  text-decoration: none;
+  &:hover {
+    background-color: $background-05;
+  }
 }

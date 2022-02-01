@@ -57,7 +57,7 @@ function TopNavbar() {
 
             { isAuth ?
               <Button
-                className={styles["menu-button"]}
+                buttonStyle="menu-button"
                 inputType="submit"
                 clickHandler={ () => history.push( "/profile" ) }
               >
@@ -66,7 +66,7 @@ function TopNavbar() {
 
             { isAuth ?
               <Button
-                className={styles["menu-button"]}
+                buttonStyle="menu-button"
                 inputType="submit"
                 clickHandler={ () => history.push( "/account-filters" ) }
               >
@@ -75,7 +75,7 @@ function TopNavbar() {
             
             { isAuth ?
               <Button
-                className={styles["menu-button"]}
+                buttonStyle="menu-button"
                 inputType="submit"
                 clickHandler={ logout }
               >

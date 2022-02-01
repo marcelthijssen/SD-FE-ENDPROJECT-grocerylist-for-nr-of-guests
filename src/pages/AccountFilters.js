@@ -7,7 +7,6 @@ import typesOfIntolerances from "../assets/json/typesOfIntolerances.json";
 import typesOfMeals from "../assets/json/typesOfMeals.json";
 import typesOfDiets from "../assets/json/typesOfDiets.json";
 import styles from "./AccountFilters.module.scss";
-import FilterExport from "../components/filterExport/FilterExport";
 import Button from "../components/buttons/Button";
 
 function AccountFilters() {
@@ -32,6 +31,13 @@ function AccountFilters() {
     localStorage.setItem( "types of diets", JSON.stringify( tod ) );
   }
 
+  function copyAll() {
+    copySettingsToc();
+    copySettingsToc();
+    copySettingsToi();
+    copySettingsTom();
+  }
+
   return (
     <div>
       <PageHeader
@@ -39,7 +45,7 @@ function AccountFilters() {
       />
       <div id={ styles["grid"] }>
 
-        <div id={ styles["grid-main"] }>
+        <div id={ styles["grid-main"] } className={styles["container"]}>
           <h1>Filtersettings</h1>
           <p>Here you can save your personal filtersettings.</p>
           <p>To use them, click 'Use these settings'.</p>
@@ -59,6 +65,7 @@ function AccountFilters() {
                 typeFilter={ typesOfCuisines }
               />
               <Button
+                buttonStyle="use-button"
                 clickHandler={ copySettingsToc }>
                 Use these settings
               </Button>
@@ -76,6 +83,7 @@ function AccountFilters() {
                 typeFilter={ typesOfIntolerances }
               />
               <Button
+                buttonStyle="use-button"
                 clickHandler={ copySettingsToi }>
                 Use these settings
               </Button>
@@ -92,6 +100,7 @@ function AccountFilters() {
                 typeFilter={ typesOfMeals }
               />
               <Button
+                buttonStyle="use-button"
                 clickHandler={ copySettingsTom }>
                 Use these settings
               </Button>
@@ -108,14 +117,18 @@ function AccountFilters() {
                 typeFilter={ typesOfDiets }
               />
               <Button
+                buttonStyle="use-button"
                 clickHandler={ copySettingsTod }>
                 Use these settings
               </Button>
             </div>
           </div>
 
-          <FilterExport />
-
+          <Button
+            buttonStyle="use-all-button"
+            clickHandler={ copyAll }>
+             USE ALL THESE FILTERSETTINGS
+          </Button>
         </div>
       </div>
     </div>

@@ -49,13 +49,14 @@ function SignIn() {
 
   return (
     <>
-      <PageHeader className={ styles[" "] } title="Inloggen"/>
+      <PageHeader title="sign in"/>
 
       <div id={ styles["grid"] }>
         <div id={ styles["grid-main"] }>
 
           <div className={ styles["form-container"] }>
             <form className={ styles["login-form"] } onSubmit={ handleSubmit }>
+
               <label
                 className={ styles["label-input"] }
                 htmlFor="username-field">
@@ -93,8 +94,10 @@ function SignIn() {
                 label="Sign In"
                 disabled={ isDisabled }
               />
+              <div className={styles["text-block"]}>
               <p>Heb je nog geen account?</p>
               <p><Link to="/register">Registreer</Link> je dan eerst.</p>
+              </div>
             </form>
           </div>
         </div>

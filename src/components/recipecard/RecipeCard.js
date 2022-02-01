@@ -1,16 +1,11 @@
 // RecipeCard are displayed in the Search-pages as results
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./RecipeCard.module.scss";
 import { Link } from "react-router-dom";
 import ToggleFavorites from "../toggleFavorites/ToggleFavorites";
 import RecipeIcons from "../recipeIcons/RecipeIcons";
 
 function RecipeCard( { recipesSearchResult } ) {
-
-  // useEffect(()=>{
-  //   // console.log(recipesSearchResult);
-  //   // console.log(recipesSearchResult[0].id);
-  // })
 
   return (
     <>

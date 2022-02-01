@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./ToggleFavorites.module.scss";
 import { useToggle } from "rooks";
 import { FavCounterContext } from "../../context/FavContextProvider";

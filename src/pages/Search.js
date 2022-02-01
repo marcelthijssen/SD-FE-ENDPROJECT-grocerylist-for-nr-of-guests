@@ -130,8 +130,7 @@ function RecipeSearchResults( { recipeSearch } ) {
                   name={ "types of intolerances" }
                   typeFilter={ typesOfIntolerances }
                 />
-                <button className={ styles["filter-button"] } onClick={ handleChange } type="submit-button">Activate
-                  ilter
+                <button className={ styles["filter-button"] } onClick={ handleChange } type="submit-button">Activate Filter
                 </button>
 
               </div>

@@ -49,71 +49,74 @@ function Register() {
 
   return (
     <>
-      <div className={ styles["content-container"] }>
-        <PageHeader title="Registreren"/>
-        <div id={ styles["grid"] }>
-          <div id={ styles["grid-main"] }>
+      <PageHeader title="Register"/>
 
-            <div className={ styles["InputField-container"] }>
-              <form className={ styles["register-InputField"] } onSubmit={ handleSubmit }>
-                <label
-                  htmlFor="email-field"
-                  className={ styles["label-input"] }
-                >
-                  Emailadres:
-                  <input
-                    className={ styles["input-field"] }
-                    type="email"
-                    id="email-field"
-                    name="email"
-                    value={ email }
-                    onChange={ ( e ) => setEmail( e.target.value ) }
-                  />
-                </label>
+      <div id={ styles["grid"] }>
+        <div id={ styles["grid-main"] }>
 
-                <label
-                  className={ styles["label-input"] }
-                  htmlFor="username-field">
-                  Gebruikersnaam:
-                  <input
-                    className={ styles["input-field"] }
-                    type="text"
-                    id="username-field"
-                    value={ username }
-                    onChange={ ( e ) => setUsername( e.target.value ) }
-                  />
-                </label>
+          <div className={ styles["form-container"] }>
+          <form className={ styles["register-form"] } onSubmit={ handleSubmit }>
 
-                <label
-                  className={ styles["label-input"] }
-                  htmlFor="password-field">
-                  Wachtwoord:
-                  <input
-                    className={ styles["input-field"] }
-                    type="password"
-                    id="password-field"
-                    name="password"
-                    value={ password }
-                    onChange={ ( e ) => setPassword( e.target.value ) }
-                  />
-                </label>
-                { error && <p className={ styles["error"] }>Error...</p> }
-                <Button
-                  type="submit"
-                  buttonStyle="submit-button"
-                  disabled={ loading }
-                >
-                  Register
-                </Button>
+            <label
+              htmlFor="email-field"
+              className={ styles["label-input"] }
+            >
+              email-address:
+              <input
+                className={ styles["input-field"] }
+                type="email"
+                id="email-field"
+                name="email"
+                value={ email }
+                onChange={ ( e ) => setEmail( e.target.value ) }
+              />
+            </label>
 
-                <p>Allready an account? You can signin <Link to="/signin">here</Link>.</p>
+            <label
+              className={ styles["label-input"] }
+              htmlFor="username-field">
+              Username:
+              <input
+                className={ styles["input-field"] }
+                type="text"
+                id="username-field"
+                value={ username }
+                onChange={ ( e ) => setUsername( e.target.value ) }
+              />
+            </label>
 
-              </form>
+            <label
+              className={ styles["label-input"] }
+              htmlFor="password-field">
+              Password:
+              <input
+                className={ styles["input-field"] }
+                type="password"
+                id="password-field"
+                name="password"
+                value={ password }
+                onChange={ ( e ) => setPassword( e.target.value ) }
+              />
+            </label>
+            { error && <p className={ styles["error"] }>Error...</p> }
 
+            <Button
+              type="submit"
+              buttonStyle="submit-button"
+              label="register"
+              disabled={ loading }
+            />
+            <div className={styles["text-block"]}>
+            <p>Allready an account? </p>
+              <p>You can signin <Link to="/signin">here</Link>.</p>
             </div>
+
+          </form>
+
           </div>
         </div>
       </div>
+
     </>
   );
 }

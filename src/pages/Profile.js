@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../context/IsAuthContextProvider";
+// import { AuthContext } from "../context/IsAuthContextProvider";
 import axios from "axios";
 import PageHeader from "../components/layout/pageheader/Pageheader";
 import styles from "./Profile.module.scss";
@@ -57,7 +57,8 @@ function Profile() {
               <section className={ styles["filtersettings"] }>
                 <h2>Filtersettings</h2>
                 <p>Adjust your personal searchfilters</p>
-                <p><Link to="/account-filters">Filtersettings</Link></p>
+                <p><Link to="/account-filters"
+                className={styles["filter-settings"]}>Filtersettings</Link></p>
 
               </section>
             </div>
