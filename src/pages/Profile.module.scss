@@ -36,7 +36,7 @@
 .filter-settings {
   padding: 10px;
   background-color: $background-03;
-  border-radius: 6px;
+  border-radius: $border-radius-01;
   text-decoration: none;
   &:hover {
     background-color: $background-05;

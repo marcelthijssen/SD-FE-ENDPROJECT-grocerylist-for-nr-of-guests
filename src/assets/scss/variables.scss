@@ -3,13 +3,29 @@
   align-items: center;
   height: 50px;
   padding-left: 20px;
-  background: #fff;
-  border-radius: 6px;
+  background: #ffffff;
+  border-radius: $border-radius-01;
   border: none;
   box-shadow: $box-shadow-01;
 }
-/* background-colors */
+@mixin tooltip {
+  display: none;
+  position: absolute;
+  top: -70px;
+  left: -100px;
+  padding: 10px;
+  border-radius: $border-radius-01;
+  background-color: #ffffff;
+  box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 18px;
+}
 
+// border-radius;
+$border-radius-01: 6px;
+$border-radius-search-button-01: 0 6px 6px 0;
+
+/* background-colors */
 $background-01: hsl(0, 0%, 100%);
 $background-02: hsl(0, 0%, 95%);
 $background-03: hsl(0, 0%, 90%);
@@ -25,6 +41,7 @@ $background-12: hsl(0, 0%, 90%, 0.65);
 $background-20: hsl(0, 69%, 24%);
 $background-21: hsl(0, 71%, 16%);
 //rgba(234, 234, 234, 0.65)
+
 /* Background-colors-transparant */
 $background-51: hsla(0, 0%, 100%, 0.8);
 
@@ -46,7 +63,7 @@ $width-02: 1000px;
 $width-03: 900px;
 
 // color text
-$title: hsl(0, 0%, 0%);
+$title: $font-color-06;
 
 //Distances
 $gap-01: 10px;
@@ -89,19 +106,6 @@ $menu-button-active: hsl(351, 42%, 36%);
 $button-shadow-01: 0 0 7px 7px rgba(0, 0, 0, 0.1);
 
 $tooltip-shadow-01: 0 0 7px 7px rgba(0, 0, 0, 0.2);
-
-/* TOOLTIP */
-$tooltip-display-before-hover: none;
-$tooltip-position: absolute;
-$tooltip-top: -70px;
-$tooltip-top-favorite: -100px;
-$tooltip-left: -30px;
-$tooltip-padding: 10px;
-$tooltip-border-radius: 6px;
-$tooltip-background-color: #fff;
-$tooltip-shadow-01: 0 0 7px 7px rgba(0, 0, 0, 0.2);
-$tooltip-text-align: center;
-$tooltip-text-size: 18px;
 
 /* TABLE */
 $table01: hsl(0, 0%, 93%);

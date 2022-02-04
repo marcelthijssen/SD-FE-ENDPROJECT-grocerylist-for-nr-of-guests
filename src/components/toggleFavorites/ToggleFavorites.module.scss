@@ -25,16 +25,7 @@
 }
 
 .tooltip {
-  display: $tooltip-display-before-hover;
-  position: absolute;
-  top: $tooltip-top-favorite;
-  left: $tooltip-left;
-  padding: $tooltip-padding;
-  border-radius: $tooltip-border-radius;
-  background-color: $tooltip-background-color;
-  box-shadow: $tooltip-shadow-01;
-  text-align: $tooltip-text-align;
-  font-size: $tooltip-text-size;
+@include tooltip;
 }
 
 .favorite-icon:hover .tooltip {

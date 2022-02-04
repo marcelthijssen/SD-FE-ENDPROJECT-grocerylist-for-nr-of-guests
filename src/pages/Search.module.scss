@@ -14,7 +14,7 @@
 /* Filters */
 #grid-sidebar {
   grid-area: grid-sidebar;
-  padding: 0 60px 50px 0;
+  padding: 0 50px 50px 0;
 }
 
 .filtercontainer {
@@ -34,21 +34,22 @@
 }
 
 .recipes-found {
+  font-family: 'museo sans rounded', sans-serif;
   grid-area: grid-maintop;
   font-size: 24px;
 }
 
 .filter-title-container {
+  font-family: 'museo sans rounded', sans-serif;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 50px;
   letter-spacing: 1px;
   background-color: $background-02;
   color: $title;
-  font-size: 18px;
-  font-weight: bold;
-  text-indent: 30px;
+  font-size: 95%;
+  line-height: 20px;
+  padding: 10px 20px;
 }
 
 .filter-button {
@@ -56,14 +57,13 @@
   margin: 0;
   box-shadow: none;
   background-color: $filter-button-background;
-  font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
   border-radius: 0;
-  border: none;
   padding: 10px 15px 10px 15px;
 
   &:hover {
+    transition: background-color ease-in-out 0.5s;
     background-color: $filter-button-hover;
   }
 

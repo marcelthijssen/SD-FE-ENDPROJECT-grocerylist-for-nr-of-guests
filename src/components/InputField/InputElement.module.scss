@@ -20,6 +20,6 @@
     color: $error-message;
     position: absolute;
     border: 1px solid $error-message;
-    border-radius: 6px;
+    border-radius: $border-radius-01;
     padding: 10px;
 }
