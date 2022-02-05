@@ -33,16 +33,12 @@ function App() {
   const typesOfMeals = JSON.parse( localStorage.getItem( "types of meals" ) );
   const intolerances = JSON.parse( localStorage.getItem( "types of intolerances" ) );
   const typesOfDiets = JSON.parse( localStorage.getItem( "types of diets" ) );
-  const favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
   const shoppinglist = JSON.parse( localStorage.getItem( "shoppinglist" ) );
 
   // Create a localStorage to prevent "null"
   useEffect( () => {
     if ( !shoppinglist ) {
       localStorage.setItem( "shoppinglist", JSON.stringify( [] ) );
-    }
-    if ( !favoriteToSave ) {
-      localStorage.setItem( "recipes", JSON.stringify( [] ) );
     }
     if ( !cuisines ) {
       localStorage.setItem( "types of cuisines", JSON.stringify( [] ) );

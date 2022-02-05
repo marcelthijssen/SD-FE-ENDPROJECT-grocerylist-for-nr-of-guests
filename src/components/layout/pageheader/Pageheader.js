@@ -21,6 +21,7 @@ function PageHeader( { title, total, counter } ) {
             <div className={ styles["number-of-favorites"] }>
               <NumberOfFavorites id={ styles["grid-accountinfo"]} counter={counter} />
             </div>
+
           </div>
         </div>
     </>

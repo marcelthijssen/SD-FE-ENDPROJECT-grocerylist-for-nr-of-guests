@@ -2,15 +2,16 @@ import React, { createContext, useEffect, useState } from "react";
 
 export const FavCounterContext = createContext( {} );
 
-function FavCounterContextProvider( {children} ) {
+function FavCounterContextProvider( { children } ) {
   // 5. State bouwen
   const [ counter, setCounter ] = useState();
 
-  useEffect(()=>{
-    const localSaved = JSON.parse( localStorage.getItem( "favorite recipes" ) );
-    setCounter(JSON.parse(localSaved.length));
+  useEffect( () => {
+    let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
+    if ( favoriteToSave === null || !favoriteToSave ) favoriteToSave = [];
+    setCounter( JSON.parse( favoriteToSave.length ) );
     // console.log(localSaved.length);
-  },[]);
+  }, [] );
 
   // 6. Functies maken
   function addOne() {
@@ -26,7 +27,7 @@ function FavCounterContextProvider( {children} ) {
   // 4. Data maken die voor iedereen beschikbaar is
   const contextData = {
     counter: counter,
-    addOneTofavorite: addOne,
+    addOneToFavorite: addOne,
     subtractOneFromFavorite: subtractOne,
   };
 

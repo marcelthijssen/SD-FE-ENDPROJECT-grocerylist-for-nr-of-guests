@@ -5,7 +5,7 @@ import { FavCounterContext } from "../../context/FavContextProvider";
 
 function ToggleFavorites( { recipe } ) {
 
-  const { addOneTofavorite, subtractOneFromFavorite } = useContext(FavCounterContext);
+  const { addOneTofavorite, subtractOneFromFavorite } = useContext( FavCounterContext );
 
   const [ isFavorite, setIsFavorite ] = useToggle( false );
   // check if saved in localStorage, if so isFavorite and display 'red hart'
@@ -33,7 +33,7 @@ function ToggleFavorites( { recipe } ) {
   // ADD to localStorage if set to isFavorite
   function addToFavorite() {
     let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
-    if ( favoriteToSave === null ) favoriteToSave = [];
+    // if ( favoriteToSave === null ) favoriteToSave = [];
     favoriteToSave.push( recipe );
     localStorage.setItem( "favorite recipes", JSON.stringify( favoriteToSave ) );
   }
@@ -54,13 +54,15 @@ function ToggleFavorites( { recipe } ) {
           <h4 onClick={ toggle }>
 
             <div className={ styles["favorite-icon"] } style={ { cursor: "pointer" } }>
-              { isFavorite ? <span>
+              { isFavorite ?
+                <span>
                   <div className={ styles["tooltip"] }>Remove from your favorites</div>❤️
-              </span>
+                </span>
                 :
                 <span>
                   <div className={ styles["tooltip"] }>Add to your favorites</div>🤍
-                </span> }
+                </span>
+              }
             </div>
           </h4>
         </div>

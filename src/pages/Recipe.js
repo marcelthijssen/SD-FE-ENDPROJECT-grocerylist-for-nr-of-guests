@@ -12,6 +12,7 @@ import styles from "./Recipe.module.scss";
 import NumberOfGuests from "../components/numberOfGuests/NumberOfGuests";
 import Button from "../components/buttons/Button";
 import ToggleShoppingList from "../components/toggleShoppingList/ToggleShoppingList";
+import SharingButtons from "../components/SharingButtons/SharingButtons";
 
 function Recipe() {
 
@@ -106,6 +107,8 @@ function Recipe() {
               <p dangerouslySetInnerHTML={ { __html: `${ recipe.instructions } ` } }/>
 
               <div className={ styles["credit-text"] }>{ `creditText: ${ recipe.creditsText } ` }</div>
+
+              <div className={styles["grid-mainbottom"]}> <SharingButtons/> </div>
             </div>
           </div>
         </div>
