@@ -2,6 +2,7 @@
 
 .recipe-info {
   display: flex;
+  //border-radius: 6px;
   padding-top: 10px;
 }
 
@@ -9,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 0 15px 15px;
+  padding-right: 15px;
 
   &:hover .tooltip {
     opacity: 1;
@@ -24,7 +25,8 @@
 }
 
 .recipe-icon {
-  height: 45px;
+  max-height: 35px;
+  height: 3vw;
   opacity: 0.6;
 }
 

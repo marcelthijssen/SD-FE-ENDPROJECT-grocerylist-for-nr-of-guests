@@ -8,23 +8,35 @@
   border: none;
   box-shadow: $box-shadow-01;
 }
+
 @mixin tooltip {
-  display: none;
+  display: block;
+  opacity: 0;
   position: absolute;
-  top: -70px;
-  left: -100px;
+  left: -3px;
+top: 5px;
   padding: 10px;
   border-radius: $border-radius-01;
   background-color: #ffffff;
   box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.2);
   text-align: center;
-  font-size: 18px;
+  font-size: 12px;
+  z-index: 1;
 }
+//display: block;
+//opacity: 0;
+//position: absolute;
+//bottom: 70px;
+//padding: $tooltip-padding;
+//border-radius: $tooltip-border-radius;
+//background-color: $tooltip-background-color;
+//box-shadow: $tooltip-shadow-01;
+//text-align: $tooltip-text-align;
+//font-size: $tooltip-text-size;
+//z-index: 1;
 
-// border-radius;
 $border-radius-01: 6px;
-$border-radius-search-button-01: 0 6px 6px 0;
-
+$border-radius-search-button-01: 0px 6px 6px 0px;
 /* background-colors */
 $background-01: hsl(0, 0%, 100%);
 $background-02: hsl(0, 0%, 95%);
@@ -77,11 +89,11 @@ $submit-button-hover: $background-06;
 $submit-button-disabled: hsl(0, 0%, 50%);
 
 $filter-button-background: hsl(0, 0%, 90%);
-$filter-button-hover:  hsl(0, 0%, 80%);
+$filter-button-hover: hsl(0, 0%, 80%);
 $filter-button-active: hsl(0, 0%, 40%);
 
 $reset-button-background: hsl(0, 0%, 95%);
-$reset-button-hover:  hsl(0, 0%, 80%);
+$reset-button-hover: hsl(0, 0%, 80%);
 $reset-button-active: hsl(0, 0%, 40%);
 
 $favorite-button-background: hsl(0, 0%, 90%);

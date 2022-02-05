@@ -1,3 +1,4 @@
+/* recipeIcoms */
 // RecipeIcons displays ReadyInTime, Vegan, Vegetarian, Glutenfree or dairy free recipeIcons
 
 import React from "react";
