@@ -1,5 +1,8 @@
 @import '../../assets/scss/variables.scss';
 
+.favorite-recipe-card-heading > h2 {
+  padding-bottom: 0px !important;
+}
 
 .favorite-recipe-card-container {
   display: flex;
@@ -12,7 +15,6 @@
   flex-direction: row;
   align-items: center;
   height: 100px;
-  font-size: 24px;
 }
 
 .favorite-recipe-image {
@@ -37,7 +39,6 @@
 
 .left-column {
   display: flex;
-  flex-direction: column;
   border-radius: 10px;
   box-shadow: $box-shadow-01;
   background-color: #fff;

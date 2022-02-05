@@ -4,6 +4,7 @@ import React from "react";
 import displayAmount from "../../helpers/displayAmount";
 import styles from "./TableIngredients.module.scss";
 import replaceUnitNames from "../../helpers/replaceUnitNames";
+import toggleShoppingList from "../toggleShoppingList/ToggleShoppingList";
 
 function TableIngredients( { shoppingList } ) {
   // console.log( shoppingList );
@@ -15,7 +16,7 @@ function TableIngredients( { shoppingList } ) {
       // console.log( shoppingListAll );
 
       replaceUnitNames( ingredient );
-
+      // create ONE array from all ingredients adjusted to number of guests
       //IF an ingredient.id are the same AND the unit is the same then don't put in the array yet.
       if ( !shoppingListAll.some( item => item.id === ingredient.id ) || !(shoppingListAll.some( item => item.unit === ingredient.unit )) ) {
         shoppingListAll = [ ...shoppingListAll, {
@@ -38,10 +39,17 @@ function TableIngredients( { shoppingList } ) {
         // console.log( ingredientIndex );
         // console.log( parseFloat(shoppingListAll[ingredientIndex].amount) );
         // console.log( parseFloat(ingredientTemp[0].amount) );
-        shoppingListAll[ingredientIndex].amount = parseFloat(ingredientTemp[0].amount) + parseFloat(shoppingListAll[ingredientIndex].amount);
+        shoppingListAll[ingredientIndex].amount = parseFloat( ingredientTemp[0].amount ) + parseFloat( shoppingListAll[ingredientIndex].amount );
       }
     } );
   } );
+
+  // Sort List alphabetically
+  shoppingListAll.sort(function(a, b){
+    if(a.name < b.name) { return -1; }
+    if(a.name > b.name) { return 1; }
+    return 0;
+  })
 
   return (
     <>
@@ -55,7 +63,7 @@ function TableIngredients( { shoppingList } ) {
                 <tbody key={ ingredient.id }>
                 <tr>
                   {/*Calculating amount adjusted from amount of guests input */ }
-                  {/*<td> { ingredient.id } </td>*/}
+
                   <td> { ingredient.amount } </td>
                   <td> { ingredient.unit } </td>
                   <td> { ingredient.name }</td>

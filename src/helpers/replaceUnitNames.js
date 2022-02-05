@@ -9,8 +9,14 @@ export default function replaceUnitNames(ingredient) {
     case "tsp":
       ingredient.unit = "teaspoon";
       break;
+    case "teaspoons":
+      ingredient.unit = "teaspoon";
+      break;
     case "cups":
       ingredient.unit = "cup";
+      break;
+    case "g":
+      ingredient.unit = "gram";
       break;
     default:
   }

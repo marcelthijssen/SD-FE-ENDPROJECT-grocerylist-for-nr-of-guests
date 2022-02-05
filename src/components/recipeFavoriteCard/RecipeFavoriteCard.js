@@ -56,8 +56,9 @@ function RecipeFavoriteCard( { favRecipesId } ) {
             <div className={ styles["favorite-recipe-card-heading"] }>
               <ToggleFavorites className={ styles["toggle-favorites"] } recipe={ recipe.id }/>
 
-              <h3>{ `${ recipe.title }` }
-              </h3>
+              <h2>
+                { `${ recipe.title }` }
+              </h2>
             </div>
             <div>
 
@@ -80,22 +81,18 @@ function RecipeFavoriteCard( { favRecipesId } ) {
               </div>
 
               <div className={ styles["middle-column"] }>
-                <div className={ styles["number-of-guests-buttons"] }>
-                  <h5>How many guests</h5>
-                  <div className={ styles["number-of-guests"] }>
-                    <div>
-                      <p>
-                        { `This recipe is written for ${ recipe.servings } personen.` }
-                      </p>
-                      <p>
-                        Select the amount of friends that are coming.
-                        The ingredientslist will automatically be updated.
-                      </p>
-                      <p>
-                        when ready click the 'add to shoppinglist'-button. The ingredients will be added to your
-                        shoppinglist.
-                      </p>
-                    </div>
+                <div className={ styles["number-of-guests"] }>
+                  <h3>How many guests</h3>
+                  <div>
+                    <p>
+                      { `This recipe is written for ${ recipe.servings } personen.` }
+                    </p>
+                    <p>
+                      Select the amount of friends that are coming.
+                      The ingredientslist will automatically be updated.
+                      when ready click the 'add to shoppinglist'-button. The ingredients will be added to your
+                      shoppinglist.
+                    </p>
                   </div>
 
                   <NumberOfGuests

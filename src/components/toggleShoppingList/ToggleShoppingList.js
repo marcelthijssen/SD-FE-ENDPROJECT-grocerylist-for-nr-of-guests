@@ -9,12 +9,12 @@ function ToggleShoppingList( { recipe, numberOfGuests } ) {
 
   // check if saved in localStorage, if so show icon
   useEffect( () => {
-    const shoppinglist = ( localStorage.getItem( "shoppinglist" ) );
+    const shoppinglist = (localStorage.getItem( "shoppinglist" ));
     if ( shoppinglist === null || shoppinglist.length === 0 ) {
     } else {
-      if ( shoppinglist.includes(recipe.id)) {
+      if ( shoppinglist.includes( recipe.id ) ) {
         toggleInShoppingList( inShoppingList );
-          }
+      }
     }
   }, [] );
 
@@ -33,7 +33,7 @@ function ToggleShoppingList( { recipe, numberOfGuests } ) {
     let shoppinglist = JSON.parse( localStorage.getItem( "shoppinglist" ) );
 
     // add numberOfGuest and recipe in array (fullrecipeInfo)
-    const fullRecipeInfo =  [ recipe, { "numberofguests": numberOfGuests }, ] ;
+    const fullRecipeInfo = [ recipe, { "numberofguests": numberOfGuests }, ];
     // console.log( { fullRecipeInfo } );
 
     // add fullRecipeInfo is to the complete shoppinglist.
@@ -48,15 +48,20 @@ function ToggleShoppingList( { recipe, numberOfGuests } ) {
     shoppinglist.splice( index, 1 );
     localStorage.setItem( "shoppinglist", JSON.stringify( shoppinglist ) );
   }
+
   // todo: change icons
   return (
     <Button
       buttonStyle="add-button"
       clickHandler={ toggle }>
-        <div>
-          { inShoppingList ? <div>❌ Remove from shoppinglist</div> : <div>✅ Add to shoppinglist</div> }
-
-        </div>
+      <div>
+        {
+          inShoppingList ?
+            <div>❌ Remove from shoppinglist</div>
+            :
+            <div>✅ Add to shoppinglist</div>
+        }
+      </div>
     </Button>
 
   );

@@ -17,7 +17,7 @@ function ShoppingList() {
     <>
       <div className={ styles["content-container"] }>
 
-        <PageHeader title="Shopping adjusted for amount of guests" counter={ counter }/>
+        <PageHeader title="Shoppinglist" counter={ counter }/>
 
         { shoppingList &&
 
