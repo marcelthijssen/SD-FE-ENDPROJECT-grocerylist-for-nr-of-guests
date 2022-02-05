@@ -19,18 +19,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 
 .register-form {
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  height: fit-content;
-  background-color: $background-02;
+@include login-form;
 }
 
 .input-field {
@@ -45,14 +37,14 @@
   width: 300px;
   padding: 15px;
 }
-
-
-.register-form {
-  width: 550px;
-  padding: 50px;
-  background-color: $background-03;
-  border-radius: $border-radius-01;
-}
+//
+//
+//.register-form {
+//  width: 550px;
+//  padding: 50px;
+//  background-color: $background-03;
+//  border-radius: $border-radius-01;
+//}
 
 form > label {
   display: flex;

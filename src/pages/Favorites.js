@@ -24,6 +24,7 @@ function Favorites() {
       { favoriteToSave &&
         <div className={ styles["content-container"] }>
           <PageHeader title="Favorites" counter={ counter }/>
+
           <div id={ styles["grid"] }>
             <div id={ styles["grid-main"] }>
               { favoriteToSave.map( ( favRecipesId ) =>

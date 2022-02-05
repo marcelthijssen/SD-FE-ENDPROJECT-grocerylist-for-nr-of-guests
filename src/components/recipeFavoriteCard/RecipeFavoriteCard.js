@@ -76,21 +76,26 @@ function RecipeFavoriteCard( { favRecipesId } ) {
                   </div>
                 </Link>
 
-                  <RecipeIcons recipe={ recipe }/>
+                <RecipeIcons recipe={ recipe }/>
               </div>
 
               <div className={ styles["middle-column"] }>
                 <div className={ styles["number-of-guests-buttons"] }>
-                  <h2>How many guests</h2>
+                  <h5>How many guests</h5>
                   <div className={ styles["number-of-guests"] }>
-                    <p>{ `This recipe is written for ${ recipe.servings } personen.` }</p>
-                    <p>
-                      Select the amount of friends that are coming.
-                      The ingredientslist will automatically be updated.
-                    </p><p>
-                    when ready click the 'add to shoppinglist'-button. The ingredients will be added to your
-                    shoppinglist.
-                  </p>
+                    <div>
+                      <p>
+                        { `This recipe is written for ${ recipe.servings } personen.` }
+                      </p>
+                      <p>
+                        Select the amount of friends that are coming.
+                        The ingredientslist will automatically be updated.
+                      </p>
+                      <p>
+                        when ready click the 'add to shoppinglist'-button. The ingredients will be added to your
+                        shoppinglist.
+                      </p>
+                    </div>
                   </div>
 
                   <NumberOfGuests

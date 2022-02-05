@@ -5,7 +5,7 @@
   grid-template-areas:
     "grid-footer grid-footer grid-footer grid-footer grid-footer";
   grid-template-columns: 20px 2fr 2fr 2fr 20px;
-  grid-template-rows: auto auto 50px 50px auto auto 50px 100px;
+  grid-template-rows: auto;
 }
 
 #grid-footer {

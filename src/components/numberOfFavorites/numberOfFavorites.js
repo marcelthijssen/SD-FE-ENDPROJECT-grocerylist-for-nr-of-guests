@@ -13,10 +13,10 @@ function NumberOfFavorites( { counter } ) {
   return (
     <>
       { counter &&
-        <div className={ styles["favorites"] } style={ { cursor: "pointer" } }>
-          <div className={ styles["favorites-text"] }>
+        <div className={ styles["favorites"] }>
+          <span className={ styles["favorites-text"] }>
             Favorite recipes
-          </div>
+          </span>
           <Button
             type="button"
             buttonStyle="favorite-button"

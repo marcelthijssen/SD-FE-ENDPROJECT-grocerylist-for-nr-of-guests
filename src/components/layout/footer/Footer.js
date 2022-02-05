@@ -6,19 +6,19 @@ function Footer() {
     <>
       <div id={ styles["grid"] }>
         <div id={ styles["grid-footer"] }>
-          <h1>Footer-title</h1>
+          <h3>Footer-title</h3>
           <div className={ styles["footer"] }>
             <section className={ styles["footer-section"] }>
-              <h3>This is the footersection 1</h3>
+              <h4>This is the footersection 1</h4>
               <p>needs some filling</p>
             </section>
             <section className={ styles["footer-section"] }>
-              <h3>This is the footersection 2</h3>
+              <h4>This is the footersection 2</h4>
               <p>needs some filling</p>
 
             </section>
             <section className={ styles["footer-section"] }>
-              <h3>This is the footersection 3</h3>
+              <h4>This is the footersection 3</h4>
               <p>needs some filling</p>
 
             </section>
