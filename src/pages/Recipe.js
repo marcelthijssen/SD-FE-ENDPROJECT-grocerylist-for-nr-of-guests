@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "./Recipe.module.scss";
 import "../index.module.scss";
 // components
 import PageHeader from "../components/layout/pageheader/Pageheader";
@@ -40,13 +39,14 @@ function Recipe() {
         <div>
           <PageHeader title={ `${ recipe.title } ` }/>
 
-          {/*TODO: Positioning: Favorite in card*/}
-          <ToggleFavorites recipe={ recipe.id }/>
 
           <div id={ styles["grid"] }>
+
             <div className={ styles["recipeheader"] }>
-              <hr/>
-              <h1> { `${ recipe.title } ` }</h1>
+              <ToggleFavorites recipe={ recipe.id }/>
+              <h1>
+                { `${ recipe.title } ` }
+              </h1>
             </div>
 
             <div className={ styles["column1"] }>
@@ -68,14 +68,16 @@ function Recipe() {
             <div className={ styles["column3"] }>
 
               <div className={ styles["number-of-guests-buttons"] }>
-                <h2>How many guests</h2>
+                <h3>
+                  How many guests
+                </h3>
                 <div className={ styles["number-of-guests"] }>
                   <p>{ `This recipe is written for ${ recipe.servings } personen.` }</p>
                   <p>
                     For how many guests will you be serving?
                     Select the amount of guests and add to the ingredients
                     into your shopping-list.
-                </p>
+                  </p>
                 </div>
 
                 <NumberOfGuests
@@ -94,7 +96,9 @@ function Recipe() {
                           clickHandler={ e => setNumberOfGuests( recipe.servings ) }
                           label="reset"
                   />
-                  : "" }
+                  :
+                  <div/>
+                }
 
               </div>
               <div className={ styles["add-to-shoppinglist"] }>
@@ -103,12 +107,14 @@ function Recipe() {
             </div>
 
             <div className={ styles["recipe-instruction"] }>
-              <h2>Instructions</h2>
+              <h3>
+                Instructions
+              </h3>
               <p dangerouslySetInnerHTML={ { __html: `${ recipe.instructions } ` } }/>
 
               <div className={ styles["credit-text"] }>{ `creditText: ${ recipe.creditsText } ` }</div>
 
-              <div className={styles["grid-mainbottom"]}> <SharingButtons/> </div>
+              <div className={ styles["grid-mainbottom"] }><SharingButtons/></div>
             </div>
           </div>
         </div>

@@ -13,8 +13,12 @@
 
 .recipeheader {
   grid-area: grid-maintop;
+  display: flex;
+  flex-direction:row;
 }
-
+.recipeheader > h1 {
+  padding: 15px 0 0 10px;
+}
 .columns {
   display: grid;
 }

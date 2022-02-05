@@ -82,7 +82,9 @@ function RecipeFavoriteCard( { favRecipesId } ) {
 
               <div className={ styles["middle-column"] }>
                 <div className={ styles["number-of-guests"] }>
-                  <h3>How many guests</h3>
+                  <h3>
+                    How many guests
+                  </h3>
                   <div>
                     <p>
                       { `This recipe is written for ${ recipe.servings } personen.` }
@@ -115,7 +117,7 @@ function RecipeFavoriteCard( { favRecipesId } ) {
 
                 </div>
 
-
+                {/*Toggle to ShoppingList */ }
                 <div className={ styles["add-to-shoppinglist"] }>
                   <ToggleShoppingList recipe={ recipe } numberOfGuests={ numberOfGuests }/>
                 </div>

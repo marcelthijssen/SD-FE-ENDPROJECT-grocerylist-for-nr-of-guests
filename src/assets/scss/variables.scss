@@ -10,17 +10,29 @@
 }
 
 @mixin tooltip {
+  font-size: 12px;
+  letter-spacing: 1px;
   opacity: 0;
   position: absolute;
   bottom: 70px;
-  padding: $tooltip-padding;
-  border-radius: $tooltip-border-radius;
-  background-color: $tooltip-background-color;
-  box-shadow: $tooltip-shadow-01;
-  text-align: $tooltip-text-align;
-  font-size: $tooltip-text-size;
+  padding: 15px;
+  border-radius: $border-radius-01;
+  background-color: #ffffff;
+  box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 12px;
   z-index: 1;
 }
+
+/* TOOLTIP */
+//$tooltip-display-before-hover: none;
+//$tooltip-position: absolute;
+//$tooltip-top: -70px;
+//$tooltip-top-favorite: -100px;
+//$tooltip-left: -30px;
+//$tooltip-border-radius: 6px;
+
+
 @mixin login-form {
   align-items: center;
   display: flex;
@@ -118,15 +130,4 @@ $tooltip-shadow-01: 0 0 7px 7px rgba(0, 0, 0, 0.2);
 /* TABLE */
 $table01: hsl(0, 0%, 93%);
 $table02: hsl(0, 0%, 100%);
-/* TOOLTIP */
-$tooltip-display-before-hover: none;
-$tooltip-position: absolute;
-$tooltip-top: -70px;
-$tooltip-top-favorite: -100px;
-$tooltip-left: -30px;
-$tooltip-padding: 10px;
-$tooltip-border-radius: 6px;
-$tooltip-background-color: #fff;
-$tooltip-shadow-01: 0 0 7px 7px rgba(0, 0, 0, 0.2);
-$tooltip-text-align: center;
-$tooltip-text-size: 18px;
+;

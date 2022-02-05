@@ -89,11 +89,10 @@ p {
   padding-bottom: 10px;
   line-height: 1.5;
 }
-body {
-  background-color: $background-02;
-}
 
 body {
+  background-color: $background-02;
+
   font-family: 'Oxygen', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

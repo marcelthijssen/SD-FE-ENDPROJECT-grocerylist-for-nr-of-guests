@@ -94,7 +94,7 @@ function RecipeSearchResults( { recipeSearch } ) {
       <div>
         <div className={ styles["content-container"] }>
 
-          <PageHeader id={ styles["grid-pageheader"] } title="Search" counter={ counter }/>
+          <PageHeader id={ styles["grid-pageheader"] } title="Search"/>
 
           <div id={ styles["grid"] }>
             <div id={ styles["grid-maintop"] }>
