@@ -16,7 +16,7 @@ function HomePageInfoBlocks() {
             <article className={ styles["single-info-card"] } key={ infoBlock.id }>
 
               <div className={ styles["image-container"] }>
-                <div className={styles["info-number"]} >{ `${ infoBlock.id }` } </div>
+                <div className={ styles["info-number"] }>{ `${ infoBlock.id }` } </div>
 
                 <img className={ styles["info-card-image"] }
                      alt={ `${ infoBlock.title }` }
@@ -26,11 +26,15 @@ function HomePageInfoBlocks() {
               <div className={ styles["text-container"] }>
                 <div
                   className={ styles["info-card-title"] }>
-                  { `${ infoBlock.title }` }
+                  <h4>
+                    { `${ infoBlock.title }` }
+                  </h4>
                 </div>
 
                 <div className={ styles["info-cards-content"] }>
-                  { `${ infoBlock.content }` }
+                  <p>
+                    { `${ infoBlock.content }` }
+                  </p>
                 </div>
               </div>
 

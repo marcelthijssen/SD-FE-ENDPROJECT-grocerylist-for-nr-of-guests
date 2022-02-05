@@ -5,7 +5,7 @@ import { FavCounterContext } from "../../context/FavContextProvider";
 
 function ToggleFavorites( { recipe } ) {
 
-  const { addOneTofavorite, subtractOneFromFavorite } = useContext( FavCounterContext );
+  const { addOneToFavorite, subtractOneFromFavorite } = useContext( FavCounterContext );
 
   const [ isFavorite, setIsFavorite ] = useToggle( false );
   // check if saved in localStorage, if so isFavorite and display 'red hart'
@@ -22,7 +22,7 @@ function ToggleFavorites( { recipe } ) {
     if ( !isFavorite ) {
       setIsFavorite( isFavorite );
       addToFavorite();
-      addOneTofavorite();
+      addOneToFavorite();
     } else {
       setIsFavorite( !isFavorite );
       removeFromFavorite();

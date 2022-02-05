@@ -10,25 +10,20 @@ function FavCounterContextProvider( { children } ) {
     let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
     if ( favoriteToSave === null || !favoriteToSave ) favoriteToSave = [];
     setCounter( JSON.parse( favoriteToSave.length ) );
-    // console.log(localSaved.length);
   }, [] );
 
-  // 6. Functies maken
-  function addOne() {
+  function addOneToFavorite() {
     setCounter( counter + 1 );
-    // console.log(counter);
   }
 
-  function subtractOne() {
+  function subtractOneFromFavorite() {
     setCounter( counter - 1 );
-    // console.log(counter);
   }
 
-  // 4. Data maken die voor iedereen beschikbaar is
   const contextData = {
     counter: counter,
-    addOneToFavorite: addOne,
-    subtractOneFromFavorite: subtractOne,
+    addOneToFavorite: addOneToFavorite,
+    subtractOneFromFavorite: subtractOneFromFavorite,
   };
 
   return (

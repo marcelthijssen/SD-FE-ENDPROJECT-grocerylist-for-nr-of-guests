@@ -31,7 +31,9 @@ function RecipeCard( { recipesSearchResult } ) {
 
               <div className={ styles["recipe-card-text-container"] }>
                 <Link to={ `/recipe/${ recipe.id }` }>
-                  <div className={ styles["recipe-card-title"] }>{ `${ recipe.title }` }</div>
+                  <div className={ styles["recipe-card-title"] }>
+                    <h4>{ `${ recipe.title }` }</h4>
+                  </div>
                 </Link>
 
                   <RecipeIcons className={ styles["recipe-icons"] } recipe={ recipe }/>

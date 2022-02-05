@@ -55,27 +55,35 @@
   src: local('Museo Sans Rounded 900'), url('./assets/fonts/museo-sans-rounded-cufonfonts-webfont/MuseoSansRounded900.woff') format('woff');
 }
 
-
 * {
   font-family: "Oxygen", sans-serif;
   margin:0;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'museo sans rounded', sans-serif;
-  font-weight: 100;
+  font-weight: 500;
   color: $font-color-06;
 }
 h1 {
+  font-size: 30pt;
   padding-bottom: 26px;
+}
+h2 {
+  font-size: 26pt;
+  padding-bottom: 20px;
+}
+h3 {
+  font-size: 24pt;
+}
+h4 {
+  font-size: 18pt;
 }
 hr {
   color: $font-color-06;
 }
-h2 {
-  padding-bottom: 20px;
-}
 p {
+  font-size: 16px;
   color: $font-color-01;
   padding-bottom: 10px;
   line-height: 1.5;
@@ -88,10 +96,6 @@ body {
   font-family: 'Oxygen', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-p {
-  font-size: 16px;
 }
 
 .content-container {

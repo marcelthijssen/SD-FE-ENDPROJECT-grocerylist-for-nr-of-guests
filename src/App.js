@@ -34,6 +34,7 @@ function App() {
   const intolerances = JSON.parse( localStorage.getItem( "types of intolerances" ) );
   const typesOfDiets = JSON.parse( localStorage.getItem( "types of diets" ) );
   const shoppinglist = JSON.parse( localStorage.getItem( "shoppinglist" ) );
+  let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
 
   // Create a localStorage to prevent "null"
   useEffect( () => {
@@ -51,6 +52,9 @@ function App() {
     }
     if ( !typesOfDiets ) {
       localStorage.setItem( "types of diets", JSON.stringify( [] ) );
+    }
+    if ( !favoriteToSave ) {
+      localStorage.setItem( "favorite recipes", JSON.stringify( [] ) );
     }
 
   }, [] );
