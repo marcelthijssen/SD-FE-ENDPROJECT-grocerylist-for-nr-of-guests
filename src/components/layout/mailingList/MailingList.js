@@ -31,6 +31,7 @@ function MailingList() {
           id="grid-footer"
           className={ styles["footer-mailing"] }
           onSubmit={ handleSubmit( onFormSubmit ) }
+          noValidate
         >
 
           <div className={ styles["mailinglist-input"] }>

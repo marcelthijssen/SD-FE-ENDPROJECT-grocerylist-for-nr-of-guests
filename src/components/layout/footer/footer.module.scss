@@ -3,32 +3,54 @@
 #grid {
   display: grid;
   grid-template-areas:
-    "grid-footer grid-footer grid-footer grid-footer grid-footer";
-  grid-template-columns: 20px 2fr 2fr 2fr 20px;
+    ". grid-footer grid-footer grid-footer grid-footersocial .";
+  grid-template-columns: 0.5fr 2fr 2fr 2fr 4fr 0.5fr;
   grid-template-rows: auto;
+  background-color: $background-04;
+  padding: 50px 0;
   gap: 20px;
 }
 
 #grid-footer {
   grid-area: grid-footer;
-  background-color: $background-04;
-  padding: 50px;
 }
 
 #grid-footer h1 {
   padding-bottom: 30px;
 }
 
+#grid-footersocial {
+  display: flex;
+  grid-area: grid-footersocial;
+  justify-content: flex-end;
+}
+
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-self: center;
 }
 
 .footer-section {
-  max-width: 30%;
+  width: fit-content;
+  padding-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.socials img {
+  display: flex;
+  height: 16px;
+  width: 16px;
+  margin-left: 20px;
+  color: grey;
+
 }

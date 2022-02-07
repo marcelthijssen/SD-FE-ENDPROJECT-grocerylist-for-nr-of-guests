@@ -35,13 +35,7 @@
     letter-spacing: 1px;
 }
 
-.error {
-    position:absolute;
-    padding: 5px 10px;
-    background-color: $background-02;
-    border-radius:6px;
-    letter-spacing: 1.5px;
-}
+
 .label {
     font-size: 20px;
     color: $font-color-01;
@@ -49,11 +43,7 @@
 }
 
 .error-message {
-    color: $error-message;
-    position: absolute;
-    border: 1px solid $error-message;
-    border-radius: $border-radius-01;
-    padding: 10px;
+@include error-message;
 }
 
 .pageheader-text {

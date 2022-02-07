@@ -60,7 +60,7 @@ function Searchbar( { setRecipeSearchHandler } ) {
               />
               {
                 queryError ?
-                  <span className={ styles["error"] }>Please insert a minimum of 3 characters</span>
+                  <span className={ styles["error-message"] }>Please insert a minimum of 3 characters</span>
                   :
                   null
               }

@@ -1,6 +1,6 @@
 // TableIngredient is shown on /favorites
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 // import displayAmount from "../../helpers/displayAmount";
 import styles from "./ShoppingListRecipes.module.scss";
 import { Link } from "react-router-dom";
@@ -13,7 +13,7 @@ function ShoppingListRecipes( { shoppingList } ) {
     <>
       { shoppingList &&
         <div className={ styles["recipe-list"] }>
-          <h3>Recipes shoppinglist:</h3>
+          <h4>Recipes included in your shoppinglist:</h4>
           { shoppingList.map( ( recipe ) =>
 
             <p>

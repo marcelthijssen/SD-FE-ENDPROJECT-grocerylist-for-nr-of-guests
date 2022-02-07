@@ -18,6 +18,7 @@ function InputElement( { errors, register, name, label, value, inputType, valida
             placeholder={ placeholder }
             id={ `${ name }-field` }
             { ...register( name, validationRules ) }
+
           />
           { errors[name] && <p className={ styles["error-message"] }>{ errors[name].message }</p> }
         </div>
