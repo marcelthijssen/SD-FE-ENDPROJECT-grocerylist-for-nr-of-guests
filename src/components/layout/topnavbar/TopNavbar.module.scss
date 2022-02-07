@@ -11,16 +11,18 @@
 
 .grid {
   background-color: $background-01;
+  position: fixed;
+  width:100%;
+  box-shadow: $box-shadow-01;
 }
 
 .top-navbar {
   grid-area: grid-topnav;
   display: flex;
-  padding-left: 10px;
   background-color: #fff;
-  position: sticky;
   align-items: center;
-  width: 100%;
+  max-width: 1920px;
+  top: 0;
 }
 
 .push {
@@ -34,24 +36,12 @@
 
 .tooltip {
   visibility: hidden;
-
 }
 
 .tooltip:hover {
   visibility: visible;
-
 }
 
 .menu-link {
-  letter-spacing: 1px;
-  border-radius: 5px;
-  padding: 10px 15px 10px 15px;
-  margin: 10px 10px 10px 10px;
-  text-decoration: none;
-  color: $font-color-01;
-
-  &:hover {
-    background-color: $background-03;
-    transition: ease-in-out 0.2s;
-  }
+  @include menu-link;
 }

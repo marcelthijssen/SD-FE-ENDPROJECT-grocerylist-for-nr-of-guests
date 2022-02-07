@@ -7,29 +7,11 @@ button {
   letter-spacing: 2px;
 }
 
-.menu-button {
-  background-color: #ffffff;
-  font-weight: 500;
-  margin: 10px;
-  border: solid 3px $menu-button-background;
-
-  &:hover {
-    background-color: $menu-button-hover;
-    border: solid 3px $menu-button-hover;
-    transition: ease-in-out 0.5s;
-  }
-
-  &:active {
-    background-color: $menu-button-active;
-  }
-}
 .print,
 .signin-button,
 .register-button {
   background-color: $menu-button-background;
-  font-weight: 500;
   margin: 10px;
-  border: solid 3px $menu-button-background;
 
   &:hover {
     background-color: $menu-button-hover;

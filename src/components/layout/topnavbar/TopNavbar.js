@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styles from "./TopNavbar.module.scss";
 import logo from "../../../assets/images/logo.svg";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory, Link, NavLink } from "react-router-dom";
 import Button from "../../buttons/Button";
 import { AuthContext } from "../../../context/IsAuthContextProvider";
 
@@ -12,28 +12,29 @@ function TopNavbar() {
   return (
     <>
       <div id={styles["grid"]} className={styles["grid"]}>
+
         <nav id={styles["grid-topnav"]} className={styles["top-navbar"]}>
 
-          <Link to="/">
+          <NavLink to="/">
 
           <span className={styles["logo-container"]}>
             <img src={ logo } type="svg" alt="logo"/>
           </span>
-          </Link>
+          </NavLink>
 
           <div className={styles["push"]}>
 
-            <Link
+            <NavLink
               className={styles["menu-link"]}
               to="/faq">
-              FAQ
-            </Link>
+              faq
+            </NavLink>
 
-            <Link
+            <NavLink
               className={styles["menu-link"]}
               to="/shoppinglist">
               Shoppinglist
-            </Link>
+            </NavLink>
 
             { !isAuth ?
               <Button

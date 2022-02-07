@@ -1,22 +1,34 @@
 @import '../assets/scss/variables.scss';
 
 #grid {
-    display: grid;
-    grid-template-areas:
+  display: grid;
+  grid-template-areas:
     //". grid-maintop grid-maintop grid-maintop ."
-    ". grid-sidebar grid-main grid-main ."
+          ". grid-sidebar grid-main grid-main ."
     ". grid-mainbottom grid-mainbottom grid-mainbottom .";
-    grid-template-rows: auto 50px;
-    grid-template-columns: 20px 2fr 2fr 2fr 20px;
-    grid-gap: 60px;
+  grid-template-rows: auto 50px;
+  grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+  grid-gap: 10px;
 }
 
 .grid-main {
-    grid-area: grid-main;
+  grid-area: grid-main;
 }
+
 .grid-sidebar {
-    grid-area: grid-sidebar;
+  grid-area: grid-sidebar;
+  padding-right: 40px;
 }
+
 article {
-    padding-bottom: 50px;
+  background-color: #ffffff;
+  padding: 20px 20px 40px 20px;
+  margin-bottom: 20px;
+  box-shadow: $box-shadow-01;
+  border-radius: $border-radius-01;
+}
+
+.faq-link {
+  @include menu-link;
+  background-color: #efefef;
 }

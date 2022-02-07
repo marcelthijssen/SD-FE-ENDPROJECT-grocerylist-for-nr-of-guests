@@ -3,11 +3,12 @@
 #grid {
     display: grid;
     grid-template-areas:
-    "grid-pageheader";
-    grid-template-rows: auto;
+    "grid-top"
+    "grid-searchbar";
+    grid-template-rows: 70px auto;
 }
 #pageheader {
-    grid-area: grid-pageheader;
+    grid-area: grid-searchbar;
 }
 .pageheader {
     border-bottom: 0px solid white;

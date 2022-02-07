@@ -1,19 +1,24 @@
 [
   {
     "id": "1",
-    "question": "How do i search a recipe",
-    "answer": "You type a word in the searchbar and click enter or the button wih the text search."
+    "question": "How do I search a recipe",
+    "answer": "You type a word in the searchbar and click enter or the button wih the text search.",
+    "link": "search"
   },
   {
     "id": "2",
     "question": "With what language can I search",
-    "answer": "For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. "
+    "answer": "For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. ",
+    "link": "search"
+
   },
   {
     "id": "3",
-    "question": "Where can i find the shoppinglist",
-    "answer": "When you have added at least one recipe to the shoppinglist, a button in the top navbar wil be available."
-  },{
+    "question": "Where can iI find the shoppinglist",
+    "answer": "When you have added at least one recipe to the shoppinglist, a button in the top navbar wil be available.",
+    "link": "shoppinglist"
+  },
+  {
     "id": "4",
     "question": "This is a question",
     "answer": "And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. "
@@ -26,7 +31,8 @@
   {
     "id": "6",
     "question": "This is yet another question",
-    "answer": "And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. "
+    "answer": "And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. ",
+    "link": "register"
   },
   {
     "id": "7",
@@ -36,6 +42,7 @@
   {
     "id": "8",
     "question": "This is a not question",
-    "answer": "And this is just not an answer."
+    "answer": "And this is just not an answer.",
+    "link": "signin"
   }
 ]

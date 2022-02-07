@@ -7,6 +7,7 @@ import faq from "../assets/json/faq.json";
 import PageHeader from "../components/layout/pageheader/Pageheader";
 import Button from "../components/buttons/Button";
 import router from "react-router-dom/es/Router";
+import { Link } from "react-router-dom";
 
 // import { isAuthContext } from "../context/IsAuthContextProvider";
 
@@ -24,12 +25,12 @@ function Faq() {
             If you have another question please send us an email. We wi get back to you as soon as possible.
           </p>
           <Button type="submit"
-                  clickhandler={() => router.push('mailto:email@yahoo.com')}
+                  clickhandler={ () => router.push( "mailto:email@yahoo.com" ) }
                   label="send an email"/>
 
         </section>
         <section className={ styles["grid-main"] }>
-          <div>
+          <div className={ styles["questions"] }>
             { faq.map( ( faq ) =>
               <article key={ `${ faq.id - 1 }` }>
                 <h3>
@@ -38,6 +39,11 @@ function Faq() {
                 <p>
                   { `${ faq.answer }` }
                 </p>
+                { ( !faq.link) ?
+                  <div/>
+                  :
+                  <Link className={styles["faq-link"]} to={ `/${ faq.link }` }>{ `${ faq.link }` }</Link>
+                }
               </article>
             ) }
           </div>
