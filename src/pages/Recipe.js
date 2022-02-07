@@ -52,7 +52,7 @@ function Recipe() {
             <div className={ styles["column1"] }>
               <div className={ styles["card"] }>
                 {
-                  <img className={ styles["result_image"] }
+                  <img className={ styles["image"] }
                        src={ `${ recipe.image }` }
                        alt={ `${ recipe.title }` }/>
                 }
@@ -61,6 +61,7 @@ function Recipe() {
                 </div>
               </div>
             </div>
+
             <div className={ styles["column2"] }>
               <RecipeIngredientsList recipe={ recipe } numberOfGuests={ numberOfGuests }/>
             </div>
@@ -111,10 +112,10 @@ function Recipe() {
                 Instructions
               </h3>
               <p dangerouslySetInnerHTML={ { __html: `${ recipe.instructions } ` } }/>
-
+              <div id={ styles["grid-mainbottom"] }>
               <div className={ styles["credit-text"] }>{ `creditText: ${ recipe.creditsText } ` }</div>
 
-              <div className={ styles["grid-mainbottom"] }><SharingButtons/></div>
+             </div>
             </div>
           </div>
         </div>

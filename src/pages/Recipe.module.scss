@@ -11,14 +11,20 @@
   grid-gap: 20px;
 }
 
+#grid-mainbottom {
+  grid-area: grid-mainbottom;
+}
+
 .recipeheader {
   grid-area: grid-maintop;
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
 }
+
 .recipeheader > h1 {
   padding: 15px 0 0 10px;
 }
+
 .columns {
   display: grid;
 }
@@ -27,11 +33,17 @@
   border-radius: $border-radius-01;
   background-color: $background-01;
   box-shadow: $box-shadow-01;
+  overflow: hidden;
 }
 
 .column1, .column2, .column3 {
   display: flex;
   flex-direction: column;
+}
+
+.column1 .image {
+  object-fit: cover;
+  width: 100%;
 }
 
 .column1 {
@@ -58,8 +70,4 @@
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-sharingbuttons {
-  grid-area: grid-mainbottom;
-}
-
 

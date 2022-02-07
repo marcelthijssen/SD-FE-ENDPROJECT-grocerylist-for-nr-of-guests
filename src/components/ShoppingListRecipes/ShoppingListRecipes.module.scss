@@ -1,0 +1,8 @@
+@import '../../assets/scss/variables';
+
+.recipe-list {
+  padding: 50px 50px 50px 0;
+}
+.menu-link {
+  @include menu-link;
+}

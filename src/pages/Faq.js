@@ -30,9 +30,11 @@ function Faq() {
 
         </section>
         <section className={ styles["grid-main"] }>
-          <div className={ styles["questions"] }>
+          <div >
             { faq.map( ( faq ) =>
-              <article key={ `${ faq.id - 1 }` }>
+              <article
+                className={ styles["question"] }
+                       key={ `${ faq.id - 1 }` }>
                 <h3>
                   { `${ faq.question }` }
                 </h3>
@@ -42,7 +44,9 @@ function Faq() {
                 { ( !faq.link) ?
                   <div/>
                   :
-                  <Link className={styles["faq-link"]} to={ `/${ faq.link }` }>{ `${ faq.link }` }</Link>
+                  <Link className={styles["faq-link"]} to={ `/${ faq.link }` }>
+                    { `${ faq.link }` }
+                  </Link>
                 }
               </article>
             ) }
