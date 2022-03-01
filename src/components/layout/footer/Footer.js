@@ -1,12 +1,11 @@
 import React from "react";
-import styles from "./footer.module.scss";
+import styles from "./Footer.module.scss";
 import facebook from "../../../assets/images/facebook.svg";
 import twitter from "../../../assets/images/twitter.svg";
 import pinterest from "../../../assets/images/pinterest.svg";
 import instagram from "../../../assets/images/instagram.svg";
 import tiktok from "../../../assets/images/tiktok.svg";
-import studiothijssen from "../../../assets/images/studiothijssen.svg";
-import { Link } from "react-router-dom";
+
 
 function Footer() {
   return (
@@ -41,10 +40,9 @@ function Footer() {
                 <li>How</li>
                 <li>What</li>
                 <li>Faq</li>
-                <li></li>
-
               </ul>
             </div>
+
           </div>
 
         </div>
