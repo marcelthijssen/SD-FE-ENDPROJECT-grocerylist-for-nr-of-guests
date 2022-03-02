@@ -42,7 +42,7 @@ function RecipeFavoriteCard( { favRecipesId } ) {
 
     fetchData();
   }, [ favRecipesId ] );
-  console.log( numberOfGuests );
+  // console.log( numberOfGuests );
 
   return (
     <>

@@ -3,7 +3,7 @@ import React, { createContext, useEffect, useState } from "react";
 export const FavCounterContext = createContext( {} );
 
 function FavCounterContextProvider( { children } ) {
-  // 5. State bouwen
+
   const [ counter, setCounter ] = useState();
 
   useEffect( () => {
