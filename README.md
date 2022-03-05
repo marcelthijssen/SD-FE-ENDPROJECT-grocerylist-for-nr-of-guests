@@ -1,34 +1,57 @@
 # Grocerylist calculated for number of guests coming for diner
 
-Ik heb een applicatie ontwikkeld die gaat helpen om de boodschappenlijst van ingrediënten, kan aanpassen aan het aantal personen wat komt eten. Het werkt in 4 stappen: 1 zoek een gerecht, 2 voeg het toe aan favorieten, 3 pas per gerecht aan voor hoeveel personen u dit gerecht gaat bereiden, 4 - print de aangepaste boodschappenlijst van dei ingredienten.
+Ik heb een applicatie ontwikkeld die gaat helpen bij het maken van één boodschappenlijst van alle ingrediënten, aangepast aan het aantal personen wat komt eten. 
+Het werkt in 4 stappen: \
+1 - zoek een gerecht\
+2 - voeg het toe aan favorieten\
+3 - geef per gerecht het aantal personen aan waarvoor u het gerecht gaat bereiden\
+4 - print de aangepaste boodschappenlijst\
 
+
+# Preview
 ![](src/assets/images/website.png)
 
+# Installatie
+Clone deze git-repository via de groene button, of via jouw editor naar uw locale machine.
+
+Open de applicatie in de editor en installeer alle benodigde dependencies met de volgende code: 
+
+`npm install`
+
 ## Benodigde abonnement
-De applicatie maakt gebruik van de Spoonacular-api. Om de applicatie te gebruiken is er een api-key nodig. Een gratis abonnement is aanwezig: https://spoonacular.com/food-api/pricing.
+De applicatie maakt gebruik van de api-key van Spoonacular.\
+Er is een gratis api-key beschikbaar om de applicatie te gebruiken.\
+U kunt eventueel een andere api-key aanschaffen om meer data te kunnen ontvangen via:\
+https://spoonacular.com/food-api
 
-## .env-file
-Maak in de root een .env-bestand aan met de volgende tekst:
-REACT_APP_SPOONACULAR_KEY=
-Daarachter plaatst u de api-key verkregen bij Spoonacular.
+Om de beschikbare api-key te gebruiken, maakt u een nieuw bestand aan in de root-folder genaamd:\
+`.env-file`
 
+Plaats daarin de volgende code:
+#### `REACT_APP_SPOONACULAR_KEY=c3cb27d6fbfc48f4977ee4ac7143e983`
+
+## Account kunt u zelf aanmaken
+In het account kunt u filtervoorkeuren instellen.
+
+Deze applicatie maakt gebruik van de NOVI-Back-end:\
+Lees hier meer informatie hierover:\
+https://github.com/hogeschoolnovi/novi-educational-backend-documentation 
 
 ## Available Scripts
 
-In the project directory, you can run:
+Start de applicatie met:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+De app wordt gestart in ontwikkelings-mode.\
+Open [http://localhost:3000](http://localhost:3000) om het te bekijken in de browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Na iedere wijziging zal de pagina herladen.\
 
-### `npm test`
+### `npm test:watch`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start de test-runner in de watch-mode.\
+Lees hier meer informatie hierover: [running tests](https://facebook.github.io/create-react-app/docs/running-tests).
 
 ### `npm run build`
 

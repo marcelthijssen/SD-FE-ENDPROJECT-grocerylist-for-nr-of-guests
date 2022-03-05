@@ -20,7 +20,7 @@ function HomePageInfoBlocks() {
 
                 <img className={ styles["info-card-image"] }
                      alt={ `${ infoBlock.title }` }
-                     src={ require( `../../assets/images/${ infoBlock.imagename }.png` ).default }
+                     src={ require( `../../assets/images/${ infoBlock.imagename }.png` ) }
                 />
               </div>
               <div className={ styles["text-container"] }>
