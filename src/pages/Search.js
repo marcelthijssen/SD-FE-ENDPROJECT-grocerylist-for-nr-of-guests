@@ -3,7 +3,7 @@ import styles from "./Search.module.scss";
 import PageHeader from "../components/layout/pageheader/Pageheader";
 import RecipeCard from "../components/recipecard/RecipeCard";
 import axios from "axios";
-import FilterTypes from "../components/filters/FilterTypes";
+import Filters from "../components/filters/Filters";
 import typesOfMeals from "../assets/json/typesOfMeals.json";
 import typesOfCuisines from "../assets/json/typesOfCuisines.json";
 import typesOfIntolerances from "../assets/json/typesOfIntolerances.json";
@@ -108,7 +108,7 @@ function RecipeSearchResults( { recipeSearch } ) {
                   Types of Cuisines
                 </div>
 
-                <FilterTypes
+                <Filters
                   title={ "TypesCuisines" }
                   name={ "types of cuisines" }
                   typeFilter={ typesOfCuisines }
@@ -125,7 +125,7 @@ function RecipeSearchResults( { recipeSearch } ) {
                   Types of Intolerances
                 </div>
 
-                <FilterTypes
+                <Filters
                   title={ "Types of Intolerances" }
                   name={ "types of intolerances" }
                   typeFilter={ typesOfIntolerances }
@@ -139,7 +139,7 @@ function RecipeSearchResults( { recipeSearch } ) {
                 <div className={ styles["filter-title-container"] }>
                   Types of Meals
                 </div>
-                <FilterTypes
+                <Filters
                   title={ "Types of Meals" }
                   name={ "types of meals" }
                   typeFilter={ typesOfMeals }
@@ -154,7 +154,7 @@ function RecipeSearchResults( { recipeSearch } ) {
                 <div className={ styles["filter-title-container"] }>
                   Types of Diets
                 </div>
-                <FilterTypes
+                <Filters
                   title={ "Types of Diets" }
                   name={ "types of diets" }
                   typeFilter={ typesOfDiets }

@@ -1,7 +1,7 @@
 import React from "react";
 // components
 import PageHeader from "../components/layout/pageheader/Pageheader";
-import FilterTypes from "../components/filters/FilterTypes";
+import Filters from "../components/filters/Filters";
 import typesOfCuisines from "../assets/json/typesOfCuisines.json";
 import typesOfIntolerances from "../assets/json/typesOfIntolerances.json";
 import typesOfMeals from "../assets/json/typesOfMeals.json";
@@ -58,7 +58,7 @@ function AccountFilters() {
                 Types of Cuisines
               </div>
 
-              <FilterTypes
+              <Filters
                 className={ styles["account-filter"] }
                 title={ "Types of Cuisines" }
                 name={ "account settings toc" }
@@ -76,7 +76,7 @@ function AccountFilters() {
               <div className={ styles["filter-title"] }>
                 Types of Intolerances
               </div>
-              <FilterTypes
+              <Filters
                 className={ styles["account-filter"] }
                 title={ "Types of Intolerances" }
                 name={ "account settings toi" }
@@ -93,7 +93,7 @@ function AccountFilters() {
               <div className={ styles["filter-title"] }>
                 Types of Type of meals
               </div>
-              <FilterTypes
+              <Filters
                 className={ styles["account-filter"] }
                 title={ "Types of Meals" }
                 name={ "account settings tom" }
@@ -110,7 +110,7 @@ function AccountFilters() {
               <div className={ styles["filter-title"] }>
                 Types of Diets
               </div>
-              <FilterTypes
+              <Filters
                 className={ styles["account-filter"] }
                 title={ "Types of Diets" }
                 name={ "account settings tod" }

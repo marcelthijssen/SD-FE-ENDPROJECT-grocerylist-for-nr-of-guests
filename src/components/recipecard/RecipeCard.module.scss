@@ -23,15 +23,12 @@
 
 .image-container {
   border-radius: 10px 10px 0 0;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   height: 200px;
 }
 
 .recipe-card-image {
-  min-width: 100%;
-  min-height: 100%
+  object-fit: contain;
 }
 
 .recipe-card-text-container {

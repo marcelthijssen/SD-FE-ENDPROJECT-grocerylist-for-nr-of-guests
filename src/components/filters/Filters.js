@@ -3,7 +3,7 @@ import { useToggle } from "rooks";
 import styles from "./Filters.module.scss";
 import Button from "../buttons/Button";
 
-function FilterTypes( { typeFilter, name } ) {
+function Filters( { typeFilter, name } ) {
 
   const [ isChecked, toggleIsChecked ] = useToggle( false );
   const [ nameFilter, setNameFilter ] = useState( [] );
@@ -81,4 +81,4 @@ function FilterTypes( { typeFilter, name } ) {
   );
 }
 
-export default FilterTypes;
+export default Filters;

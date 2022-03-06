@@ -22,7 +22,7 @@ function Faq() {
           </h4>
 
           <p>
-            If you have another question please send us an email. We wi get back to you as soon as possible.
+            If you have another question please send us an email. We willç get back to you as soon as possible.
           </p>
           <Button type="submit"
                   clickhandler={ () => router.push( "mailto:email@yahoo.com" ) }
