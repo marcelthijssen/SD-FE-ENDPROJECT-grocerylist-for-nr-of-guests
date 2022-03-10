@@ -22,7 +22,9 @@ Open de applicatie in de editor en installeer alle benodigde dependencies met de
 De applicatie maakt gebruik van de api-key van Spoonacular.\
 Er is een gratis api-key beschikbaar om de applicatie te gebruiken.\
 U kunt eventueel een andere api-key aanschaffen om meer data te kunnen ontvangen via:\
-https://spoonacular.com/food-api
+https://spoonacular.com/food-api \
+Documentatie voor de spoonacular api vindt u hier: \
+https://spoonacular.com/food-api/docs
 
 Om de beschikbare api-key te gebruiken, maakt u een nieuw bestand aan in de root-folder genaamd:\
 `.env-file`
@@ -33,7 +35,7 @@ Plaats daarin de volgende code:
 ## Account kunt u zelf aanmaken
 In het account kunt u filtervoorkeuren instellen.
 
-Deze applicatie maakt gebruik van de NOVI-Back-end:\
+Deze applicatie maakt gebruik van de NOVI-Back-end: \
 Lees hier meer informatie hierover:\
 https://github.com/hogeschoolnovi/novi-educational-backend-documentation 
 
