@@ -1,5 +1,3 @@
-// TableIngredient is shown on /favorites
-
 import React from "react";
 import styles from "./ShoppingListRecipes.module.scss";
 import { Link } from "react-router-dom";

@@ -1,5 +1,3 @@
-// TableIngredient is shown on /favorites
-
 import React from "react";
 import displayAmount from "../../helpers/displayAmount";
 import styles from "./TableIngredients.module.scss";
@@ -9,8 +7,8 @@ function TableIngredients( { shoppingList } ) {
   let ingredientTemp = [];
   let shoppingListAll = [];
 
-  shoppingList.map( ( recipe ) => {
-    recipe[0].extendedIngredients.map( ( ingredient ) => {
+  shoppingList.forEach( ( recipe ) => {
+    recipe[0].extendedIngredients.forEach( ( ingredient ) => {
 
       replaceUnitNames( ingredient );
       // create ONE array from all ingredients adjusted to number of guests
