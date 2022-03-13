@@ -4,8 +4,7 @@ import styles from "../recipecard/RecipeCard.module.scss";
 import replaceUnitNames from "../../helpers/replaceUnitNames";
 
 function RecipeIngredientsList( { recipe, numberOfGuests } ) {
-  console.log( recipe );
-
+  // console.log( recipe );
 
   return (
     <>
@@ -20,12 +19,12 @@ function RecipeIngredientsList( { recipe, numberOfGuests } ) {
               { recipe.extendedIngredients.map( ( ingredient ) =>
                 <tbody key={ ingredient.id }>
 
-                { replaceUnitNames( ingredient ) }
+                {/*{ replaceUnitNames( ingredient ) }*/}
 
                 <tr>
                   {/*Calculating amount adjusted from amount of guests input */ }
                   <td> { displayAmount( (ingredient.amount / recipe.servings) * numberOfGuests ) } </td>
-                  <td> { ingredient.unit } </td>
+                  <td> { replaceUnitNames(ingredient.unit) } </td>
                   <td> { ingredient.name }</td>
                 </tr>
                 </tbody>
@@ -38,6 +37,5 @@ function RecipeIngredientsList( { recipe, numberOfGuests } ) {
     </>
   );
 }
-
 
 export default RecipeIngredientsList;

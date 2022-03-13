@@ -1,31 +1,29 @@
-export default function replaceUnitNames(ingredient) {
+export default function replaceUnitNames( unit ) {
 
-  module.exports = { replaceUnitNames:replaceUnitNames,  };
+  module.export = { replaceUnitNames: replaceUnitNames, };
 
-  switch ( ingredient.unit ) {
-    case "tbsp":
-      ingredient.unit = "tablespoon";
-      break;
-      case "tablespoons":
-      ingredient.unit = "tablespoon";
-      break;
-    case "tsp":
-      ingredient.unit = "teaspoon";
-      break;
-    case "teaspoons":
-      ingredient.unit = "teaspoon";
-      break;
-    case "cup":
-      ingredient.unit = "cup";
-      break;
-    case "c":
-      ingredient.unit = "cup";
-      break;
-    case "g":
-      ingredient.unit = "gram";
-      break;
-    default:
+  if ( unit === "tbsp" ) {
+    return "tablespoon";
   }
-  return ingredient.unit;
-
+  if ( unit === "tablespoons" ) {
+    return "tablespoon";
+  }
+  if ( unit === "tsp" ) {
+    return "teaspoon";
+  }
+  if ( unit === "teaspoons" ) {
+    return "teaspoon";
+  }
+  if ( unit === "cups" ) {
+    return "cup";
+  }
+  if ( unit === "c" ) {
+    return "cup";
+  }
+  if ( unit === "g" ) {
+    return "gram";
+  }
+  else {
+    return unit;
+  }
 }

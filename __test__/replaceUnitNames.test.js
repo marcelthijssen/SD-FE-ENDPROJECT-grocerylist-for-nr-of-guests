@@ -3,7 +3,7 @@ const replaceUnitNames = require( "../src/helpers/replaceUnitNames" ).default;
 test( "UnitNames should be replaced", () => {
 
   // Arrange
-  const ingredient = { "unit": "tsp" };
+  const ingredient = "tsp";
   const expectedResult = "teaspoon";
 
   // Act
@@ -16,13 +16,13 @@ test( "UnitNames should be replaced", () => {
 test( "Unknown unitName is NOT replaced", () => {
 
   // Arrange
-  const ingredient = { "unit": "plates" };
+  const ingredient = "plates";
 
   // Act
   const result = replaceUnitNames( ingredient) ;
 
   //Assert // What we expect
-  expect( result ).toBe(ingredient.unit) ;
+  expect( result ).toBe(ingredient) ;
 } );
 
 
