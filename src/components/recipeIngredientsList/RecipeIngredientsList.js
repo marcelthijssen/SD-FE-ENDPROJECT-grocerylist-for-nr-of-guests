@@ -5,8 +5,11 @@ import replaceUnitNames from "../../helpers/replaceUnitNames";
 
 function RecipeIngredientsList( { recipe, numberOfGuests } ) {
   console.log( recipe );
+
+
   return (
     <>
+
       { recipe && numberOfGuests &&
 
         <div>
@@ -17,8 +20,8 @@ function RecipeIngredientsList( { recipe, numberOfGuests } ) {
               { recipe.extendedIngredients.map( ( ingredient ) =>
                 <tbody key={ ingredient.id }>
 
-                {/*Replace unitNames*/ }
                 { replaceUnitNames( ingredient ) }
+
                 <tr>
                   {/*Calculating amount adjusted from amount of guests input */ }
                   <td> { displayAmount( (ingredient.amount / recipe.servings) * numberOfGuests ) } </td>
@@ -35,5 +38,6 @@ function RecipeIngredientsList( { recipe, numberOfGuests } ) {
     </>
   );
 }
+
 
 export default RecipeIngredientsList;

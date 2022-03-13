@@ -1,4 +1,7 @@
 export default function replaceUnitNames(ingredient) {
+
+  module.exports = { replaceUnitNames:replaceUnitNames,  };
+
   switch ( ingredient.unit ) {
     case "tbsp":
       ingredient.unit = "tablespoon";
@@ -12,7 +15,10 @@ export default function replaceUnitNames(ingredient) {
     case "teaspoons":
       ingredient.unit = "teaspoon";
       break;
-    case "cups":
+    case "cup":
+      ingredient.unit = "cup";
+      break;
+    case "c":
       ingredient.unit = "cup";
       break;
     case "g":
@@ -20,4 +26,6 @@ export default function replaceUnitNames(ingredient) {
       break;
     default:
   }
+  return ingredient.unit;
+
 }
