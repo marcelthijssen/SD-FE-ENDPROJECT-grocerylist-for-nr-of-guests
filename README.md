@@ -48,7 +48,12 @@ Start de applicatie met:
 De app wordt gestart in ontwikkelings-mode.\
 Open [http://localhost:3000](http://localhost:3000) om het te bekijken in de browser.
 
-Na iedere wijziging zal de pagina herladen.\
+Na iedere wijziging zal de pagina herladen.
+
+### Jest
+Om de aanwezige tests goed te laten werken is er naast de `__test__`-folder ook een `__mocks__`-folder aangemaakt.\
+In de `__mocks__`-folder staan twee bestanden die `scss`-import-errors voorkomen. 
+Daarnaast is er ook een `.babelrc`-bestand aangemaakt. 
 
 ### `npm test:watch`
 
