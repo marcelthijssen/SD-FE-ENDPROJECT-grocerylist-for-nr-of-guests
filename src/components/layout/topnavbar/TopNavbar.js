@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styles from "./TopNavbar.module.scss";
 import logo from "../../../assets/images/logo.svg";
-import { useHistory, Link, NavLink } from "react-router-dom";
+import { useHistory, NavLink } from "react-router-dom";
 import Button from "../../buttons/Button";
 import { AuthContext } from "../../../context/IsAuthContextProvider";
 

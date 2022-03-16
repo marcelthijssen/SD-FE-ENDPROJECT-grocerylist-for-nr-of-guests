@@ -26,6 +26,7 @@ function Profile() {
         } );
 
         setProfileData( result.data );
+        console.log(result);
       } catch ( e ) {
         console.error( e );
       }
@@ -52,7 +53,6 @@ function Profile() {
                 <p><strong>Email:</strong> { profileData.email }</p>
               </section>
 
-              {/*Als er keys in ons object zitten hebben we data, en dan renderen we de content*/ }
 
               <section className={ styles["filtersettings"] }>
                 <h2>Filtersettings</h2>

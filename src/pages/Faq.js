@@ -1,15 +1,13 @@
 // Text info block are displayed on the Home-pages
 
 import React from "react";
-import styles from "./faq.module.scss";
+import styles from "./Faq.module.scss";
 import faq from "../assets/json/faq.json";
 
 import PageHeader from "../components/layout/pageheader/Pageheader";
 import Button from "../components/buttons/Button";
-import router from "react-router-dom/es/Router";
+import { Router } from "react-router-dom";
 import { Link } from "react-router-dom";
-
-// import { isAuthContext } from "../context/IsAuthContextProvider";
 
 function Faq() {
   return (
@@ -25,7 +23,7 @@ function Faq() {
             If you have another question please send us an email. We willç get back to you as soon as possible.
           </p>
           <Button type="submit"
-                  clickhandler={ () => router.push( "mailto:email@yahoo.com" ) }
+                  clickhandler={ () => Router.push( "mailto:email@hosting.com" ) }
                   label="send an email"/>
 
         </section>

@@ -17,16 +17,13 @@
 
 .mailinglist-input {
   @include form-input;
+  padding: 0;
 }
 .mailinglist-input input {
-  font-size: 20px;
+  font-size: 16px;
 }
 
-.error {
-  position:absolute;
-  margin: 0 0 0 10%;
-  padding: 5px 10px;
-  background-color: $background-02;
-  border-radius:6px;
-  letter-spacing: 1.5px;
+.error-message {
+  @include error-message;
+
 }

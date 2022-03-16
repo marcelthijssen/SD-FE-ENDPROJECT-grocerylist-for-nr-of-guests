@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import styles from "../pages/Register.module.scss";
 import Button from "../components/buttons/Button";
 import PageHeader from "../components/layout/pageheader/Pageheader";
+import InputElement from "../components/InputField/InputElement";
+import { useForm } from "react-hook-form";
 
 function Register() {
 
@@ -13,6 +15,12 @@ function Register() {
   const [ error, toggleError ] = useState( false );
   const [ loading, toggleLoading ] = useState( false );
   const history = useHistory();
+
+  // const [ isDisabled, setIsDisabled ] = useState( false );
+  const { register, formState: { errors }, handleSubmit } = useForm( {
+    mode: "onBlur",
+  } );
+  console.log('ERRORS', errors);
   // canceltoken to prevent leak
   const source = axios.CancelToken.source();
 
@@ -22,17 +30,16 @@ function Register() {
     };
   }, [] );
 
+
   // submitting and post data
-  async function handleSubmit( e ) {
-    e.preventDefault();
+  async function onFormSubmit( data ) {
     toggleError( false );
     toggleLoading( true );
-
     try {
       await axios.post( `https://polar-lake-14365.herokuapp.com/api/auth/signup`, {
-        username: username,
-        email: email,
-        password: password,
+        username: data.username,
+        email: data.email,
+        password: data.password,
         role: [ "user" ]
       }, {
         cancelToken: source.token,
@@ -43,7 +50,6 @@ function Register() {
       console.error( e );
       toggleError( true );
     }
-
     toggleLoading( false );
   }
 
@@ -55,63 +61,64 @@ function Register() {
         <div id={ styles["grid-main"] }>
 
           <div className={ styles["form-container"] }>
-          <form className={ styles["register-form"] } onSubmit={ handleSubmit }>
 
-            <label
-              htmlFor="email-field"
-              className={ styles["label-input"] }
+            <form
+              onSubmit={ handleSubmit( onFormSubmit ) }
+              className={ styles["form"] }
             >
-              email-address:
-              <input
-                className={ styles["input-field"] }
-                type="email"
-                id="email-field"
+              <h2>Registration</h2>
+
+              <InputElement
+                errors={ errors }
+                register={ register }
                 name="email"
-                value={ email }
+                label="Email"
+                inputType="email"
                 onChange={ ( e ) => setEmail( e.target.value ) }
-              />
-            </label>
+                validationRules={ {
+                  required: "Please type a valid email is required",
+                  pattern: {
+                    value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: "invalid email",
+                  }
 
-            <label
-              className={ styles["label-input"] }
-              htmlFor="username-field">
-              Username:
-              <input
-                className={ styles["input-field"] }
-                type="text"
-                id="username-field"
-                value={ username }
+                } }
+              />
+
+              <InputElement
+                errors={ errors }
+                register={ register }
+                name="username"
+                label="Username"
+                inputType="text"
                 onChange={ ( e ) => setUsername( e.target.value ) }
-              />
-            </label>
 
-            <label
-              className={ styles["label-input"] }
-              htmlFor="password-field">
-              Password:
-              <input
-                className={ styles["input-field"] }
-                type="password"
-                id="password-field"
+                validationRules={ {
+
+                  required: "Please enter a username",
+                } }
+              />
+
+              <InputElement
+                errors={ errors }
+                register={ register }
                 name="password"
-                value={ password }
+                label="password"
+                inputType="password"
                 onChange={ ( e ) => setPassword( e.target.value ) }
+
+                validationRules={ {
+                  required: "Please enter a password",
+                } }
               />
-            </label>
-            { error && <p className={ styles["error"] }>Error...</p> }
 
-            <Button
-              type="submit"
-              buttonStyle="submit-button"
-              label="register"
-              disabled={ loading }
-            />
-            <div className={styles["text-block"]}>
-            <p>Allready an account? </p>
-              <p>You can signin <Link to="/signin">here</Link>.</p>
-            </div>
-
-          </form>
+              <Button
+                type="submit"
+                buttonStyle="submit-button"
+                label="register"
+                disabled={ loading }
+              />
+            </form>
 
           </div>
         </div>

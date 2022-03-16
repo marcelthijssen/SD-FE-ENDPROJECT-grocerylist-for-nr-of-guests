@@ -9,10 +9,11 @@ function ShoppingListRecipes( { shoppingList } ) {
       { shoppingList &&
         <div className={ styles["recipe-list"] }>
           <h4>Recipes included in your shoppinglist:</h4>
+
           { shoppingList.map( ( recipe ) =>
-            <p >
-              <Link to={ `/recipe/${ recipe[0].id }` } key={recipe[0].title}>{ recipe[0].title }</Link>
-          </p>
+            <p key={ recipe[0].title }>
+              <Link to={ `/recipe/${ recipe[0].id }` } >{ recipe[0].title }</Link>
+            </p>
           ) }
         </div>
       }

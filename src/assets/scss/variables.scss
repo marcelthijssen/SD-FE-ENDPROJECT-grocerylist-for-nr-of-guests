@@ -41,26 +41,29 @@
 }
 
 @mixin login-form {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  background-color: $background-02;
-  box-shadow: $box-shadow-01;
-  padding-top: 80px;
+  //align-items: center;
+  //display: flex;
+  //flex-direction: column;
+  //width: 90%;
+  //background-color: $background-02;
+  //box-shadow: $box-shadow-01;
+  //padding: 80px;
 }
 
 @mixin error-message {
   color: $error-message;
-  position: absolute;
   border: 1px solid $error-message;
   border-radius: $border-radius-01;
   padding: 10px;
-  background-color: $background-01;
+  background-color: #ffffffa3;
+  letter-spacing:1px;
+  font-size: 10px;
+  width:fit-content;
 }
 
 $border-radius-01: 6px;
 $border-radius-search-button-01: 0px 6px 6px 0px;
+
 /* background-colors */
 $background-01: hsl(0, 0%, 100%);
 $background-02: hsl(0, 0%, 95%);
@@ -82,7 +85,7 @@ $background-21: hsl(0, 71%, 16%);
 $background-51: hsla(0, 0%, 100%, 0.8);
 
 /* box-shadows */
-$box-shadow-01: 0 5px 10px 5px rgba(0, 0, 0, 0.1);
+$box-shadow-01: 0px 0px 10px 5px rgb(0, 0, 0,  0.05);
 
 /* font-colors */
 $font-color-01: hsl(0, 0%, 20%);

@@ -5,7 +5,7 @@ function NumberOfGuests( { placeholder, children, value, inputType, onChange, na
 
   return (
     <>
-      <div className={styles["number-of-guests"]}>
+      <div className={ styles["number-of-guests"] }>
         <label htmlFor={ `${ name }-field` }/>
         <input
           value={ value }

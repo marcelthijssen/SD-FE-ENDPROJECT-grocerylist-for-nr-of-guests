@@ -5,6 +5,7 @@ import twitter from "../../../assets/images/twitter.svg";
 import pinterest from "../../../assets/images/pinterest.svg";
 import instagram from "../../../assets/images/instagram.svg";
 import tiktok from "../../../assets/images/tiktok.svg";
+import { Link } from "react-router-dom";
 
 
 function Footer() {
@@ -50,45 +51,45 @@ function Footer() {
         <section id={ styles["grid-footersocial"] }>
           <ul className={ styles["socials"] }>
             <li >
-              <href a="https://pinterest.nl">
+              <Link to="https://pinterest.nl">
                 <img alt="pinterest"
                      style={ { cursor: "pointer" } }
                      src={ pinterest }
                      height={ 25 } width={ 25 }
                 />
-              </href>
+              </Link>
             </li>
             <li>
-              <href a="https://instagram.nl">
+              <Link to="https://instagram.nl">
                 <img alt="instagram"
                      style={ { cursor: "pointer" } }
                      src={ instagram }
                 />
-              </href>
+              </Link>
             </li>
             <li>
-              <href a="https://twitter.nl">
+              <Link to="https://twitter.nl">
                 <img alt="twitter"
                      style={ { cursor: "pointer" } }
                      src={ twitter }
                 />
-              </href>
+              </Link>
             </li>
             <li>
-              <href a="https://facebook.nl">
+              <Link to="https://facebook.nl">
                 <img alt="facebook"
                      style={ { cursor: "pointer" } }
                      src={ facebook }
                 />
-              </href>
+              </Link>
             </li>
             <li>
-              <href a="https://tiktok.nl">
+              <Link to="https://tiktok.nl">
                 <img alt="tiktok"
                      style={ { cursor: "pointer" } }
                      src={ tiktok }
                 />
-              </href>
+              </Link>
             </li>
           </ul>
         </section>

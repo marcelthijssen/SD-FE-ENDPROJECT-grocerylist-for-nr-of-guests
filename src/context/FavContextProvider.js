@@ -3,8 +3,6 @@ import React, { createContext, useEffect, useState } from "react";
 export const FavCounterContext = createContext( {} );
 
 function FavCounterContextProvider( { children } ) {
-  // JEST __test__
-  // module.exports = { addOneToFavorite: addOneToFavorite, };
 
   const [ counter, setCounter ] = useState();
 
@@ -15,11 +13,11 @@ function FavCounterContextProvider( { children } ) {
   }, [] );
 
   function addOneToFavorite() {
-    setCounter( counter + 1 );
+    return setCounter( counter + 1 );
   }
 
   function subtractOneFromFavorite() {
-    setCounter( counter - 1 );
+    return setCounter( counter - 1 );
   }
 
   const contextData = {

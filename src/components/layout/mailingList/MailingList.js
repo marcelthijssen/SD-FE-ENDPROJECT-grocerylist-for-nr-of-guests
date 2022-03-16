@@ -15,12 +15,9 @@ function MailingList() {
   // save data to localstorage "newsletter", disable button en enable after 1 sec
   function onFormSubmit( data ) {
     setIsDisabled( true );
-    // console.log( isDisabled );
-    // console.log( data );
     localStorage.setItem( "newsletter", JSON.stringify( data ) );
     setTimeout( () => {
       setIsDisabled( false );
-      // console.log("again");
     }, 1000 );
   }
 

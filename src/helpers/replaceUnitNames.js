@@ -2,28 +2,26 @@ export default function replaceUnitNames( unit ) {
 
   module.export = { replaceUnitNames: replaceUnitNames, };
 
-  if ( unit === "tbsp" ) {
-    return "tablespoon";
+  switch ( unit ) {
+    case "tbsp":
+      return "tablespoon";
+    case "tablespoons":
+      return "tablespoon";
+    case "tsp":
+      return "teaspoon";
+    case "teaspoons":
+      return "teaspoon";
+    case "cup":
+      return "cup";
+    case "c":
+      return "cup";
+    case "g":
+      return "gram";
+    //  test
+    case "servings":
+        return "jhgfd";
+    default:
+      return unit;
   }
-  if ( unit === "tablespoons" ) {
-    return "tablespoon";
-  }
-  if ( unit === "tsp" ) {
-    return "teaspoon";
-  }
-  if ( unit === "teaspoons" ) {
-    return "teaspoon";
-  }
-  if ( unit === "cups" ) {
-    return "cup";
-  }
-  if ( unit === "c" ) {
-    return "cup";
-  }
-  if ( unit === "g" ) {
-    return "gram";
-  }
-  else {
-    return unit;
-  }
+
 }

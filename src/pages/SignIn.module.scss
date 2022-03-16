@@ -13,18 +13,27 @@
 
 #grid-main {
   grid-area: grid-main;
+  display: flex;
+  justify-content: center;
 }
 
 .form-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  //align-items: center;
+  //justify-content: center;
+  //@include login-form;
+  //align-items: center;
+  //display: flex;
+  //flex-direction: column;
+  //width: 90%;
+  background-color: $background-02;
+  box-shadow: $box-shadow-01;
+  padding:80px;
+  max-width:500px;
 }
-
-.login-form {
-  @include login-form;
+.form {
+  max-width: 500px;
 }
-
 .input-field {
   @include form-input;
   height: 35pt;
@@ -35,7 +44,6 @@ form > label {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  //margin:20px;
   justify-content: space-between;
   align-content: center;
   width: 320px;
@@ -48,5 +56,5 @@ form > label {
   border: none;
 }
 .text-block {
-  padding-top:30px;
+  padding-top:60px;
 }

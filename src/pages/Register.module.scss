@@ -6,8 +6,8 @@
     ". grid-maintop grid-maintop grid-maintop ."
     ". grid-main grid-main grid-main ."
     ". grid-mainbottom grid-mainbottom grid-mainbottom .";
-  grid-template-rows: 50px auto 50px ;
-  grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+  grid-template-rows: 50px auto 50px;
+  grid-template-columns: 20px 2fr 2fr 2fr 20px;
   grid-gap: 20px;
 }
 
@@ -19,10 +19,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  @include login-form;
 
-.register-form {
-@include login-form;
 }
 
 .input-field {
@@ -30,21 +28,6 @@
   height: 35pt;
   margin: 10px 0;
 }
-
-.label-input {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  padding: 15px;
-}
-//
-//
-//.register-form {
-//  width: 550px;
-//  padding: 50px;
-//  background-color: $background-03;
-//  border-radius: $border-radius-01;
-//}
 
 form > label {
   display: flex;
@@ -63,21 +46,6 @@ fieldset {
 
 }
 
-.registration-form-section {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  /*justify-content: space-between;*/
-  /*width:350px;*/
-}
 .text-block {
-  padding-top:30px;
-}
-/* typo */
-.form-error-message {
-  color: red;
-  font-size: 75%;
-  padding-top: 5px;
-  padding-left: 10px;
+  padding-top: 30px;
 }
