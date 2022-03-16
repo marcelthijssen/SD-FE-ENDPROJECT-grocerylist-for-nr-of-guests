@@ -11,13 +11,12 @@ import styles from "./Recipe.module.scss";
 import NumberOfGuests from "../components/numberOfGuests/NumberOfGuests";
 import Button from "../components/buttons/Button";
 import ToggleShoppingList from "../components/toggleShoppingList/ToggleShoppingList";
-import SharingButtons from "../components/SharingButtons/SharingButtons";
 
 function Recipe() {
 
   const { id } = useParams();
   const [ recipe, setRecipe ] = useState( [] );
-  const [ numberOfGuests, setNumberOfGuests ] = useState();
+  const [ numberOfGuests, setNumberOfGuests ] = useState("");
 
   useEffect( () => {
     async function fetchData() {
@@ -26,7 +25,7 @@ function Recipe() {
         setRecipe( singleResult.data );
         setNumberOfGuests( singleResult.data.servings );
       } catch ( e ) {
-        console.error( e );
+        // console.error( e );
       }
     }
 
@@ -92,9 +91,9 @@ function Recipe() {
 
                 { numberOfGuests !== recipe.servings
                   ?
-                  <Button className={ styles["reset-button"] }
+                  <Button buttonStyle="reset-amount-button"
                           inputType="button"
-                          clickHandler={ e => setNumberOfGuests( recipe.servings ) }
+                          clickHandler={ () => setNumberOfGuests( recipe.servings ) }
                           label="reset"
                   />
                   :

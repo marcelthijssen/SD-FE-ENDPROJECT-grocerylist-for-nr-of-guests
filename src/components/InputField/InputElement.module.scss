@@ -7,9 +7,9 @@
 }
 
 .input-field {
-  display: flex;
-  height: 35px;
-  margin: 5px;
+  //display: flex;
+  //height: 35px;
+  //margin: 5px;
   width: 500px;
   border: none;
   outline: none;
@@ -19,9 +19,13 @@
 .input-field {
   @include form-input;
   height: 35pt;
-  margin: 10px 0;
+  margin: 10px 5px;
 }
+
 
 .error-message {
   @include error-message;
+}
+.error-message {
+  position: absolute!important;
 }

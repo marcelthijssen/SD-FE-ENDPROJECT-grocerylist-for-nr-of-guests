@@ -9,7 +9,7 @@ function SharingButtons() {
   }
 
   function shareThisPage() {
-    console.log( "shareThisButton" );
+    // console.log( "shareThisButton" );
   }
 
   function mailThisRecipe() {

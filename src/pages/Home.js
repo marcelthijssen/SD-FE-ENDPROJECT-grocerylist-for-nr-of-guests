@@ -23,8 +23,6 @@ function Home() {
         const result = await axios.get( `https://api.spoonacular.com/recipes/random?number=6&tags=vegetarian,dessert&apiKey=${ process.env.REACT_APP_SPOONACULAR_KEY }`, { cancelToken: source.token, } );
         setRecipesSearchResult( result.data.recipes );
 
-        // console.log( result.results );
-        // CLEANUP when user leaves page while function is running
         return function cleanup() {
           source.cancel();
         };
@@ -35,17 +33,12 @@ function Home() {
 
     fetchData();
   }, [] );
-  //
-  // useEffect( () => {
-  //   console.log( recipesSearchResult );
-  // }, [ recipesSearchResult ] );
 
   return (
     <>
-      { recipesSearchResult &&
-        <div >
 
           <PageHeader title="Home"/>
+      { recipesSearchResult &&
 
           <div id={ styles["grid"] }>
             <div id={ styles["grid-main"] }>
@@ -58,7 +51,6 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
       }
     </>
   );

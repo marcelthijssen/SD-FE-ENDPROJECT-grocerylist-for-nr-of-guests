@@ -25,14 +25,14 @@ function Filters( { typeFilter, name } ) {
         ? [ ...prev, value ]
         : prev.filter( val => val !== value )
     );
-    console.log("clicked")
+    // console.log("clicked")
 
   }
 
   //Remove all selected
   function clearSelected( e ) {
     const { checked, value } = e.currentTarget;
-    console.log("clicked cleaarselect");
+    // console.log("clicked clearselect");
     setNameFilter(
       prev => checked
         ? [ ...prev, value ]

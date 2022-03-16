@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 60px;
-  padding: 60px 0;
+  padding-bottom: 60px;
 }
 
 .single-recipe-card {
@@ -16,7 +16,7 @@
   height: 400px;
   position: relative;
   background-color: $background-01;
-  flex: 0.5 0 21%;
+  flex: 29%;
 }
 
 .image-container {

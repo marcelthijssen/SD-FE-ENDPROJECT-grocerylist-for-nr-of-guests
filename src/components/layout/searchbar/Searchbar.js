@@ -16,7 +16,7 @@ function Searchbar( { setRecipeSearchHandler } ) {
     e.preventDefault();
     setRecipeSearchHandler( query );
     setIsDisabled( true );
-    console.log( query );
+    // console.log( query );
     setTimeout( () => {
       setIsDisabled( false );
     }, 1000 );
@@ -33,7 +33,7 @@ function Searchbar( { setRecipeSearchHandler } ) {
     } else {
       setQueryError( false );
     }
-    console.warn( e.target.value );
+    // console.warn( e.target.value );
   }
 
   return (

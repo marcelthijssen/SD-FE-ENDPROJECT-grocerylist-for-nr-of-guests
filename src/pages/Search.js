@@ -8,11 +8,9 @@ import typesOfMeals from "../assets/json/typesOfMeals.json";
 import typesOfCuisines from "../assets/json/typesOfCuisines.json";
 import typesOfIntolerances from "../assets/json/typesOfIntolerances.json";
 import typesOfDiets from "../assets/json/typesOfDiets.json";
-import { FavCounterContext } from "../context/FavContextProvider";
 
 function RecipeSearchResults( { recipeSearch } ) {
 
-  const { counter } = useContext( FavCounterContext );
   const [ recipesSearchResult, setRecipesSearchResult ] = useState( [] );
   const [ totalResults, setTotalResults ] = useState( 0 );
   const [ query, setQuery ] = useState( { recipeSearch } );
@@ -42,7 +40,7 @@ function RecipeSearchResults( { recipeSearch } ) {
   // update query ion browser refresh
   useEffect( () => {
     setQuery( localStorage.getItem( "query" ) );
-  } );
+  }, [] );
 
   // get data
   useEffect( () => {
@@ -54,18 +52,13 @@ function RecipeSearchResults( { recipeSearch } ) {
         const result = await axios.get( `https://api.spoonacular.com/recipes/complexSearch?query=${ query }&cuisine=${ savedCuisinesFilter }&type=${ savedMealsFilter }&intolerances=${ savedIntolerancesFilter }&diet=${ savedDietsFilter }&addRecipeInformation=true&apiKey=${ process.env.REACT_APP_SPOONACULAR_KEY }${ offSetting }`, { cancelToken: source.token, } );
         setTotalResults( result.data.totalResults );
         setRecipesSearchResult( result.data.results );
-
-        // console.log( filterActive );
         setFilterActive( false );
-        // console.log( filterActive );
-        // console.log( result );
 
         // CLEANUP when user leaves page while function is running
         return function cleanup() {
           source.cancel();
         };
       } catch ( e ) {
-        console.error( e );
       }
     }
 
@@ -74,18 +67,13 @@ function RecipeSearchResults( { recipeSearch } ) {
 
   function handleChange() {
     setFilterActive( true );
-    // console.log( filterActive );
-    // console.log( "clicked" );
-    // console.log( recipeSearch );
   }
 
   function nextPageButton() {
-    console.log("+10");
     return setOffSet( offSet + 10 );
   }
 
   function previousPageButton() {
-    console.log("-10");
     return setOffSet( offSet - 10 );
   }
 
@@ -130,7 +118,8 @@ function RecipeSearchResults( { recipeSearch } ) {
                   name={ "types of intolerances" }
                   typeFilter={ typesOfIntolerances }
                 />
-                <button className={ styles["filter-button"] } onClick={ handleChange } type="submit-button">Activate Filter
+                <button className={ styles["filter-button"] } onClick={ handleChange } type="submit-button">Activate
+                  Filter
                 </button>
 
               </div>
@@ -169,14 +158,13 @@ function RecipeSearchResults( { recipeSearch } ) {
               <RecipeCard recipesSearchResult={ recipesSearchResult }/>
             </div>
 
-
             <div id={ styles["grid-mainbottom"] } className={ styles["pagination"] }>
 
               <button
                 type="submit"
                 onClick={ previousPageButton }
                 disabled={ offSet < 1 }
-                className={styles["pagination-button"]}
+                className={ styles["pagination-button"] }
               >
                 Previous 10 recipes
               </button>
@@ -184,7 +172,7 @@ function RecipeSearchResults( { recipeSearch } ) {
                 type="submit"
                 disabled={ offSet > recipesSearchResult.length }
                 onClick={ nextPageButton }
-                className={styles["pagination-button"]}
+                className={ styles["pagination-button"] }
               >
                 Next 10 recipes
               </button>

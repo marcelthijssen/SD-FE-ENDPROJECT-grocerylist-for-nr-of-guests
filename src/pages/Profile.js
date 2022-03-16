@@ -26,9 +26,9 @@ function Profile() {
         } );
 
         setProfileData( result.data );
-        console.log(result);
+        // console.log(result);
       } catch ( e ) {
-        console.error( e );
+        // console.error( e );
       }
     }
 

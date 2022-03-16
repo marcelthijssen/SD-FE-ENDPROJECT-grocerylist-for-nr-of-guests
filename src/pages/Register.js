@@ -16,11 +16,10 @@ function Register() {
   const [ loading, toggleLoading ] = useState( false );
   const history = useHistory();
 
-  // const [ isDisabled, setIsDisabled ] = useState( false );
   const { register, formState: { errors }, handleSubmit } = useForm( {
     mode: "onBlur",
   } );
-  console.log('ERRORS', errors);
+
   // canceltoken to prevent leak
   const source = axios.CancelToken.source();
 
@@ -47,7 +46,7 @@ function Register() {
 
       history.push( "/signin" );
     } catch ( e ) {
-      console.error( e );
+      // console.error( e );
       toggleError( true );
     }
     toggleLoading( false );

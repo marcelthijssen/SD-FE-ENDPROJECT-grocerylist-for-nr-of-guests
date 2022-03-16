@@ -49,7 +49,6 @@ function AuthContextProvider( { children } ) {
       status: "done",
     } );
 
-    console.log( "Gebruiker is uitgelogd!" );
     history.push( "/" );
   }
 
@@ -80,8 +79,8 @@ function AuthContextProvider( { children } ) {
       }
 
     } catch ( e ) {
-      console.error( e );
-      // ging er iets mis? Plaatsen we geen data in de state
+      // console.error( e );
+
       toggleIsAuth( {
         isAuth: false,
         user: null,

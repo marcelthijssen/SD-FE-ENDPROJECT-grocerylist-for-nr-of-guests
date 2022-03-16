@@ -7,7 +7,6 @@ import instagram from "../../../assets/images/instagram.svg";
 import tiktok from "../../../assets/images/tiktok.svg";
 import { Link } from "react-router-dom";
 
-
 function Footer() {
   return (
     <>
@@ -50,8 +49,8 @@ function Footer() {
 
         <section id={ styles["grid-footersocial"] }>
           <ul className={ styles["socials"] }>
-            <li >
-              <Link to="https://pinterest.nl">
+            <li>
+              <Link to="/">
                 <img alt="pinterest"
                      style={ { cursor: "pointer" } }
                      src={ pinterest }
@@ -60,7 +59,7 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="https://instagram.nl">
+              <Link to="/">
                 <img alt="instagram"
                      style={ { cursor: "pointer" } }
                      src={ instagram }
@@ -68,15 +67,16 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="https://twitter.nl">
+              <Link to="/">
                 <img alt="twitter"
                      style={ { cursor: "pointer" } }
                      src={ twitter }
                 />
               </Link>
+
             </li>
             <li>
-              <Link to="https://facebook.nl">
+              <Link to="/">
                 <img alt="facebook"
                      style={ { cursor: "pointer" } }
                      src={ facebook }
@@ -84,7 +84,7 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="https://tiktok.nl">
+              <Link to="/">
                 <img alt="tiktok"
                      style={ { cursor: "pointer" } }
                      src={ tiktok }
