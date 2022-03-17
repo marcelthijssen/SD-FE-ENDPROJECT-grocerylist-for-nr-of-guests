@@ -13,6 +13,7 @@ function HomePageInfoBlocks() {
         <div className={ styles["info-cards"] }>
 
           { infoBlocks.map( ( infoBlock ) =>
+
             <article className={ styles["single-info-card"] } key={ infoBlock.id }>
 
               <div className={ styles["image-container"] }>

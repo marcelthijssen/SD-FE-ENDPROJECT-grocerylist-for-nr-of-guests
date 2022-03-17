@@ -1,11 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.scss";
-import facebook from "../../../assets/images/facebook.svg";
-import twitter from "../../../assets/images/twitter.svg";
-import pinterest from "../../../assets/images/pinterest.svg";
-import instagram from "../../../assets/images/instagram.svg";
-import tiktok from "../../../assets/images/tiktok.svg";
-import { Link } from "react-router-dom";
+
+import SocialIcons from "../../socials/SocialIcons";
 
 function Footer() {
   return (
@@ -46,52 +42,54 @@ function Footer() {
           </div>
 
         </div>
-
+<div>
+</div>
         <section id={ styles["grid-footersocial"] }>
-          <ul className={ styles["socials"] }>
-            <li>
-              <Link to="/">
-                <img alt="pinterest"
-                     style={ { cursor: "pointer" } }
-                     src={ pinterest }
-                     height={ 25 } width={ 25 }
-                />
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <img alt="instagram"
-                     style={ { cursor: "pointer" } }
-                     src={ instagram }
-                />
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <img alt="twitter"
-                     style={ { cursor: "pointer" } }
-                     src={ twitter }
-                />
-              </Link>
+          <SocialIcons/>
+          {/*<ul className={ styles["socials"] }>*/}
+          {/*  <li>*/}
+          {/*    <Link to="/">*/}
+          {/*      <img alt="pinterest"*/}
+          {/*           style={ { cursor: "pointer" } }*/}
+          {/*           src={ pinterest }*/}
+          {/*           height={ 25 } width={ 25 }*/}
+          {/*      />*/}
+          {/*    </Link>*/}
+          {/*  </li>*/}
+          {/*  <li>*/}
+          {/*    <Link to="/">*/}
+          {/*      <img alt="instagram"*/}
+          {/*           style={ { cursor: "pointer" } }*/}
+          {/*           src={ instagram }*/}
+          {/*      />*/}
+          {/*    </Link>*/}
+          {/*  </li>*/}
+          {/*  <li>*/}
+          {/*    <Link to="/">*/}
+          {/*      <img alt="twitter"*/}
+          {/*           style={ { cursor: "pointer" } }*/}
+          {/*           src={ twitter }*/}
+          {/*      />*/}
+          {/*    </Link>*/}
 
-            </li>
-            <li>
-              <Link to="/">
-                <img alt="facebook"
-                     style={ { cursor: "pointer" } }
-                     src={ facebook }
-                />
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <img alt="tiktok"
-                     style={ { cursor: "pointer" } }
-                     src={ tiktok }
-                />
-              </Link>
-            </li>
-          </ul>
+          {/*  </li>*/}
+          {/*  <li>*/}
+          {/*    <Link to="/">*/}
+          {/*      <img alt="facebook"*/}
+          {/*           style={ { cursor: "pointer" } }*/}
+          {/*           src={ facebook }*/}
+          {/*      />*/}
+          {/*    </Link>*/}
+          {/*  </li>*/}
+          {/*  <li>*/}
+          {/*    <Link to="/">*/}
+          {/*      <img alt="tiktok"*/}
+          {/*           style={ { cursor: "pointer" } }*/}
+          {/*           src={ tiktok }*/}
+          {/*      />*/}
+          {/*    </Link>*/}
+          {/*  </li>*/}
+          {/*</ul>*/}
         </section>
 
       </div>
