@@ -17,9 +17,12 @@
 
 .mailinglist-input {
   display:flex;
+  flex-direction: row;
+  align-items: center;
 }
 .mailinglist-input input {
   font-size: 16px;
+  border-radius: 6px 0 0 6px;
 }
 
 .error-message {

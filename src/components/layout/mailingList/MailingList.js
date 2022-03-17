@@ -46,7 +46,6 @@ function MailingList() {
                   message: "invalid mailaddress",
                 }
               } }
-
             />
             <Button inputType="submit"
                     label="Submit"

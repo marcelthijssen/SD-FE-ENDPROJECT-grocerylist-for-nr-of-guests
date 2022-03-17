@@ -45,7 +45,9 @@ function Home() {
               <div className={ styles["home-container"] }>
 
                 <HomePageInfoBlocks className={ styles["home-info-block"] }/>
+
                 <hr/>
+
                 <RecipeCard recipesSearchResult={ recipesSearchResult }/>
 
               </div>

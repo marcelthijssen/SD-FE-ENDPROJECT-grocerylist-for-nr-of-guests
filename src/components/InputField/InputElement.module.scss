@@ -19,13 +19,12 @@
 .input-field {
   @include form-input;
   height: 35pt;
-  margin: 10px 5px;
 }
 
 
 .error-message {
   @include error-message;
 }
-.error-message {
-  position: absolute!important;
-}
+//.error-message {
+//  position: absolute!important;
+//}

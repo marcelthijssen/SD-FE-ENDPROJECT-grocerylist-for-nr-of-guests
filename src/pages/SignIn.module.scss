@@ -18,26 +18,11 @@
 }
 
 .form-container {
-  display: flex;
-  //align-items: center;
-  //justify-content: center;
-  //@include login-form;
-  //align-items: center;
-  //display: flex;
-  //flex-direction: column;
-  //width: 90%;
-  background-color: $background-02;
-  box-shadow: $box-shadow-01;
-  padding:80px;
-  max-width:500px;
+  @include form-container;
 }
-.form {
-  max-width: 500px;
-}
+
 .input-field {
   @include form-input;
-  height: 35pt;
-  margin: 10px 0;
 }
 
 form > label {
@@ -55,6 +40,7 @@ form > label {
   width: 300px;
   border: none;
 }
+
 .text-block {
-  padding-top:60px;
+  padding-top: 60px;
 }

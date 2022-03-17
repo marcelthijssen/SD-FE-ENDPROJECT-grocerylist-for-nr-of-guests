@@ -13,14 +13,12 @@
 
 #grid-main {
   grid-area: grid-main;
+  display: flex;
+  justify-content: center;
 }
 
 .form-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @include login-form;
-
+  @include form-container;
 }
 
 .input-field {

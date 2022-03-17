@@ -1,60 +1,65 @@
 @import '../../../assets/scss/variables.scss';
 
 #grid {
-    display: grid;
-    grid-template-areas:
+  display: grid;
+  grid-template-areas:
     "grid-top"
     "grid-searchbar";
-    grid-template-rows: 70px auto;
+  grid-template-rows: 70px auto;
 }
+
 #pageheader {
-    grid-area: grid-searchbar;
+  grid-area: grid-searchbar;
 }
+
 .pageheader {
-    border-bottom: 0px solid white;
-    background: url(../../../assets/images/pageheader-image.png) ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center -4vw;
+  border-bottom: 0px solid white;
+  background: url(../../../assets/images/pageheader-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -4vw;
 }
+
 .searchbar {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .search-input {
-    @include form-input;
+  @include form-input;
 }
+
 .searchbar input {
-    font-size: 20px;
-    border:none;
-    display:flex;
-    margin: 5px;
-    width: 500px;
-    outline: none;
-    letter-spacing: 1px;
+  font-size: 20px;
+  border: none;
+  display: flex;
+  margin: 5px;
+  width: 500px;
+  outline: none;
+  letter-spacing: 1px;
 }
 
 
 .label {
-    font-size: 20px;
-    color: $font-color-01;
-    letter-spacing: 1px;
+  font-size: 20px;
+  color: $font-color-01;
+  letter-spacing: 1px;
 }
 
 .error-message {
-@include error-message;
+  @include error-message;
+  margin-top: 70px;
 }
 
 .pageheader-text {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing:2px;
-    color: #ffffff;
-    text-shadow: 0 0 5px $font-color-07;
-    text-align: center;
-    height:20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 0 0 5px $font-color-07;
+  text-align: center;
+  height: 20vw;
 }

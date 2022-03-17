@@ -13,13 +13,13 @@
   },
   {
     "id": "3",
-    "title": "chose number off guests",
-    "content": "Configure per recipe the number of guests who will be coming for diner.",
+    "title": "Add guests",
+    "content": "Add the number of guests, who are coming.",
     "imagename": "3-group-people"
   },
   {
     "id": "4",
-    "title": "create your personalised shoppinglist",
+    "title": "create a shoppinglist",
     "content": "Print your shoppinglist and go shopping!",
     "imagename": "4-grocery-store"
   }
