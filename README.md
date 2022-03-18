@@ -14,6 +14,9 @@ Het werkt in 4 stappen: \
 #info
 Deze applicatie is gemaakt met Webstorm: https://www.jetbrains.com/webstorm. \
 En https://www.npmjs.com
+Omdat dit een front-end-project is wordt er nu gebruik gemaakt van de Novi-hogeschool back-end.\
+Lees hier meer informatie hierover: \
+https://github.com/hogeschoolnovi/novi-educational-backend-documentation
 # Installatie
 Clone deze git-repository via de groene button, of via jouw eigen editor naar uw locale machine.
 
@@ -60,7 +63,7 @@ Bouw de app voor productie met: \
 Voor meer informatie: [deployment](https://facebook.github.io/create-react-app/docs/deployment).
 
 ## Als de applicatie draait.
-Kun je in vier stappen een boodschappenlijst maken rekening houdend met het aantal gasten wat komt eten. \
+Kun je in enkele stappen een boodschappenlijst maken, rekening houdend met het aantal gasten wat komt eten. \
 1. zoek een gerecht door het invoeren van een of meerdere woorden 
 ⚠ Alleen engelse woorden gebruiken
 2. Voeg een gerecht toe aan favorieten door op het hartje te klikken
@@ -69,11 +72,20 @@ Kun je in vier stappen een boodschappenlijst maken rekening houdend met het aant
 5. Voeg toe aan de 'shoppinglist'
 
 
-in de zoekbalk
+###Filters
+Links kun je in vier verschillende categoriën de zoekresultaten filteren:
+1. Types of Cuisine (bijvoorbeeld: italian of carabian)
+2. Types of Intolerances (bijvoorbeeld: Dairy of Gluten)
+3. Typesof Meals (Bijvoorbeeld: Starter of een Main)
+4. Types of Diets (Bijvoorbeeld: Vegan of Gluten Free)
+De filters worden actief na klikken op de 'Activate filter'-button of door een nieuwe zoekvraag te starten.
 
+###Er is een mogelijk om een account aan te maken 
+Via http://localhost:3000/register kun je een account aanmaken.
+wanneer het rustig is op de server, en je bent de eerste die registreerdt, dan moet de server eerst nog opstarten.
+Probeer het na een minuut nog een keer.
 
-In het account kunt u filter voorkeuren instellen.
-
-Deze applicatie maakt gebruik van de NOVI-Back-end: \
-Lees hier meer informatie hierover: \
-https://github.com/hogeschoolnovi/novi-educational-backend-documentation 
+Na een geslaagde registratie wordt je geredirect naar de inlog-pagina. 
+Na het inloggen wordt je geredirect naar je account-pagina.\
+Hier kun je de vier filters je eigen voorkeur-selectie instellen en copiëren naar de site. \
+Nadat je bent uitgelogd en weer inlogt zijn je voorkeursinstellingen weer beschibaar. 

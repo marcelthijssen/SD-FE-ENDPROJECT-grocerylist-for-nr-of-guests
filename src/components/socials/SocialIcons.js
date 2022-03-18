@@ -9,18 +9,18 @@ function SocialIcons() {
     <>
       { socialsIcons &&
 
-        <ul className={ styles["socials"] }>
+        <div className={ styles["socials"] }>
           { socialsIcons.map( ( socialsIcon ) =>
-            <lu>
+            <div key={`${ socialsIcon.title }`}>
               <ExternalLink href={ `${ socialsIcon.url }` } target="blank">
                 <img
                   src={ require( `../../assets/images/${ socialsIcon.title }.svg` ) }
                   alt={ `${ socialsIcon.title }` }
                 />
               </ExternalLink>
-            </lu>
+            </div>
           ) }
-        </ul>
+        </div>
 
       }
     </>
