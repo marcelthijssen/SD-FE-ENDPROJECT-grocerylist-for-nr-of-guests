@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./MailingList.module.scss";
-import "../grid.module.css";
+// import "../grid.module.css";
 import Button from "../../buttons/Button";
 import { useForm } from "react-hook-form";
 import InputElement from "../../InputField/InputElement";

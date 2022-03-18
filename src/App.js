@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 // css
 import "./App.module.scss";
-import "./components/layout/grid.module.css";
+// import "./components/layout/grid.module.css";
 
 // components
 import Footer from "./components/layout/footer/Footer";

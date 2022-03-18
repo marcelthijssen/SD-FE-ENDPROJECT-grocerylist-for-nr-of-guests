@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import styles from "./Searchbar.module.scss";
-import "../grid.module.css";
+// import "../grid.module.css";
 import Button from "../../buttons/Button";
 
 function Searchbar( { setRecipeSearchHandler } ) {

@@ -37,7 +37,12 @@ button {
 .not {
   font-size: 300%;
 }
-
+.recipe-link {
+  background-color: $background-01;
+  box-shadow: $box-shadow-01;
+  text-decoration: none;
+  font-size: 16px;
+}
 .reset-button,
 .submit-button {
   background-color: $reset-button-background;

@@ -11,61 +11,69 @@ Het werkt in 4 stappen: \
 # Preview
 ![](src/assets/images/website.png)
 
+#info
+Deze applicatie is gemaakt met Webstorm: https://www.jetbrains.com/webstorm. \
+En https://www.npmjs.com
 # Installatie
-Clone deze git-repository via de groene button, of via jouw editor naar uw locale machine.
+Clone deze git-repository via de groene button, of via jouw eigen editor naar uw locale machine.
 
-Open de applicatie in de editor en installeer alle benodigde dependencies met de volgende code: 
-
+Installeer alle benodigde dependencies met: \
 `npm install`
 
-## Benodigde abonnement
-De applicatie maakt gebruik van de api-key van Spoonacular.\
+Eventuele problemen kunt u 
+
+## Benodigde api-key
+De applicatie maakt gebruik van een api van Spoonacular. \
 Er is een gratis api-key beschikbaar om de applicatie te gebruiken.\
 U kunt eventueel een andere api-key aanschaffen om meer data te kunnen ontvangen via:\
 https://spoonacular.com/food-api \
 Documentatie voor de spoonacular api vindt u hier: \
 https://spoonacular.com/food-api/docs
 
-Om de beschikbare api-key te gebruiken, maakt u een nieuw bestand aan in de root-folder genaamd:\
+Om de beschikbare api-key te gebruiken, maakt u een nieuw bestand aan in de root-folder genaamd: \
 `.env-file`
 
-Plaats daarin de volgende code:
-#### `REACT_APP_SPOONACULAR_KEY=c3cb27d6fbfc48f4977ee4ac7143e983`
-
-## Account kunt u zelf aanmaken
-In het account kunt u filtervoorkeuren instellen.
-
-Deze applicatie maakt gebruik van de NOVI-Back-end: \
-Lees hier meer informatie hierover:\
-https://github.com/hogeschoolnovi/novi-educational-backend-documentation 
+Plaats daarin de volgende code: \
+`REACT_APP_SPOONACULAR_KEY=c3cb27d6fbfc48f4977ee4ac7143e983`
 
 ## Available Scripts
 
-Start de applicatie met:
+Start de applicatie met: \
+`npm start`
 
-### `npm start`
-
-De app wordt gestart in ontwikkelings-mode.\
+De app wordt gestart in ontwikkelings-mode. \
 Open [http://localhost:3000](http://localhost:3000) om het te bekijken in de browser.
 
-Na iedere wijziging zal de pagina herladen.
-
 ### Jest
-Om de aanwezige tests goed te laten werken is er naast de `__test__`-folder ook een `__mocks__`-folder aangemaakt.\
-In de `__mocks__`-folder staan twee bestanden die `scss`-import-errors voorkomen. 
-Daarnaast is er ook een `.babelrc`-bestand aangemaakt. 
+Start de tests met: \
+`npm start` 
 
-### `npm test:watch`
+Om de test automatisch te starten bij een wijziging gebruik dan: \
+`npm test:watch`
 
-Start de test-runner in de watch-mode.\
-Lees hier meer informatie hierover: [running tests](https://facebook.github.io/create-react-app/docs/running-tests).
+Lees hier meer informatie hierover: [running tests](https://facebook.github.io/create-react-app/docs/running-tests). 
+`npm run build`
 
-### `npm run build`
+Bouw de app voor productie met: \
+`npm run build`. De build staat in de `build`-folder
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Voor meer informatie: [deployment](https://facebook.github.io/create-react-app/docs/deployment).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Als de applicatie draait.
+Kun je in vier stappen een boodschappenlijst maken rekening houdend met het aantal gasten wat komt eten. \
+1. zoek een gerecht door het invoeren van een of meerdere woorden 
+⚠ Alleen engelse woorden gebruiken
+2. Voeg een gerecht toe aan favorieten door op het hartje te klikken
+3. Ga naar de favorieten door op het getal te klikken
+4. Pas het aantal gasten aan 
+5. Voeg toe aan de 'shoppinglist'
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+in de zoekbalk
+
+
+In het account kunt u filter voorkeuren instellen.
+
+Deze applicatie maakt gebruik van de NOVI-Back-end: \
+Lees hier meer informatie hierover: \
+https://github.com/hogeschoolnovi/novi-educational-backend-documentation 
