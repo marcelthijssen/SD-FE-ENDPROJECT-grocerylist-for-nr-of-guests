@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d492b1df-1e08-4d6a-a72e-39593773ac25" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/recipeFavoriteCard/RecipeFavoriteCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recipeFavoriteCard/RecipeFavoriteCard.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="23Wal8nUdpPGn7SJ8yWoS2LsLdG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+      <recent name="$PROJECT_DIR$/src/components/editaccount" />
+      <recent name="$PROJECT_DIR$/src/assets/json" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="UnitNames should be replaced" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/__test__/replaceUnitNames.test.js" />
+      <test-names>
+        <test-name value="UnitNames should be replaced" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.UnitNames should be replaced" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d492b1df-1e08-4d6a-a72e-39593773ac25" name="Changes" comment="" />
+      <created>1641852450252</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1641852450252</updated>
+      <workItem from="1641852488219" duration="39000" />
+      <workItem from="1641852626401" duration="1358000" />
+      <workItem from="1642083014302" duration="6908000" />
+      <workItem from="1642156983182" duration="2997000" />
+      <workItem from="1642163557514" duration="8441000" />
+      <workItem from="1642275932009" duration="95000" />
+      <workItem from="1642276038492" duration="3882000" />
+      <workItem from="1642684613506" duration="8456000" />
+      <workItem from="1642782745216" duration="7066000" />
+      <workItem from="1642867065248" duration="76000" />
+      <workItem from="1643184269418" duration="5389000" />
+      <workItem from="1643192323399" duration="2668000" />
+      <workItem from="1643200702936" duration="7131000" />
+      <workItem from="1609459398798" duration="198000" />
+      <workItem from="1643293975234" duration="5529000" />
+      <workItem from="1643355003344" duration="125000" />
+      <workItem from="1643355150133" duration="22000" />
+      <workItem from="1643367461493" duration="155000" />
+      <workItem from="1643372360178" duration="7056000" />
+      <workItem from="1643469074378" duration="2359000" />
+      <workItem from="1643472213190" duration="2162000" />
+      <workItem from="1643531821880" duration="9520000" />
+      <workItem from="1643558143454" duration="4341000" />
+      <workItem from="1643741488227" duration="7223000" />
+      <workItem from="1643790836775" duration="8694000" />
+      <workItem from="1643806877763" duration="22000" />
+      <workItem from="1643972862286" duration="929000" />
+      <workItem from="1643973986077" duration="4419000" />
+      <workItem from="1643989954573" duration="2840000" />
+      <workItem from="1644048926293" duration="26190000" />
+      <workItem from="1644219640741" duration="21061000" />
+      <workItem from="1644317905845" duration="134000" />
+      <workItem from="1644487147746" duration="75000" />
+      <workItem from="1646082509029" duration="1168000" />
+      <workItem from="1609459448366" duration="5279000" />
+      <workItem from="1609459684809" duration="592000" />
+      <workItem from="1609459377810" duration="5518000" />
+      <workItem from="1646493688337" duration="8199000" />
+      <workItem from="1646573487116" duration="3760000" />
+      <workItem from="1646670250112" duration="277000" />
+      <workItem from="1646916410683" duration="4682000" />
+      <workItem from="1647013467582" duration="13372000" />
+      <workItem from="1647094433604" duration="7689000" />
+      <workItem from="1647160242819" duration="24554000" />
+      <workItem from="1647272286613" duration="1401000" />
+      <workItem from="1647341366931" duration="197000" />
+      <workItem from="1647356386437" duration="3861000" />
+      <workItem from="1647413218553" duration="20466000" />
+      <workItem from="1647501521160" duration="7723000" />
+      <workItem from="1647610351265" duration="5723000" />
+      <workItem from="1647870676156" duration="2073000" />
+      <workItem from="1647873021314" duration="165000" />
+      <workItem from="1647873229459" duration="8000" />
+      <workItem from="1647873459763" duration="377000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

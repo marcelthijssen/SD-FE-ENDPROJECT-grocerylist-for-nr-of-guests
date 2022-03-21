@@ -115,7 +115,6 @@ function RecipeFavoriteCard( { favRecipesId } ) {
 
                 </div>
 
-                {/*Toggle to ShoppingList */ }
                 <div className={ styles["add-to-shoppinglist"] }>
                   <ToggleShoppingList recipe={ recipe } numberOfGuests={ numberOfGuests }/>
                 </div>
