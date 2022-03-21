@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d492b1df-1e08-4d6a-a72e-39593773ac25" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/recipeFavoriteCard/RecipeFavoriteCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recipeFavoriteCard/RecipeFavoriteCard.js" afterDir="false" />
-    </list>
+    <list default="true" id="d492b1df-1e08-4d6a-a72e-39593773ac25" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +144,7 @@
       <workItem from="1647870676156" duration="2073000" />
       <workItem from="1647873021314" duration="165000" />
       <workItem from="1647873229459" duration="8000" />
-      <workItem from="1647873459763" duration="377000" />
+      <workItem from="1647873459763" duration="642000" />
     </task>
     <servers />
   </component>
