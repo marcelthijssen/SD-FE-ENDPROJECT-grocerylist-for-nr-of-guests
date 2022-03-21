@@ -28,7 +28,7 @@ function Favorites() {
           <div id={ styles["grid"] }>
             <div id={ styles["grid-main"] }>
               { favoriteToSave.map( ( favRecipesId ) =>
-                <div>
+                <div  key={ favRecipesId }>
                   {
                     <RecipeFavoriteCard favRecipesId={ favRecipesId }/>
 

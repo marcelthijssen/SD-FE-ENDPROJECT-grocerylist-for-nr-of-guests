@@ -15,7 +15,7 @@ function RecipeFavoriteCard( { favRecipesId } ) {
   const source = axios.CancelToken.source();
 
   const [ recipe, setRecipe ] = useState();
-  const [ numberOfGuests, setNumberOfGuests ] = useState();
+  const [ numberOfGuests, setNumberOfGuests ] = useState(0);
   // cancel request if page premature closes
   useEffect( () => {
     return function cleanup() {
@@ -30,7 +30,6 @@ function RecipeFavoriteCard( { favRecipesId } ) {
         const result = await axios.get( `https://api.spoonacular.com/recipes/${ favRecipesId }/information?includeNutrition=false/&apiKey=${ process.env.REACT_APP_SPOONACULAR_KEY }`, { cancelToken: source.token, } );
         setRecipe( result.data );
         setNumberOfGuests( result.data.servings );
-        // console.log( result.data );
 
         return function cleanup() {
           source.cancel();
@@ -42,7 +41,6 @@ function RecipeFavoriteCard( { favRecipesId } ) {
 
     fetchData();
   }, [ favRecipesId ] );
-  // console.log( numberOfGuests );
 
   return (
     <>
