@@ -1,11 +1,11 @@
 # Grocerylist calculated for number of guests coming for diner
 
 Ik heb een applicatie ontwikkeld die gaat helpen bij het maken van één boodschappenlijst van alle ingrediënten, aangepast aan het aantal personen wat komt eten. 
-Het werkt in 4 stappen: \
-1 - zoek een gerecht\
-2 - voeg het toe aan favorieten\
-3 - geef per gerecht het aantal personen aan waarvoor u het gerecht gaat bereiden\
-4 - print de aangepaste boodschappenlijst\
+Het werkt in 4 stappen: 
+1. zoek een gerecht
+2. voeg het toe aan favorieten
+3. geef per gerecht het aantal personen aan waarvoor u het gerecht gaat bereiden\
+4. print de aangepaste boodschappenlijst
 
 
 # Preview
@@ -49,13 +49,12 @@ Open [http://localhost:3000](http://localhost:3000) om het te bekijken in de bro
 
 ### Jest
 Start de tests met: \
-`npm start` 
+`npm run test 
 
 Om de test automatisch te starten bij een wijziging gebruik dan: \
-`npm test:watch`
+`npm run test:watch`
 
 Lees hier meer informatie hierover: [running tests](https://facebook.github.io/create-react-app/docs/running-tests). 
-`npm run build`
 
 Bouw de app voor productie met: \
 `npm run build`. De build staat in de `build`-folder
