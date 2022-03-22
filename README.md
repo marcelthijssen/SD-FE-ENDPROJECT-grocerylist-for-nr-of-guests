@@ -49,7 +49,7 @@ Open [http://localhost:3000](http://localhost:3000) om het te bekijken in de bro
 
 ### Jest
 Start de tests met: \
-`npm run test 
+`npm run test`
 
 Om de test automatisch te starten bij een wijziging gebruik dan: \
 `npm run test:watch`
