@@ -34,7 +34,7 @@ Documentatie voor de spoonacular api vindt u hier: \
 https://spoonacular.com/food-api/docs
 
 Om de beschikbare api-key te gebruiken, maakt u een nieuw bestand aan in de root-folder genaamd: \
-`.env-file`
+`.env`-file
 
 Plaats daarin de volgende code: \
 `REACT_APP_SPOONACULAR_KEY=c3cb27d6fbfc48f4977ee4ac7143e983`
