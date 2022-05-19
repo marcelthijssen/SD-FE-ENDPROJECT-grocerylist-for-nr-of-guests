@@ -13,42 +13,11 @@
 }
 
 .pageheader {
-  border-bottom: 0px solid white;
+  border-bottom: 0 solid white;
   background: url(../../../assets/images/pageheader-image.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -4vw;
-}
-
-.searchbar {
-  display: flex;
-  justify-content: center;
-}
-
-.search-input {
-  @include form-input;
-}
-
-.searchbar input {
-  font-size: 20px;
-  border: none;
-  display: flex;
-  margin: 5px;
-  width: 500px;
-  outline: none;
-  letter-spacing: 1px;
-}
-
-
-.label {
-  font-size: 20px;
-  color: $font-color-01;
-  letter-spacing: 1px;
-}
-
-.error-message {
-  @include error-message;
-  margin-top: 70px;
 }
 
 .pageheader-text {
@@ -63,3 +32,37 @@
   text-align: center;
   height: 20vw;
 }
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar-input {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  //@include form-input;
+}
+
+.searchbar-input input {
+  font-size: 20px;
+  border: none;
+  display: flex;
+  width: 500px;
+  outline: none;
+  letter-spacing: 1px;
+  border-radius: 6px 0 0 6px;
+}
+
+.label {
+  font-size: 20px;
+  color: $font-color-01;
+  letter-spacing: 1px;
+}
+
+.error-message {
+  @include error-message;
+  margin-top: 70px;
+}
+

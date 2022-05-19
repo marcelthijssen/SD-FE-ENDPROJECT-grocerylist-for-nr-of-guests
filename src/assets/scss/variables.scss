@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
   height: 50px;
+  max-width:500px;
+  width:90%;
   padding-left: 20px;
   background: #ffffff;
   border-radius: $border-radius-01;
@@ -40,6 +42,12 @@
     transition: ease-in-out 0.2s;
   }
 }
+
+@mixin label {
+    font-size: 16px;
+    color: $font-color-01;
+    letter-spacing: 1px;
+  }
 
 @mixin error-message {
   color: $error-message;
