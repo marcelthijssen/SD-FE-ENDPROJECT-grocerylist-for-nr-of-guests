@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./InputElement.module.scss";
 
-function InputElement( { errors, register, name, label, value, inputType, validationRules, placeholder, onChange } ) {
+function InputElement( { errors, register, name, label,  inputType, validationRules, placeholder } ) {
 
   return (
     <>
@@ -13,11 +13,10 @@ function InputElement( { errors, register, name, label, value, inputType, valida
       <div className={ styles["form-field"] }>
         <input
           className={ styles["input-field"] }
-          value={ value }
           type={ inputType }
           placeholder={ placeholder }
           id={ `${ name }-field` }
-          { ...register( name, validationRules, onChange ) }
+          { ...register( name, validationRules ) }
         />
         { errors[name] && <p className={ styles["error-message"] }>{ errors[name].message }</p> }
       </div>

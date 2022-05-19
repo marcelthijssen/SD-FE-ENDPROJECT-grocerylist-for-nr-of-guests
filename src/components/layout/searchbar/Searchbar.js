@@ -3,38 +3,29 @@ import { useHistory } from "react-router-dom";
 import styles from "./Searchbar.module.scss";
 // import "../grid.module.css";
 import Button from "../../buttons/Button";
+import InputElement from "../../InputField/InputElement";
+import { useForm } from "react-hook-form";
 
 function Searchbar( { setRecipeSearchHandler } ) {
 
   const [ query, setQuery ] = useState( localStorage.getItem( "query" ) || "" );
   const [ isDisabled, setIsDisabled ] = useState( false );
-  const [ queryError, setQueryError ] = useState( false );
+  // const [ setQueryError ] = useState( false );
   const history = useHistory();
 
-  // save data to localstorage "newsletter", disable button en enable after 1 sec
-  function onFormSubmit( e ) {
-    e.preventDefault();
-    setRecipeSearchHandler( query );
-    setIsDisabled( true );
-    // console.log( query );
-    setTimeout( () => {
-      setIsDisabled( false );
-    }, 1000 );
-    localStorage.setItem( "query", query );
-    // redirect to search
+  const { register, formState: { errors, isValid }, handleSubmit } = useForm( {
+    mode: "onBlur",
+  } );
+
+  function onFormSubmit( data ) {
+    console.log( data.search );
+    setQuery( data.search );
+    localStorage.setItem( "query", data.search );
+    setRecipeSearchHandler( data.search );
     history.push( "/search" );
 
   }
 
-  function queryHandler( e ) {
-    let item = e.target.value;
-    if ( item.length < 3 ) {
-      setQueryError( true );
-    } else {
-      setQueryError( false );
-    }
-    // console.warn( e.target.value );
-  }
 
   return (
     <>
@@ -43,42 +34,45 @@ function Searchbar( { setRecipeSearchHandler } ) {
           <div className={ styles["pageheader-text"] }>
             <div>Enjoying a meal with friends</div>
           </div>
+
           <form
             className={ styles["searchbar"] }
-            onSubmit={ onFormSubmit }>
+            onSubmit={ handleSubmit( onFormSubmit ) }>
 
             <div className={ styles["search-input"] }>
-              <input
+              <InputElement
+                errors={ errors }
+                register={ register }
                 type="text"
                 name="search"
                 value={ query }
                 placeholder={ query }
-                onChange={ e => {
-                  setQuery( e.target.value );
-                  queryHandler( e );
+                validationRules={ {
+                  MinLength: {
+                    value: 3,
+                    message: "Please enter a minimum of 3 characters"
+                  },
+                  pattern: {
+                    value: /^[a-zA-Z]{3,}$/,
+                    message: "Minimum of 3 characters,no numbers"
+                  }
                 } }
               />
-              {
-                queryError ?
-                  <span className={ styles["error-message"] }>Please insert a minimum of 3 characters</span>
-                  :
-                  null
-              }
-              {
-                query.length < 3 ?
-                  <Button
-                    inputType="submit"
-                    buttonStyle="recipe-search-button"
-                    disabled="disabled"
-                    label="Search"
-                  />
-                  :
-                  <Button
-                    inputType="submit"
-                    buttonStyle="recipe-search-button"
-                    label="Search"
-                    isDisabled={ isDisabled }
-                  />
+              { !isValid
+                ?
+                <Button
+                  inputType="submit"
+                  buttonStyle="recipe-search-button"
+                  disabled="disabled"
+                  label="Search"
+                />
+                :
+                <Button
+                  inputType="submit"
+                  buttonStyle="recipe-search-button"
+                  label="Search"
+                  isDisabled={ isDisabled }
+                />
               }
             </div>
           </form>
