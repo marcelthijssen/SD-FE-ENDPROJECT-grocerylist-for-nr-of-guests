@@ -1,5 +1,15 @@
 @import './src/assets/scss/variables';
 
+
+@font-face {
+  font-family: 'SantEliaRough';
+  src: url('./assets/fonts/SantEliaRough/SantEliaRoughAlt-BoldThrDMO.woff2') format('woff2'),
+  url('./assets/fonts/SantEliaRough/SantEliaRoughAlt-BoldThrDMO.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Oxygen';
   src: url('./assets/fonts/Oxygen/Oxygen-Regular.woff2') format('woff2'),
@@ -62,23 +72,26 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'museo sans rounded', sans-serif;
-  font-weight: 500;
   color: $font-color-06;
 }
 h1 {
   font-size: 30pt;
+  font-weight: 800;
   padding-bottom: 26px;
 }
 h2 {
   font-size: 24pt;
+  font-weight: 500;
   padding-bottom: 20px;
 }
 h3 {
   font-size: 18pt;
+  font-weight: 500;
   padding-bottom: 20px;
 }
 h4 {
   font-size: 14pt;
+  font-weight: 800;
   padding-bottom: 10px;
 }
 hr {

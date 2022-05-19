@@ -1,5 +1,12 @@
 @import '../../../assets/scss/variables.scss';
-
+//@font-face {
+//  font-family: 'SantEliaRough';
+//  src: url('../../../assets/fonts/SantEliaRough/SantEliaRoughAlt-BoldThrDMO.woff2') format('woff2'),
+//  url('../../../assets/fonts/SantEliaRough/SantEliaRoughAlt-BoldThrDMO.woff') format('woff');
+//  font-weight: bold;
+//  font-style: normal;
+//  font-display: swap;
+//}
 #grid {
   display: grid;
   grid-template-areas:
@@ -24,14 +31,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #ffffff;
-  text-shadow: 0 0 5px $font-color-07;
-  text-align: center;
   height: 20vw;
+  font-family: "SantEliaRough", "serif" !important;
+  font-size: 6vw;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(113 20 20 / 99%);
+  text-align: center;
 }
+//h1 {
+//
+//}
 
 .searchbar {
   display: flex;

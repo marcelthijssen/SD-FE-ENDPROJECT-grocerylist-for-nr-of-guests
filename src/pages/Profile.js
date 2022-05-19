@@ -26,9 +26,7 @@ function Profile() {
         } );
 
         setProfileData( result.data );
-        // console.log(result);
       } catch ( e ) {
-        // console.error( e );
       }
     }
 
@@ -58,7 +56,7 @@ function Profile() {
                 <h2>Filtersettings</h2>
                 <p>Adjust your personal searchfilters</p>
                 <p><Link to="/account-filters"
-                className={styles["filter-settings"]}>Filtersettings</Link></p>
+                className={styles["filter-settings"]}> Filtersettings</Link></p>
 
               </section>
             </div>

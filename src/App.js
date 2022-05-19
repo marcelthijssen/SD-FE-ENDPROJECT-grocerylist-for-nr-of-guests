@@ -1,11 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
-import {
-  Switch,
-  Route, Redirect
-} from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 // css
 import "./App.module.scss";
-// import "./components/layout/grid.module.css";
 
 // components
 import Footer from "./components/layout/footer/Footer";

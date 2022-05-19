@@ -31,7 +31,7 @@ function Searchbar( { setRecipeSearchHandler } ) {
       <div id={ styles["grid"] }>
         <div id={ styles["pageheader"] } className={ styles["pageheader"] }>
           <div className={ styles["pageheader-text"] }>
-            <div>Enjoying a meal with friends</div>
+            Enjoying a meal with friends
           </div>
 
           <form
