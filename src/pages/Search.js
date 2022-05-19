@@ -34,12 +34,12 @@ function RecipeSearchResults( { recipeSearch } ) {
   }, [ filterActive ] );
 
   useEffect( () => {
-    setOffSet( 0 );
-  }, [] );
-
-  // update query ion browser refresh
-  useEffect( () => {
     setQuery( localStorage.getItem( "query" ) );
+    setOffSet( 0 );
+  }, );
+
+  useEffect( () => {
+    setOffSet( 0 );
   }, [] );
 
   // get data
@@ -101,8 +101,8 @@ function RecipeSearchResults( { recipeSearch } ) {
                   name={ "types of cuisines" }
                   typeFilter={ typesOfCuisines }
                 />
-                <button className={ styles["filter-button"] } onClick={ handleChange } type="submit-button">Activate
-                  filter
+                <button className={ styles["filter-button"] } onClick={ handleChange } type="submit-button">
+                  Activate filter
                 </button>
 
               </div>
@@ -118,8 +118,12 @@ function RecipeSearchResults( { recipeSearch } ) {
                   name={ "types of intolerances" }
                   typeFilter={ typesOfIntolerances }
                 />
-                <button className={ styles["filter-button"] } onClick={ handleChange } type="submit-button">Activate
-                  Filter
+                <button
+                  className={ styles["filter-button"] }
+                  onClick={ handleChange }
+                  type="submit-button"
+                >
+                  Activate Filter
                 </button>
 
               </div>
