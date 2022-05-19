@@ -5,26 +5,21 @@
   color: $font-color-01;
   letter-spacing: 1px;
 }
-
-.input-field {
-  //display: flex;
-  //height: 35px;
-  //margin: 5px;
-  width: 500px;
-  border: none;
-  outline: none;
-  letter-spacing: 1px;
+.form-field {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+.form-field input {
+  font-size: 16px;
+  border-radius: 6px 0 0 6px;
 }
 
 .input-field {
   @include form-input;
   height: 35pt;
 }
-
-
+// TODO: transform from 0 til 100% visible
 .error-message {
   @include error-message;
 }
-//.error-message {
-//  position: absolute!important;
-//}

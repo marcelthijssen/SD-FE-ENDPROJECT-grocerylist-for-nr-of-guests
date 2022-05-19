@@ -39,7 +39,7 @@ function Searchbar( { setRecipeSearchHandler } ) {
             className={ styles["searchbar"] }
             onSubmit={ handleSubmit( onFormSubmit ) }>
 
-            <div className={ styles["search-input"] }>
+            <div className={ styles["searchbar-input"] }>
               <InputElement
                 errors={ errors }
                 register={ register }

@@ -18,7 +18,8 @@ function InputElement( { errors, register, name, label,  inputType, validationRu
           id={ `${ name }-field` }
           { ...register( name, validationRules ) }
         />
-        { errors[name] && <p className={ styles["error-message"] }>{ errors[name].message }</p> }
+        { errors[name] &&
+          <p className={ styles["error-message"] }>{ errors[name].message }</p> }
       </div>
     </>
   );
