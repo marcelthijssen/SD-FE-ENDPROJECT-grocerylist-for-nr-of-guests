@@ -7,10 +7,16 @@
   gap: 60px;
   padding-bottom: 60px;
 }
-.image-container + .info-card-image {
-  object-fit: contain;
+//.image-container + .info-card-image {
+//  object-fit: contain;
+//  object-position: center center;
+//}
+
+.info-card-image {
+  width: 100%;
   object-position: center center;
 }
+
 .single-info-card {
   display: flex;
   flex-direction: column;

@@ -9,7 +9,6 @@ function Searchbar( { setRecipeSearchHandler } ) {
 
   const [ query, setQuery ] = useState( localStorage.getItem( "query" ) || "" );
   const [ isDisabled, setIsDisabled ] = useState( false );
-  // const [ setQueryError ] = useState( false );
   const history = useHistory();
 
   const { register, formState: { errors, isValid }, handleSubmit } = useForm( {
@@ -22,9 +21,7 @@ function Searchbar( { setRecipeSearchHandler } ) {
     localStorage.setItem( "query", data.search );
     setRecipeSearchHandler( data.search );
     history.push( "/search" );
-
   }
-
 
   return (
     <>
