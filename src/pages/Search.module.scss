@@ -7,7 +7,7 @@
     ". grid-sidebar grid-main grid-main ."
     ". grid-sidebar grid-mainbottom grid-mainbottom .";
   grid-template-rows: 50px auto 100px;
-  grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+  grid-template-columns: 0.5fr 2fr 4fr 4fr 0.5fr;
   grid-gap: 20px;
 }
 
@@ -29,7 +29,6 @@
 
 #grid-maintop {
   grid-area: grid-maintop;
-  //padding: 40px;
   color: $font-color-06;
 }
 

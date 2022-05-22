@@ -129,10 +129,12 @@ button {
   width: 60px;
   height: 60px;
   box-shadow: $box-shadow-01;
+  transition: ease-out 0.5s;
 
   &:hover {
-    background-color: $favorite-button-hover;
-    transition: ease-in-out 0.3s;
+    background-color: $background-20;
+    color: #fff;
+    transition: ease-in 0.5s;
   }
 }
 

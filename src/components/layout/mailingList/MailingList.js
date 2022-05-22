@@ -5,6 +5,8 @@ import Button from "../../buttons/Button";
 import { useForm } from "react-hook-form";
 import InputElement from "../../InputField/InputElement";
 
+module.export = { MailingList: MailingList };
+
 function MailingList() {
 
   const [ isDisabled, setIsDisabled ] = useState(false );

@@ -37,6 +37,7 @@ ul {
 .filter-input[type="checkbox"] {
     cursor: pointer;
     margin-right: 10px;
+    background-color: red;
     &:checked + label {
         width: 19px;
     }

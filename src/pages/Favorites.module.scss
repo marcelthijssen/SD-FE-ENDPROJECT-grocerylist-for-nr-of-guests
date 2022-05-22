@@ -7,7 +7,7 @@
     ". grid-main grid-main grid-main ."
     ". grid-main-bottom grid-mainbottom grid-mainbottom .";
   grid-template-rows:  auto auto 50px auto;
-  grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+  grid-template-columns: 0.5fr 2fr 4fr 4fr 0.5fr;
   grid-gap: 20px;
 }
 

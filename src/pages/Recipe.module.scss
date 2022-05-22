@@ -14,7 +14,7 @@ h1{
     " . grid-column1 grid-column2 grid-column3 . "
     " . . grid-mainbottom grid-mainbottom . ";
   grid-template-rows:  auto auto  auto;
-  grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+  grid-template-columns: 0.5fr 2fr 4fr 4fr 0.5fr;
   grid-gap: 20px;
 }
 

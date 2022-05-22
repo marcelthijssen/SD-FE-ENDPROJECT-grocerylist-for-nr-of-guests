@@ -17,7 +17,7 @@ test( "UnitNames should be replaced", () => {
 test( "Unknown unitName is NOT replaced", () => {
 
   // Arrange
-  const input = "plates";
+  const input = "unknow";
 
   // Act
   const result = replaceUnitNames( input) ;

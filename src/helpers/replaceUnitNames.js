@@ -21,9 +21,7 @@ export default function replaceUnitNames( unit ) {
       return "cup";
     case "g":
       return "gram";
-    //  test
-    // case "servings":
-    //     return "jhgfd";
+
     default:
       return unit;
   }
