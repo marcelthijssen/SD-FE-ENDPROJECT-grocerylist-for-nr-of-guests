@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../context/IsAuthContextProvider";
+import { isAuthContext } from "../context/IsAuthContextProvider";
 import axios from "axios";
 import styles from "./SignIn.module.scss";
 import Button from "../components/buttons/Button";
@@ -16,7 +16,7 @@ function SignIn() {
   const { register, formState: { errors }, handleSubmit } = useForm( {
     mode: "onBlur",
   } )
-  const { login } = useContext( AuthContext );
+  const { login } = useContext( isAuthContext );
   const source = axios.CancelToken.source();
 
   // cancel request if page premature closes

@@ -48,8 +48,7 @@ function RecipeFavoriteCard( { favRecipesId } ) {
 
         <div>
           <hr/>
-          <article className={ styles["favorite-recipe-card-container"] } key={ `${ recipe.id }` }>
-
+          <article className={ styles["favorite-recipe-card-container"] } key={ `${ recipe.title }` }>
 
             <div className={ styles["favorite-recipe-card-heading"] }>
               <ToggleFavorites className={ styles["toggle-favorites"] } recipe={ recipe.id }/>
@@ -74,8 +73,9 @@ function RecipeFavoriteCard( { favRecipesId } ) {
                          alt={ `${ recipe.title }` }/>
                   </div>
                 </Link>
-
-                <RecipeIcons recipe={ recipe }/>
+                <div className={ styles["recipe-icons"] }>
+                <RecipeIcons  recipe={ recipe }/>
+              </div>
               </div>
 
               <div className={ styles["middle-column"] }>

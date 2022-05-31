@@ -17,12 +17,12 @@ import Searchbar from "./components/layout/searchbar/Searchbar";
 import Recipe from "./pages/Recipe";
 import RecipeSearchResults from "./pages/Search";
 import ShoppingList from "./pages/ShoppingList";
-import { AuthContext } from "./context/IsAuthContextProvider";
 import AccountFilters from "./pages/AccountFilters";
 import MailingList from "./components/layout/mailingList/MailingList";
+import { isAuthContext } from "./context/IsAuthContextProvider";
 
 function App() {
-  const { isAuth } = useContext( AuthContext );
+  const { isAuth } = useContext( isAuthContext );
   const [ recipeSearch, setRecipeSearch ] = useState();
 
   const cuisines = JSON.parse( localStorage.getItem( "types of cuisines" ) );
@@ -107,7 +107,9 @@ function App() {
 
         </Switch>
       </div>
+
       <MailingList/>
+
       <Footer id="grid-footer"/>
 
     </>

@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import isTokenValid from "../helpers/isTokenValid";
 
-export const AuthContext = createContext( {} );
+export const isAuthContext = createContext( {} );
 
 function AuthContextProvider( { children } ) {
   const [ isAuth, toggleIsAuth ] = useState( {
@@ -97,9 +97,9 @@ function AuthContextProvider( { children } ) {
   };
 
   return (
-    <AuthContext.Provider value={ contextData }>
+    <isAuthContext.Provider value={ contextData }>
       { isAuth.status === "done" ? children : <p>One moment please...</p> }
-    </AuthContext.Provider>
+    </isAuthContext.Provider>
   );
 }
 

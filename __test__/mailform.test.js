@@ -1,6 +1,10 @@
 const { render } = require( "react-dom" );
 const MailingList = require( "../src/components/layout/mailingList/MailingList" ).default;
 
+function MailingList( { input } ){
+
+}
+
 test( "mailaddress must be checked", () => {
 render(<MailingList />)
   // Arrange
@@ -8,7 +12,7 @@ render(<MailingList />)
   const expectedResult = "teaspoon";
 
   // Act
-  const LinkElement = render.
+  // const LinkElement = render.
   const result = MailingLIst( input );
 
   //Assert // What we expect

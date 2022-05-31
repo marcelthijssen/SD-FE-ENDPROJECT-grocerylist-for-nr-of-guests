@@ -3,11 +3,11 @@ import styles from "./TopNavbar.module.scss";
 import logo from "../../../assets/images/logo.svg";
 import { useHistory, NavLink } from "react-router-dom";
 import Button from "../../buttons/Button";
-import { AuthContext } from "../../../context/IsAuthContextProvider";
+import { isAuthContext } from "../../../context/IsAuthContextProvider";
 
 function TopNavbar() {
   const history = useHistory();
-  const { isAuth, logout } = useContext( AuthContext );
+  const { isAuth, logout } = useContext( isAuthContext );
 
   return (
     <>
