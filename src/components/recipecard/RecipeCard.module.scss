@@ -35,6 +35,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .recipe-card-title {
@@ -48,6 +49,7 @@
 .recipe-icons {
   padding: 18px;
 }
+
 
 .input-favorite {
   position: absolute;

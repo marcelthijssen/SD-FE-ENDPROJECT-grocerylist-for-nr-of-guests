@@ -22,7 +22,7 @@ function RecipeIcons( { recipe } ) {
                style={ { cursor: "pointer" } }
                src={ coockingtimer }
           />
-          ️{ ` ${ recipe.readyInMinutes } min.` }
+          { ` ${ recipe.readyInMinutes } min.` }
         </div>
 
         <div>

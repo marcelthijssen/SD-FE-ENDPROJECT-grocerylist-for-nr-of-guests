@@ -27,9 +27,11 @@ function RecipeCard( { recipesSearchResult } ) {
                        src={ `${ recipe.image }` }
                        alt={ `${ recipe.title }` }/>
                 </div>
+
               </Link>
 
               <div className={ styles["recipe-card-text-container"] }>
+
                 <Link to={ `/recipe/${ recipe.id }` }>
                   <div className={ styles["recipe-card-title"] }>
                     <h4>{ `${ recipe.title }` }</h4>
@@ -37,6 +39,7 @@ function RecipeCard( { recipesSearchResult } ) {
                 </Link>
 
                   <RecipeIcons className={ styles["recipe-icons"] } recipe={ recipe }/>
+
               </div>
 
             </article>

@@ -8,7 +8,6 @@ function Filters( { typeFilter, name } ) {
   const [ isChecked, toggleIsChecked ] = useToggle( false );
   const [ nameFilter, setNameFilter ] = useState( [] );
 
-  // checking if saved in localStorage, if so checkbox on
   useEffect( () => {
     const filter = JSON.parse( localStorage.getItem( name ) );
     if ( filter ) setNameFilter( filter );
@@ -25,20 +24,23 @@ function Filters( { typeFilter, name } ) {
         ? [ ...prev, value ]
         : prev.filter( val => val !== value )
     );
-    // console.log("clicked")
 
   }
 
   //Remove all selected
   function clearSelected( e ) {
     const { checked, value } = e.currentTarget;
-    // console.log("clicked clearselect");
     setNameFilter(
       prev => checked
         ? [ ...prev, value ]
         : prev.filter( val => val === value )
     );
   }
+
+  function capatilize (item) {
+    item = item.charAt(0).toUpperCase() + item.slice(1);
+    return item;
+  };
 
   useEffect( () => {
     localStorage.setItem( name, JSON.stringify( nameFilter ) );
@@ -60,7 +62,7 @@ function Filters( { typeFilter, name } ) {
                   checked={ nameFilter.some( val => val === item ) }
                   onChange={ handleChange }
                 />
-                <label>{ item }</label>
+                <label>{ capatilize(item) }</label>
               </li>
 
             </div>
