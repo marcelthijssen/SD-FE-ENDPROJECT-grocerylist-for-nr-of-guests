@@ -4,12 +4,11 @@ import Button from "../buttons/Button";
 
 function ToggleShoppingList( { recipe, numberOfGuests } ) {
 
-  // TODO: recipe in shoppinglist also shown in favorites!
   const [ inShoppingList, toggleInShoppingList ] = useToggle( false );
 
   // check if saved in localStorage, if so show icon
   useEffect( () => {
-    const shoppinglist = (localStorage.getItem( "shoppinglist" ));
+    const shoppinglist = ( localStorage.getItem( "shoppinglist" ) );
     if ( shoppinglist === null || shoppinglist.length === 0 ) {
     } else {
       if ( shoppinglist.includes( recipe.id ) ) {
@@ -31,14 +30,8 @@ function ToggleShoppingList( { recipe, numberOfGuests } ) {
 
   function addToShoppinglist() {
     let shoppinglist = JSON.parse( localStorage.getItem( "shoppinglist" ) );
-
-    // add numberOfGuest and recipe in array (fullrecipeInfo)
     const fullRecipeInfo = [ recipe, { "numberofguests": numberOfGuests }, ];
-    // console.log( { fullRecipeInfo } );
-
-    // add fullRecipeInfo is to the complete shoppinglist.
     shoppinglist.push( fullRecipeInfo );
-    // console.log( shoppinglist );
     localStorage.setItem( "shoppinglist", JSON.stringify( shoppinglist ) );
   }
 
@@ -49,8 +42,8 @@ function ToggleShoppingList( { recipe, numberOfGuests } ) {
     localStorage.setItem( "shoppinglist", JSON.stringify( shoppinglist ) );
   }
 
-  // todo: change icons
   return (
+
     <Button
       buttonStyle="add-button"
       clickHandler={ toggle }>

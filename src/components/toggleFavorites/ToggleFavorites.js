@@ -8,7 +8,6 @@ function ToggleFavorites( { recipe } ) {
   const { addOneToFavorite, subtractOneFromFavorite } = useContext( FavCounterContext );
 
   const [ isFavorite, setIsFavorite ] = useToggle( false );
-  // check if saved in localStorage, if so isFavorite and display 'red hart'
   useEffect( () => {
     let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
     if ( favoriteToSave === null ) favoriteToSave = [];

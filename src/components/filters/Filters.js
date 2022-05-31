@@ -40,7 +40,7 @@ function Filters( { typeFilter, name } ) {
   function capatilize (item) {
     item = item.charAt(0).toUpperCase() + item.slice(1);
     return item;
-  };
+  }
 
   useEffect( () => {
     localStorage.setItem( name, JSON.stringify( nameFilter ) );
