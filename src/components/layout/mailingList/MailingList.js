@@ -3,7 +3,7 @@ import styles from "./MailingList.module.scss";
 // import "../grid.module.css";
 import Button from "../../buttons/Button";
 import { useForm } from "react-hook-form";
-import InputElement from "../../InputField/InputElement";
+import InputElement from "../../inputField/InputElement";
 
 module.export = { MailingList: MailingList };
 

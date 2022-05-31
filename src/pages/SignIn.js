@@ -6,7 +6,7 @@ import styles from "./SignIn.module.scss";
 import Button from "../components/buttons/Button";
 import PageHeader from "../components/layout/pageheader/Pageheader";
 import { useForm } from "react-hook-form";
-import InputElement from "../components/InputField/InputElement";
+import InputElement from "../components/inputField/InputElement";
 
 function SignIn() {
   const [ isDisabled, setIsDisabled ] = useState(false );

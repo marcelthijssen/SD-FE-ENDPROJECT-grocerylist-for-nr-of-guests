@@ -3,7 +3,7 @@ import styles from "./ShoppingList.module.scss";
 import PageHeader from "../components/layout/pageheader/Pageheader";
 import TableIngredients from "../components/tableIngredients/TableIngredienst";
 import { FavCounterContext } from "../context/FavContextProvider";
-import ShoppingListRecipes from "../components/ShoppingListRecipes/ShoppingListRecipes";
+import ShoppingListRecipes from "../components/shoppingListRecipes/ShoppingListRecipes";
 
 function ShoppingList() {
 

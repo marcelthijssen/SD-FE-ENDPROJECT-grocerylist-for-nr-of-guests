@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import styles from "./Searchbar.module.scss";
 import Button from "../../buttons/Button";
-import InputElement from "../../InputField/InputElement";
+import InputElement from "../../inputField/InputElement";
 import { useForm } from "react-hook-form";
 
 function Searchbar( { setRecipeSearchHandler } ) {

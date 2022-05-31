@@ -4,7 +4,7 @@ import axios from "axios";
 import styles from "../pages/Register.module.scss";
 import Button from "../components/buttons/Button";
 import PageHeader from "../components/layout/pageheader/Pageheader";
-import InputElement from "../components/InputField/InputElement";
+import InputElement from "../components/inputField/InputElement";
 import { useForm } from "react-hook-form";
 
 function Register() {

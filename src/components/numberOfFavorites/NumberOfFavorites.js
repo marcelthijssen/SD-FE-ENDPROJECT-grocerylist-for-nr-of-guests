@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./numberOfFavorites.module.scss";
+import styles from "./NumberOfFavorites.module.scss";
 import { useHistory } from "react-router-dom";
 import Button from "../buttons/Button";
 

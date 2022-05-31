@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import styles from "./Pageheader.module.scss";
-import NumberOfFavorites from "../../numberOfFavorites/numberOfFavorites";
+import NumberOfFavorites from "../../numberOfFavorites/NumberOfFavorites";
 import { FavCounterContext } from "../../../context/FavContextProvider";
 
 function PageHeader( { title, total } ) {
