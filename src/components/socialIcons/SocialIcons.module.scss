@@ -1,16 +1,15 @@
 @import '../../assets/scss/variables.scss';
 
 
-.socials {
+.socialicons {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-.socials img {
+.socialicons img {
   display: flex;
   height: 16px;
-  width: 16px;
   margin-left: 20px;
   opacity: 0.6;
 

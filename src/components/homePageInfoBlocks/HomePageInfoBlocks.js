@@ -1,8 +1,6 @@
-// Text info block are displayed on the Home-pages
-
 import React from "react";
 import styles from "./HomePageInfoBlocks.module.scss";
-import infoBlocks from "../../assets/json/HomeInfoBlockText.json";
+import infoBlocks from "../../assets/json/homeInfoBlocks.json";
 
 function HomePageInfoBlocks() {
 
@@ -21,10 +19,12 @@ function HomePageInfoBlocks() {
 
                 <img className={ styles["info-card-image"] }
                      alt={ `${ infoBlock.title }` }
-                     src={ require( `../../assets/images/${ infoBlock.imagename }.png` ) }
+                     src={ require( `../../assets/images/${ infoBlock.imagename }.png` ).default }
                 />
               </div>
+
               <div className={ styles["text-container"] }>
+
                 <div
                   className={ styles["info-card-title"] }>
                   <h4>
@@ -37,8 +37,8 @@ function HomePageInfoBlocks() {
                     { `${ infoBlock.content }` }
                   </p>
                 </div>
-              </div>
 
+              </div>
 
             </article>
           ) }

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 
-import SocialIcons from "../../socials/SocialIcons";
+import SocialIcons from "../../socialIcons/SocialIcons";
 
 function Footer() {
   return (
@@ -46,7 +46,7 @@ function Footer() {
 </div>
         <section id={ styles["grid-footersocial"] }>
           <SocialIcons/>
-          {/*<ul className={ styles["socials"] }>*/}
+          {/*<ul className={ styles["socialIcons"] }>*/}
           {/*  <li>*/}
           {/*    <Link to="/">*/}
           {/*      <img alt="pinterest"*/}
