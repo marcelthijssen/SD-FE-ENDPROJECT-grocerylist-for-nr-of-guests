@@ -16,7 +16,6 @@ function ToggleFavorites( { recipe } ) {
     }
   }, [] );
 
-  // toggle favorite and trigger function
   function toggle() {
     if ( !isFavorite ) {
       setIsFavorite( isFavorite );
@@ -29,7 +28,6 @@ function ToggleFavorites( { recipe } ) {
     }
   }
 
-  // ADD to localStorage if set to isFavorite
   function addToFavorite() {
     let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
     // if ( favoriteToSave === null ) favoriteToSave = [];
@@ -37,7 +35,6 @@ function ToggleFavorites( { recipe } ) {
     localStorage.setItem( "favorite recipes", JSON.stringify( favoriteToSave ) );
   }
 
-  // REMOVE from localStorage if set to !isFavorite
   function removeFromFavorite() {
     let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
     favoriteToSave = favoriteToSave.filter( favoriteToSave => favoriteToSave !== recipe );

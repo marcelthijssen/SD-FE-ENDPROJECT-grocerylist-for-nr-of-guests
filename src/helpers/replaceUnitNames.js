@@ -1,3 +1,8 @@
+/**
+ * Replace ingredient unitnames
+ * @param unit
+ * @returns {string|*}
+ */
 export default function replaceUnitNames( unit ) {
 
   module.export = { replaceUnitNames: replaceUnitNames };

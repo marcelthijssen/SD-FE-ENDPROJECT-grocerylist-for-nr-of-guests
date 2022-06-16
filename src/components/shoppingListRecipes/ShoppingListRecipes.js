@@ -3,6 +3,13 @@ import styles from "./ShoppingListRecipes.module.scss";
 import { Link } from "react-router-dom";
 import Button from "../buttons/Button";
 
+/**
+ * @param shoppingList
+ * @returns {JSX.Element}
+ * @constructor
+ * list of recipes on sidebar on shoppinglist-page
+ */
+
 function ShoppingListRecipes( { shoppingList } ) {
 
   return (
@@ -12,12 +19,12 @@ function ShoppingListRecipes( { shoppingList } ) {
           <h4>Recipes included in your shoppinglist:</h4>
 
           { shoppingList.map( ( recipe ) =>
-            <div key={ recipe[0].title }>
+            <div key={ recipe.title }>
               <Button
-              buttonStyle="recipe-link"
+                buttonStyle="recipe-link"
               >
-              <Link to={ `/recipe/${ recipe[0].id }` }>{ recipe[0].title }</Link>
-            </Button>
+                <Link to={ `/recipe/${ recipe.id }` }>{ recipe.title }</Link>
+              </Button>
             </div>
           ) }
         </div>

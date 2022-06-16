@@ -5,17 +5,18 @@ import { Link } from "react-router-dom";
 import ToggleFavorites from "../toggleFavorites/ToggleFavorites";
 import axios from "axios";
 import RecipeIcons from "../recipeIcons/RecipeIcons";
-import styles from "./RecipeFavoriteCard.module.scss";
 import ToggleShoppingList from "../toggleShoppingList/ToggleShoppingList";
 import NumberOfGuests from "../numberOfGuests/NumberOfGuests";
 import Button from "../buttons/Button";
+import styles from "./RecipeFavoriteCard.module.scss";
 
 function RecipeFavoriteCard( { favRecipesId } ) {
 
   const source = axios.CancelToken.source();
 
-  const [ recipe, setRecipe ] = useState();
+  const [ recipe, setRecipe ] = useState([] );
   const [ numberOfGuests, setNumberOfGuests ] = useState(0);
+
   // cancel request if page premature closes
   useEffect( () => {
     return function cleanup() {
@@ -23,7 +24,6 @@ function RecipeFavoriteCard( { favRecipesId } ) {
     };
   }, [] );
 
-  // get recipe information from with favRecipeId
   useEffect( () => {
     async function fetchData() {
       try {
@@ -34,8 +34,8 @@ function RecipeFavoriteCard( { favRecipesId } ) {
         return function cleanup() {
           source.cancel();
         };
+
       } catch ( e ) {
-        // console.error( e );
       }
     }
 

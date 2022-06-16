@@ -37,22 +37,22 @@ function Home() {
   return (
     <>
 
-          <PageHeader title="Home"/>
+      <PageHeader title="Home"/>
       { recipesSearchResult &&
 
-          <div id={ styles["grid"] }>
-            <div id={ styles["grid-main"] }>
-              <div className={ styles["home-container"] }>
+        <div id={ styles["grid"] }>
+          <div id={ styles["grid-main"] }>
+            <div className={ styles["home-container"] }>
 
-                <HomePageInfoBlocks className={ styles["home-info-block"] }/>
+              <HomePageInfoBlocks className={ styles["home-info-block"] }/>
 
-                <hr/>
+              <hr/>
 
-                <RecipeCard recipesSearchResult={ recipesSearchResult }/>
+              <RecipeCard recipesSearchResult={ recipesSearchResult }/>
 
-              </div>
             </div>
           </div>
+        </div>
       }
     </>
   );

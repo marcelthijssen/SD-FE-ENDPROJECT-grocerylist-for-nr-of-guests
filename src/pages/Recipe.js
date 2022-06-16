@@ -7,25 +7,38 @@ import axios from "axios";
 import ToggleFavorites from "../components/toggleFavorites/ToggleFavorites";
 import RecipeIcons from "../components/recipeIcons/RecipeIcons";
 import RecipeIngredientsList from "../components/recipeIngredientsList/RecipeIngredientsList";
-import styles from "./Recipe.module.scss";
 import NumberOfGuests from "../components/numberOfGuests/NumberOfGuests";
 import Button from "../components/buttons/Button";
 import ToggleShoppingList from "../components/toggleShoppingList/ToggleShoppingList";
+import styles from "./Recipe.module.scss";
 
 function Recipe() {
+
+  const source = axios.CancelToken.source();
 
   const { id } = useParams();
   const [ recipe, setRecipe ] = useState( [] );
   const [ numberOfGuests, setNumberOfGuests ] = useState("");
 
+  // cancel request if page premature closes
+  useEffect( () => {
+    return function cleanup() {
+      source.cancel();
+    };
+  }, [] );
+
   useEffect( () => {
     async function fetchData() {
       try {
-        const singleResult = await axios.get( `https://api.spoonacular.com/recipes/${ id }/information?includeNutrition=false/&apiKey=${ process.env.REACT_APP_SPOONACULAR_KEY }` );
-        setRecipe( singleResult.data );
-        setNumberOfGuests( singleResult.data.servings );
+        const result = await axios.get( `https://api.spoonacular.com/recipes/${ id }/information?includeNutrition=false/&apiKey=${ process.env.REACT_APP_SPOONACULAR_KEY }`, { cancelToken: source.token, } );
+        setRecipe( result.data );
+        setNumberOfGuests( result.data.servings );
+
+        return function cleanup() {
+          source.cancel();
+        };
+
       } catch ( e ) {
-        // console.error( e );
       }
     }
 
@@ -38,11 +51,11 @@ function Recipe() {
         <div>
           <PageHeader title={ `${ recipe.title } ` }/>
 
-
           <div id={ styles["grid"] }>
 
             <div className={ styles["recipeheader"] }>
               <ToggleFavorites recipe={ recipe.id }/>
+
               <h1>
                 { `${ recipe.title } ` }
               </h1>
@@ -101,6 +114,7 @@ function Recipe() {
                 }
 
               </div>
+
               <div className={ styles["add-to-shoppinglist"] }>
                 <ToggleShoppingList recipe={ recipe } numberOfGuests={ numberOfGuests }/>
               </div>
@@ -111,8 +125,10 @@ function Recipe() {
                 Instructions
               </h3>
               <p dangerouslySetInnerHTML={ { __html: `${ recipe.instructions } ` } }/>
+
               <div id={ styles["grid-mainbottom"] }>
-              <div className={ styles["credit-text"] }>{ `creditText: ${ recipe.creditsText } ` }</div>
+
+                <div className={ styles["credit-text"] }>{ `creditText: ${ recipe.creditsText } ` }</div>
 
              </div>
             </div>

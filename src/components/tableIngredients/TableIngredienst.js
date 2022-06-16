@@ -8,8 +8,8 @@ function TableIngredients( { shoppingList } ) {
   let shoppingListAll = [];
 
   shoppingList.forEach( ( recipe ) => {
-    recipe[0].extendedIngredients.forEach( ( ingredient ) => {
-
+    recipe.extendedIngredients.forEach( ( ingredient ) => {
+      console.log(recipe.servings);
       // replaceUnitNames( ingredient.unit );
       // create ONE array from all ingredients adjusted to number of guests
       // IF an ingredient.id are the same AND the unit is the same then don't put in the array yet.
@@ -18,29 +18,30 @@ function TableIngredients( { shoppingList } ) {
           "id": ingredient.id,
           "name": ingredient.name,
           "unit": replaceUnitNames( ingredient.unit),
-          "amount": displayAmount( (ingredient.amount / recipe[0].servings) * recipe[1].numberofguests )
+          "amount": displayAmount( ingredient.amount * recipe.servings )
         } ];
 
       } else {
-        // add the amounts if units are equals;
+        // add the amounts if ingredient and units are equals;
         ingredientTemp = [ ...ingredientTemp, {
           "id": ingredient.id,
           "name": ingredient.name,
           "unit": replaceUnitNames( ingredient.unit),
-          "amount": displayAmount( (ingredient.amount / recipe[0].servings) * recipe[1].numberofguests )
+          "amount": displayAmount( ingredient.amount * recipe.servings )
         } ];
-        const ingredientIndex = shoppingListAll.findIndex( x => x.id === ingredientTemp[0].id );
-        shoppingListAll[ingredientIndex].amount = parseFloat( ingredientTemp[0].amount ) + parseFloat( shoppingListAll[ingredientIndex].amount );
+        shoppingListAll.amount = parseFloat( ingredientTemp.amount ) + parseFloat( shoppingListAll.amount );
       }
     } );
-  } );
 
+    console.log(shoppingListAll);
+  } );
   // Sort List alphabetically
   shoppingListAll.sort(function(a, b){
     if(a.name < b.name) { return -1; }
     if(a.name > b.name) { return 1; }
     return 0;
   })
+
 
   return (
     <>

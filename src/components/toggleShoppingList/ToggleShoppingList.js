@@ -1,37 +1,34 @@
 import React, { useEffect } from "react";
 import { useToggle } from "rooks";
 import Button from "../buttons/Button";
+import shoppingList from "../../pages/ShoppingList";
 
 function ToggleShoppingList( { recipe, numberOfGuests } ) {
 
-  const [ inShoppingList, toggleInShoppingList ] = useToggle( false );
-
+  const [ inShoppingList, setInShoppingList ] = useToggle( false );
   // check if saved in localStorage, if so show icon
   useEffect( () => {
-    const shoppinglist = ( localStorage.getItem( "shoppinglist" ) );
-    if ( shoppinglist === null || shoppinglist.length === 0 ) {
-    } else {
+    let shoppinglist = ( localStorage.getItem( "shoppinglist" ) );
+    if ( shoppinglist === null || shoppinglist.length === 0 ) shoppinglist = [];
       if ( shoppinglist.includes( recipe.id ) ) {
-        toggleInShoppingList( inShoppingList );
-      }
+        setInShoppingList( inShoppingList );
     }
   }, [] );
 
-  // toggle favorite and trigger function
   function toggle() {
     if ( !inShoppingList ) {
-      toggleInShoppingList( inShoppingList );
+      setInShoppingList( inShoppingList );
       addToShoppinglist();
     } else {
-      toggleInShoppingList( !inShoppingList );
+      setInShoppingList( !inShoppingList );
       removeFromShoppinglist();
     }
   }
 
   function addToShoppinglist() {
     let shoppinglist = JSON.parse( localStorage.getItem( "shoppinglist" ) );
-    const fullRecipeInfo = [ recipe, { "numberofguests": numberOfGuests }, ];
-    shoppinglist.push( fullRecipeInfo );
+    recipe.servings = parseFloat( numberOfGuests );
+    shoppinglist.push( recipe );
     localStorage.setItem( "shoppinglist", JSON.stringify( shoppinglist ) );
   }
 
