@@ -94,10 +94,6 @@ function Recipe() {
                 </div>
 
                 <NumberOfGuests
-                  className={ styles["number-of-guests"] }
-                  name="number-of-guests"
-                  min="1"
-                  inputType="number"
                   value={ numberOfGuests }
                   onChange={ e => setNumberOfGuests( e.target.value ) }
                 />

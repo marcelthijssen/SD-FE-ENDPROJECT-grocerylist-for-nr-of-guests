@@ -1,17 +1,16 @@
 import React, { useEffect } from "react";
 import { useToggle } from "rooks";
 import Button from "../buttons/Button";
-import shoppingList from "../../pages/ShoppingList";
 
 function ToggleShoppingList( { recipe, numberOfGuests } ) {
 
   const [ inShoppingList, setInShoppingList ] = useToggle( false );
   // check if saved in localStorage, if so show icon
   useEffect( () => {
-    let shoppinglist = ( localStorage.getItem( "shoppinglist" ) );
+    let shoppinglist = (localStorage.getItem( "shoppinglist" ));
     if ( shoppinglist === null || shoppinglist.length === 0 ) shoppinglist = [];
-      if ( shoppinglist.includes( recipe.id ) ) {
-        setInShoppingList( inShoppingList );
+    if ( shoppinglist.includes( recipe.id ) ) {
+      setInShoppingList( inShoppingList );
     }
   }, [] );
 
@@ -27,8 +26,8 @@ function ToggleShoppingList( { recipe, numberOfGuests } ) {
 
   function addToShoppinglist() {
     let shoppinglist = JSON.parse( localStorage.getItem( "shoppinglist" ) );
-    recipe.servings = parseFloat( numberOfGuests );
-    shoppinglist.push( recipe );
+    const recipeIncludesGeusts = [ recipe, { "numberofguests": numberOfGuests }, ];
+    shoppinglist.push( recipeIncludesGeusts );
     localStorage.setItem( "shoppinglist", JSON.stringify( shoppinglist ) );
   }
 
@@ -40,20 +39,22 @@ function ToggleShoppingList( { recipe, numberOfGuests } ) {
   }
 
   return (
-
-    <Button
-      buttonStyle="add-button"
-      clickHandler={ toggle }>
-      <div>
-        {
-          inShoppingList ?
-            <div>❌ Remove from shoppinglist</div>
-            :
-            <div>✅ Add to shoppinglist</div>
-        }
-      </div>
-    </Button>
-
+    <>
+      { recipe &&
+        <Button
+          buttonStyle="add-button"
+          clickHandler={ toggle }>
+          <div>
+            {
+              inShoppingList ?
+                <div>❌ Remove from shoppinglist</div>
+                :
+                <div>✅ Add to shoppinglist</div>
+            }
+          </div>
+        </Button>
+      }
+    </>
   );
 }
 
