@@ -11,7 +11,6 @@ import Button from "../buttons/Button";
  */
 
 function ShoppingListRecipes( { shoppingList } ) {
-
   return (
     <>
       { shoppingList &&
@@ -19,11 +18,11 @@ function ShoppingListRecipes( { shoppingList } ) {
           <h4>Recipes included in your shoppinglist:</h4>
 
           { shoppingList.map( ( recipe ) =>
-            <div key={ recipe.title }>
+            <div key={ recipe[0].title }>
               <Button
                 buttonStyle="recipe-link"
               >
-                <Link to={ `/recipe/${ recipe.id }` }>{ recipe.title }</Link>
+                <Link to={ `/recipe/${ recipe[0].id }` }>{ recipe[0].title }</Link>
               </Button>
             </div>
           ) }

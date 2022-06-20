@@ -9,6 +9,7 @@ function TableIngredients( { shoppingList } ) {
 
   shoppingList.forEach( ( recipe ) => {
     recipe[0].extendedIngredients.forEach( ( ingredient ) => {
+
       // replaceUnitNames( ingredient.unit );
       // create ONE array from all ingredients adjusted to number of guests
       // IF an ingredient.id are the same AND the unit is the same then don't put in the array yet.
@@ -21,7 +22,7 @@ function TableIngredients( { shoppingList } ) {
         } ];
 
       } else {
-        // add the amounts if ingredient and units are equals;
+        // add the amounts if units are equals;
         ingredientTemp = [ ...ingredientTemp, {
           "id": ingredient.id,
           "name": ingredient.name,
@@ -32,15 +33,14 @@ function TableIngredients( { shoppingList } ) {
         shoppingListAll[ingredientIndex].amount = parseFloat( ingredientTemp[0].amount ) + parseFloat( shoppingListAll[ingredientIndex].amount );
       }
     } );
-
   } );
+
   // Sort List alphabetically
   shoppingListAll.sort(function(a, b){
     if(a.name < b.name) { return -1; }
     if(a.name > b.name) { return 1; }
     return 0;
   })
-
 
   return (
     <>
@@ -68,4 +68,3 @@ function TableIngredients( { shoppingList } ) {
 }
 
 export default TableIngredients;
-
