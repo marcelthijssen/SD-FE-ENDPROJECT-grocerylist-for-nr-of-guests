@@ -1,3 +1,6 @@
+# SD-FE ENDPROJECT NOVI HOGESCHOOL
+Dit project is afgerond op november 2021, maar blijf een Work-in-progress.
+
 # Grocerylist calculated for number of guests coming for diner
 
 Ik heb een applicatie ontwikkeld die gaat helpen bij het maken van één boodschappenlijst van alle ingrediënten, aangepast aan het aantal personen wat komt eten. 
