@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 // components
 import PageHeader from "../components/layout/pageheader/Pageheader";
 import RecipeFavoriteCard from "../components/recipeFavoriteCard/RecipeFavoriteCard";
 import styles from "./Favorites.module.scss";
+import ShoppingListRecipes from "../components/shoppingListRecipes/ShoppingListRecipes";
 
 function Favorites() {
 
+  const [ shoppingList, setShoppingList ] = useState( [] );
   const favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
   const history = useHistory();
 
@@ -16,6 +18,10 @@ function Favorites() {
     }
   }, [ favoriteToSave ] );
 
+  useEffect( () => {
+    setShoppingList( JSON.parse( localStorage.getItem( "shoppinglist" ) ) );
+  }, [] );
+
   return (
     <>
       { favoriteToSave &&
@@ -23,6 +29,11 @@ function Favorites() {
           <PageHeader title="Favorites" />
 
           <div id={ styles["grid"] }>
+
+            <div id={ styles["grid-sidebar"] }>
+              <ShoppingListRecipes shoppingList={ shoppingList }/>
+            </div>
+
             <div id={ styles["grid-main"] }>
               { favoriteToSave.map( ( favRecipesId ) =>
                 <div key={ favRecipesId }>

@@ -43,7 +43,9 @@
     transition: ease-in-out 0.2s;
   }
 }
-
+@mixin sidebar__link {
+  text-decoration: none;
+}
 @mixin label {
     font-size: 16px;
     color: $font-color-01;

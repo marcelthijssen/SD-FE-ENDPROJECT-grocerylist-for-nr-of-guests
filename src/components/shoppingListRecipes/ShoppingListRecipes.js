@@ -15,14 +15,14 @@ function ShoppingListRecipes( { shoppingList } ) {
     <>
       { shoppingList &&
         <div className={ styles["recipe-list"] }>
-          <h4>Recipes included in your shoppinglist:</h4>
+          <h5>Shoppinglist:</h5>
 
           { shoppingList.map( ( recipe ) =>
             <div key={ recipe[0].title }>
               <Button
                 buttonStyle="recipe-link"
               >
-                <Link to={ `/recipe/${ recipe[0].id }` }>{ recipe[0].title }</Link>
+                <Link className={ styles["link__sidebar"]} to={ `/recipe/${ recipe[0].id }` }>{ recipe[0].title }</Link>
               </Button>
             </div>
           ) }

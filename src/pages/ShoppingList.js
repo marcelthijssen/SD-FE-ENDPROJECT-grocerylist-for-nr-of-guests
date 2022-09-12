@@ -22,9 +22,11 @@ function ShoppingList() {
       { shoppingList &&
 
         <div id={ styles["grid"] }>
+
           <div id={ styles["grid-sidebar"] }>
             <ShoppingListRecipes shoppingList={ shoppingList }/>
           </div>
+
           <div id={ styles["grid-main"] }>
             <TableIngredients shoppingList={ shoppingList }/>
           </div>
