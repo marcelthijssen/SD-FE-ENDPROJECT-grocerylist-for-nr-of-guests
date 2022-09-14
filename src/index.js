@@ -7,7 +7,7 @@ import FavCounterContextProvider from "./context/FavContextProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename={'/recipes'}>
+    <Router basename={'/recipes/build/'}>
       <FavCounterContextProvider>
       <IsAuthContextProvider>
           <App/>

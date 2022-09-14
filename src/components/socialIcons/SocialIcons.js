@@ -14,8 +14,8 @@ function SocialIcons() {
             <div key={ `${ socialIcon.id }` }>
               <ExternalLink href={ `${ socialIcon.url }` } target="blank">
                 <img
-                  src={ require( `../../assets/images/${ socialIcon.title }.png` ) }
                   alt={ `${ socialIcon.title }` }
+                  src={ require( `../../assets/images/${ socialIcon.title }.png` ) }
                 />
               </ExternalLink>
             </div>
