@@ -17,7 +17,7 @@ function ShoppingList() {
   return (
     <>
 
-      <PageHeader title="Shoppinglist" counter={ counter }/>
+      <PageHeader counter={ counter }/>
 
       { shoppingList &&
 

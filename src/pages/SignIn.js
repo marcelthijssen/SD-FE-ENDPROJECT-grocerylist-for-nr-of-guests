@@ -52,7 +52,7 @@ function SignIn() {
 
   return (
     <>
-      <PageHeader title="Login"/>
+      <PageHeader />
 
       <div id={ styles["grid"] }>
         <div id={ styles["grid-main"] }>

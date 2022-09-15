@@ -37,7 +37,7 @@ function Home() {
   return (
     <>
 
-      <PageHeader title="Home"/>
+      <PageHeader t/>
       { recipesSearchResult &&
 
         <div id={ styles["grid"] }>

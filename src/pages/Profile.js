@@ -39,7 +39,7 @@ function Profile() {
 
   return (
     <>
-      <PageHeader title="Profielpagina"/>
+      <PageHeader />
 
       { profileData &&
         <div id={ styles["grid"] }>

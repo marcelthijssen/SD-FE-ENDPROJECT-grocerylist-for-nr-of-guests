@@ -49,7 +49,7 @@ function Recipe() {
     <>
       { recipe &&
         <div>
-          <PageHeader title={ `${ recipe.title } ` }/>
+          <PageHeader /*title={ `${ recipe.title } ` }*/ />
 
           <div id={ styles["grid"] }>
 

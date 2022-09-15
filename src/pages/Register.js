@@ -54,7 +54,7 @@ function Register() {
 
   return (
     <>
-      <PageHeader title="Register"/>
+      <PageHeader/>
 
       <div id={ styles["grid"] }>
         <div id={ styles["grid-main"] }>
