@@ -34,18 +34,21 @@
     ]
   },
   "browserslist": {
-    "production": [
+    "development": [
       ">0.2%",
       "not dead",
       "not op_mini all"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
     "file-loader": "^6.2.0",
     "sass": "^1.54.9"
   }

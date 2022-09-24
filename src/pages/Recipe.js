@@ -32,29 +32,31 @@ function Recipe() {
       try {
         const result = await axios.get( `https://api.spoonacular.com/recipes/${ id }/information?includeNutrition=false/&apiKey=${ process.env.REACT_APP_SPOONACULAR_KEY }`, { cancelToken: source.token, } );
         setRecipe( result.data );
-        setNumberOfGuests( result.data.servings );
+        const { servings } = result.data;
+        setNumberOfGuests( servings );
 
         return function cleanup() {
           source.cancel();
         };
-
       } catch ( e ) {
       }
     }
-
     fetchData();
   }, [ id ] );
 
+  console.log(recipe.id);
+
   return (
     <>
-      { recipe &&
+      { recipe.id &&
         <div>
           <PageHeader /*title={ `${ recipe.title } ` }*/ />
 
           <div id={ styles["grid"] }>
 
             <div className={ styles["recipeheader"] }>
-              <ToggleFavorites recipe={ recipe.id }/>
+
+              <ToggleFavorites recipe = { recipe.id }/>
 
               <h1>
                 { `${ recipe.title } ` }
@@ -85,10 +87,10 @@ function Recipe() {
                   How many guests
                 </h3>
                 <div className={ styles["number-of-guests"] }>
-                  <p>{ `This recipe is written for ${ recipe.servings } personen.` }</p>
+                  <p>{ `This recipe is written for ${ recipe.servings } guests.` }</p>
                   <p>
-                    For how many guests will you be serving?
-                    Select the amount of guests and add to the ingredients
+                    For how many guests will you be serving?<br/>
+                    Change the amount and add the ingredients
                     into your shopping-list.
                   </p>
                 </div>

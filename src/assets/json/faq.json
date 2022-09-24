@@ -1,47 +1,47 @@
 [
   {
     "id": "1",
-    "question": "How do I search a recipe",
+    "question": "How do I search a recipe?",
     "answer": "You type a word in the searchbar and click enter or the button wih the text search.",
     "link": "search"
   },
   {
     "id": "2",
-    "question": "With what language can I search",
+    "question": "With what language can I search?",
     "answer": "For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. ",
     "link": "search"
 
   },
   {
     "id": "3",
-    "question": "Where can iI find the shoppinglist",
+    "question": "Where can I find the shoppinglist?",
     "answer": "When you have added at least one recipe to the shoppinglist, a button in the top navbar wil be available.",
     "link": "shoppinglist"
   },
   {
     "id": "4",
-    "question": "This is a question",
+    "question": "This is a question?",
     "answer": "And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. "
   },
   {
     "id": "5",
-    "question": "This is another question",
+    "question": "This is another question?",
     "answer": "And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. "
   },
   {
     "id": "6",
-    "question": "This is yet another question",
+    "question": "This is yet another question?",
     "answer": "And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. ",
     "link": "register"
   },
   {
     "id": "7",
-    "question": "This is a question",
+    "question": "This is a question?",
     "answer": "And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. And this could be a really good answer to this question. We wil wait and see if the visitor is happy with this answer. "
   },
   {
     "id": "8",
-    "question": "This is a not question",
+    "question": "This is a not question?",
     "answer": "And this is just not an answer.",
     "link": "signin"
   }

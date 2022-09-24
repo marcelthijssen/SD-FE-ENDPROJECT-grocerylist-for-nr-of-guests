@@ -6,15 +6,17 @@ import { FavCounterContext } from "../../context/FavContextProvider";
 function ToggleFavorites( { recipe } ) {
 
   const { addOneToFavorite, subtractOneFromFavorite } = useContext( FavCounterContext );
-
   const [ isFavorite, setIsFavorite ] = useToggle( false );
+
   useEffect( () => {
     let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
     if ( favoriteToSave === null ) favoriteToSave = [];
+    // TODO: check if indexOf works in stead of favoriteToSave.includes(recipe)
     if ( favoriteToSave.includes( recipe ) ) {
       setIsFavorite( isFavorite );
     }
   }, [] );
+
 
   function toggle() {
     if ( !isFavorite ) {
@@ -38,10 +40,11 @@ function ToggleFavorites( { recipe } ) {
   function removeFromFavorite() {
     let favoriteToSave = JSON.parse( localStorage.getItem( "favorite recipes" ) );
     favoriteToSave = favoriteToSave.filter( favoriteToSave => favoriteToSave !== recipe );
-    // remove accidently added "null" from array during development
+    // remove accidentally added "null" from array during development
     favoriteToSave = favoriteToSave.filter( favoriteToSave => favoriteToSave !== null );
     localStorage.setItem( "favorite recipes", JSON.stringify( favoriteToSave ) );
   }
+  console.log(recipe);
 
   return (
     <>

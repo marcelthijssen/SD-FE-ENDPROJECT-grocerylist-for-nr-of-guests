@@ -16,13 +16,13 @@ function RecipeIngredientsList( { recipe, numberOfGuests } ) {
           <div className={ styles["recipe-ingredients-info"] }>
             <table>
               { recipe.extendedIngredients.map( ( ingredient ) =>
-                <tbody key={ ingredient.id }>
+                <tbody key={ ingredient.name + recipe.id }>
 
                 <tr>
                   {/*Calculating amount adjusted from amount of guests input */ }
                   <td> { displayAmount( (ingredient.amount / recipe.servings) * numberOfGuests ) } </td>
                   <td> { replaceUnitNames(ingredient.unit) } </td>
-                  <td> { ingredient.name }</td>
+                  <td> { ingredient.name } </td>
                 </tr>
                 </tbody>
               ) }

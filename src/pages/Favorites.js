@@ -26,8 +26,8 @@ function Favorites() {
     <>
       { favoriteToSave &&
         <div className={ styles["content-container"] }>
-          <PageHeader title="Favorites" />
-
+          <PageHeader /*title={ `${ recipe.title } ` }*/ />
+          
           <div id={ styles["grid"] }>
 
             <div id={ styles["grid-sidebar"] }>
