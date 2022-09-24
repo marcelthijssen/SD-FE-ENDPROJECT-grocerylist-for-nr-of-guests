@@ -13,11 +13,11 @@ function TableIngredients( { shoppingList } ) {
       // replaceUnitNames( ingredient.unit );
       // create ONE array from all ingredients adjusted to number of guests
       // IF an ingredient.id are the same AND the unit is the same then don't put in the array yet.
-      if ( !shoppingListAll.some( item => item.id === ingredient.id ) || !(shoppingListAll.some( item => replaceUnitNames( item.unit) === replaceUnitNames( ingredient.unit ))) ) {
+      if ( !shoppingListAll.some( item => item.id === ingredient.id ) || !(shoppingListAll.some( item => replaceUnitNames( item.unit ) === replaceUnitNames( ingredient.unit ) )) ) {
         shoppingListAll = [ ...shoppingListAll, {
           "id": ingredient.id,
           "name": ingredient.name,
-          "unit": replaceUnitNames( ingredient.unit),
+          "unit": replaceUnitNames( ingredient.unit ),
           "amount": displayAmount( (ingredient.amount / recipe[0].servings) * recipe[1].numberofguests )
         } ];
 
@@ -26,7 +26,7 @@ function TableIngredients( { shoppingList } ) {
         ingredientTemp = [ ...ingredientTemp, {
           "id": ingredient.id,
           "name": ingredient.name,
-          "unit": replaceUnitNames( ingredient.unit),
+          "unit": replaceUnitNames( ingredient.unit ),
           "amount": displayAmount( (ingredient.amount / recipe[0].servings) * recipe[1].numberofguests )
         } ];
         const ingredientIndex = shoppingListAll.findIndex( x => x.id === ingredientTemp[0].id );
@@ -36,11 +36,11 @@ function TableIngredients( { shoppingList } ) {
   } );
 
   // Sort List alphabetically
-  shoppingListAll.sort(function(a, b){
-    if(a.name < b.name) { return -1; }
-    if(a.name > b.name) { return 1; }
+  shoppingListAll.sort( function ( a, b ) {
+    if ( a.name < b.name ) { return -1; }
+    if ( a.name > b.name ) { return 1; }
     return 0;
-  })
+  } );
 
   return (
     <>

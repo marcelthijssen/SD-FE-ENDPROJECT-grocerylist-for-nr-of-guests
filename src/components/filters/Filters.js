@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useToggle } from "rooks";
 import styles from "./Filters.module.scss";
 import Button from "../buttons/Button";
-
+import capitalize from "../../helpers/capitalize";
 function Filters( { typeFilter, name } ) {
 
   const [ isChecked, toggleIsChecked ] = useToggle( false );
@@ -14,7 +14,7 @@ function Filters( { typeFilter, name } ) {
     if ( nameFilter.includes( filter ) ) {
       toggleIsChecked( isChecked );
     }
-  }, [] );
+  }, [name] );
 
   function handleChange( e ) {
     const { checked, value } = e.currentTarget;
@@ -37,10 +37,7 @@ function Filters( { typeFilter, name } ) {
     );
   }
 
-  function capatilize (item) {
-    item = item.charAt(0).toUpperCase() + item.slice(1);
-    return item;
-  }
+
 
   useEffect( () => {
     localStorage.setItem( name, JSON.stringify( nameFilter ) );
