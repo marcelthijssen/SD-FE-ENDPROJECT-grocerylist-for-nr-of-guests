@@ -3,6 +3,7 @@ import { useToggle } from "rooks";
 import styles from "./Filters.module.scss";
 import Button from "../buttons/Button";
 import capitalize from "../../helpers/capitalize";
+
 function Filters( { typeFilter, name } ) {
 
   const [ isChecked, toggleIsChecked ] = useToggle( false );
@@ -14,7 +15,7 @@ function Filters( { typeFilter, name } ) {
     if ( nameFilter.includes( filter ) ) {
       toggleIsChecked( isChecked );
     }
-  }, [name] );
+  }, [ name ] );
 
   function handleChange( e ) {
     const { checked, value } = e.currentTarget;
@@ -24,7 +25,6 @@ function Filters( { typeFilter, name } ) {
         ? [ ...prev, value ]
         : prev.filter( val => val !== value )
     );
-
   }
 
   //Remove all selected
@@ -36,8 +36,6 @@ function Filters( { typeFilter, name } ) {
         : prev.filter( val => val === value )
     );
   }
-
-
 
   useEffect( () => {
     localStorage.setItem( name, JSON.stringify( nameFilter ) );
@@ -59,7 +57,7 @@ function Filters( { typeFilter, name } ) {
                   checked={ nameFilter.some( val => val === item ) }
                   onChange={ handleChange }
                 />
-                <label>{ capatilize(item) }</label>
+                <label>{ capitalize( item ) }</label>
               </li>
 
             </div>
