@@ -1,13 +1,13 @@
 [
   {
     "id": "1",
-    "question": "How do I search a recipe?",
+    "question": "How to find a recipe?",
     "answer": "You type a word in the searchbar and click enter or the button wih the text search.",
     "link": "search"
   },
   {
     "id": "2",
-    "question": "With what language can I search?",
+    "question": "What language can I use to search a recipe?",
     "answer": "For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. For now we can only use the english words for searching. ",
     "link": "search"
 

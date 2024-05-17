@@ -19,9 +19,10 @@ td, th {
   padding: 8px;
 }
 
-td:nth-child(1) {
-  width: 1em;
-}
+// th:nth-child(1),
+// td:nth-child(1) {
+//   width: 3em;
+// }
 
 td:nth-child(2) {
   width: 25%;
@@ -37,4 +38,8 @@ tbody:nth-child(even) {
 
 tbody:nth-child(odd) {
   background-color: $table01;
+}
+
+tbody tr td:first-child {
+  min-width: 3em;
 }

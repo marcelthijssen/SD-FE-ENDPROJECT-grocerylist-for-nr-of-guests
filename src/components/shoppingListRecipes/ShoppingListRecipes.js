@@ -14,9 +14,9 @@ function ShoppingListRecipes( { shoppingList } ) {
   return (
     <>
       { shoppingList &&
+        
         <div className={ styles["recipe-list"] }>
           <h5>Shoppinglist:</h5>
-
           { shoppingList.map( ( recipe ) =>
             <div key={ recipe[0].title }>
               <Button
